@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Transkription – SeiKo (Korpus Seiteneinsteiger:innen in Vorbereitungsklassen): Handbuch zu Korpusdesign und Datenaufbereitung</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./segmentierung.html" rel="next">
+<link href="./datenerhebung.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-48c60cb7732cd05bfba6f296ac703904.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./transkription.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Transkription</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./cover/handbuch_deckblatt.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">SeiKo-Handbuch</a> 
+        <div class="sidebar-tools-main">
+    <a href="mailto:seiko@uni-giessen.de" title="Kontakt" class="quarto-navigation-tool px-1" aria-label="Kontakt"><i class="bi bi-envelope"></i></a>
+    <a href="./seiko-handbuch.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vorwort</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Allgemeines</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datenerhebung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Korpusdesign und Datenerhebung</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./transkription.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Transkription</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./segmentierung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Segmentierung der Äußerungseinheiten</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lemmapos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lemmatisierung und POS-Tagging</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ngr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Annotation Nominalgruppen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./verb.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Annotation Verben</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./evaluation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Qualitätssicherung und Evaluation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Literaturverzeichnis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nutzungsbedingungen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">SeiKo-Nutzungsbedingungen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Anhang/anhang.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Anhang</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#sec-grundlagentranskription" id="toc-sec-grundlagentranskription" class="nav-link active" data-scroll-target="#sec-grundlagentranskription"><span class="header-section-number">3.1</span> Grundlagen der Transkription</a></li>
+  <li><a href="#sec-transkriptgesprochen" id="toc-sec-transkriptgesprochen" class="nav-link" data-scroll-target="#sec-transkriptgesprochen"><span class="header-section-number">3.2</span> Transkription gesprochener Daten</a>
+  <ul class="collapse">
+  <li><a href="#äußerungsnahe-wiedergabe-des-gesagten" id="toc-äußerungsnahe-wiedergabe-des-gesagten" class="nav-link" data-scroll-target="#äußerungsnahe-wiedergabe-des-gesagten"><span class="header-section-number">3.2.1</span> Äußerungsnahe Wiedergabe des Gesagten</a></li>
+  <li><a href="#unverständliches-und-unklares" id="toc-unverständliches-und-unklares" class="nav-link" data-scroll-target="#unverständliches-und-unklares"><span class="header-section-number">3.2.2</span> Unverständliches und Unklares</a></li>
+  <li><a href="#pausen" id="toc-pausen" class="nav-link" data-scroll-target="#pausen"><span class="header-section-number">3.2.3</span> Pausen</a></li>
+  <li><a href="#abbrüche-und-selbstkorrekturen" id="toc-abbrüche-und-selbstkorrekturen" class="nav-link" data-scroll-target="#abbrüche-und-selbstkorrekturen"><span class="header-section-number">3.2.4</span> Abbrüche und Selbstkorrekturen</a></li>
+  <li><a href="#überlappungen" id="toc-überlappungen" class="nav-link" data-scroll-target="#überlappungen"><span class="header-section-number">3.2.5</span> Überlappungen</a></li>
+  <li><a href="#paralinguistische-phänomene" id="toc-paralinguistische-phänomene" class="nav-link" data-scroll-target="#paralinguistische-phänomene"><span class="header-section-number">3.2.6</span> Paralinguistische Phänomene</a></li>
+  </ul></li>
+  <li><a href="#sec-transkriptgeschrieben" id="toc-sec-transkriptgeschrieben" class="nav-link" data-scroll-target="#sec-transkriptgeschrieben"><span class="header-section-number">3.3</span> Transkription geschriebener Texte</a>
+  <ul class="collapse">
+  <li><a href="#textnahe-wiedergabe" id="toc-textnahe-wiedergabe" class="nav-link" data-scroll-target="#textnahe-wiedergabe"><span class="header-section-number">3.3.1</span> Textnahe Wiedergabe</a></li>
+  <li><a href="#unleserliches" id="toc-unleserliches" class="nav-link" data-scroll-target="#unleserliches"><span class="header-section-number">3.3.2</span> Unleserliches</a></li>
+  <li><a href="#korrekturen" id="toc-korrekturen" class="nav-link" data-scroll-target="#korrekturen"><span class="header-section-number">3.3.3</span> Korrekturen</a></li>
+  <li><a href="#tokenisierung-im-transkriptionsprozess-und-zusätzliche-spuren" id="toc-tokenisierung-im-transkriptionsprozess-und-zusätzliche-spuren" class="nav-link" data-scroll-target="#tokenisierung-im-transkriptionsprozess-und-zusätzliche-spuren"><span class="header-section-number">3.3.4</span> Tokenisierung im Transkriptionsprozess und zusätzliche Spuren</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-transkription" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Transkription</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Dieses Kapitel dokumentiert das Vorgehen bei der Transkription der Daten. Allgemeine Grundlagen werden in <a href="#sec-grundlagentranskription" class="quarto-xref"><span>Kapitel 3.1</span></a> dargestellt, während das Vorgehen für mündliche Texte in <a href="#sec-transkriptgesprochen" class="quarto-xref"><span>Kapitel 3.2</span></a> sowie für schriftliche Texte in <a href="#sec-transkriptgeschrieben" class="quarto-xref"><span>Kapitel 3.3</span></a> differenziert wird.</p>
+<section id="sec-grundlagentranskription" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-grundlagentranskription"><span class="header-section-number">3.1</span> Grundlagen der Transkription</h2>
+<p>Zur Transkription der Audioaufnahmen sowie der Scans der handschriftlichen Texte der Schüler:innen wurde der EXMARaLDA-Partitur-Editor<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <span class="citation" data-cites="Schmidt.Worner2014EXMARaLDA">(<a href="references.html#ref-Schmidt.Worner2014EXMARaLDA" role="doc-biblioref">Schmidt &amp; Wörner, 2014</a>)</span> genutzt.</p>
+<p>Der Wortlaut der mündlichen wie schriftlichen Äußerungen wurde grundsätzlich in einfacher orthographischer Transkription wiedergegeben. Die Extension einer Äußerungseinheit entspricht dabei im Regelfall einem Event. (Bei Äußerungen, die durch viele Pausen unterbrochen werden oder bei Überlappungen mit Äußerungen der Interviewer:innen kann es an einzelnen Stellen nötig sein, Äußerungseinheiten in mehr als einem Event darzustellen. Für eine konsistente Segmentierung in Äußerungseinheiten vgl. <a href="segmentierung.html" class="quarto-xref"><span>Kapitel 4</span></a>.)</p>
+<p>Es gilt zu beachten, dass jede Transkription immer auch eine Interpretation des Gehörten sowie des schriftlichen Textes durch die Transkribierenden darstellt und notwendigerweise eine Reduktion des Gesamtumfangs der sprachlichen Äußerungen bedeutet (z.B. Verlust bestimmter intonatorischer Eigenschaften etc.). Transkriptionskonventionen dienen dazu, diese möglichst zu vereinheitlichen, zu vereinfachen und allgemein interpretierbar zu machen. Die Konventionen der SeiKo-Transkriptionen werden in <a href="#sec-transkriptgesprochen" class="quarto-xref"><span>Kapitel 3.2</span></a> für die gesprochenen und in <a href="#sec-transkriptgeschrieben" class="quarto-xref"><span>Kapitel 3.3</span></a> für die geschriebenen Texte dargestellt.</p>
+<p>Für jeden Text(teil) einer Datenerhebung (<em>Narrative</em>, <em>Questions</em>, <em>Decontext</em>, <em>Text</em>) einer Schüler:in werden verschiedene EXMARaLDA-Dateien angelegt. Die Dateinamen setzen sich aus folgenden Informationen zusammen:</p>
+<p><span class="beispiel">ERHEBUNGSZEITPUNKT_SCHÜLER:IN-ID_STORY_INTERVIEWTEIL &gt;&gt; z.B. E04_A06_Busticket_T</span></p>
+<p>(In der Metadatenübersicht sind diese Informationen als ERHEBUNG, PROBANDIN, STORY, PART zu finden.)</p>
+<p>Grundsätzlich wurden die Produktionen der Schüler:innen und der Interviewer:innen je in einer eigenen Transkriptionsspur dargestellt. (Die Spuren enthalten dabei folgende Pseudonyme als Sprecher:innen-ID zugewiesen: [INT] für die Interviewer:in, sowie eine individuelle ID - z.B. [B02] - für die Schüler:innen.) Nicht durch die Transkriptionskonventionen darstellbare Auffälligkeiten (z.B. Störgeräusche, Sprechqualität) oder alternative Transkriptionen wurden auf einer separaten Spur ([com]) vermerkt.</p>
+<p>Sensible Textstellen (z.B. Nennung von Namen, Orten etc.) wurden in der Transkription pseudonymisiert wiedergegeben (z.B. NAME, ORT). In den Audioaufnahmen wurden solche Stellen durch Verrauschen unkenntlich gemacht. Eine Anonymisierung der Daten durch vollständige Verfremdung stimmlicher Merkmale <span class="citation" data-cites="Meyermann.Porzelt2014HinweisezurAnonymisierung">(vgl. hierzu z.B. <a href="references.html#ref-Meyermann.Porzelt2014HinweisezurAnonymisierung" role="doc-biblioref">Meyermann &amp; Porzelt, 2014</a>)</span> kann nicht vorgenommen werden, da die Daten sonst für viele linguistische Analysen nicht mehr nutzbar wären. (Zum Zugang zur vollständig pseudonymisierten und damit “stummen” Korpusversion sowie den Möglichkeiten zur Nutzung der Audiodaten vgl. <a href="nutzungsbedingungen.html" class="quarto-xref"><span>Kapitel 10</span></a>.)</p>
+<p>Zur Sicherung der Qualität der Transkriptionen wurden alle Transkripte nach dem Vier-Augen-Prinzip von einem zweiten Teammitglied nachgehört oder überprüft. (Für eine Übersicht der qualitätssichernden Maßnahmen vgl. <a href="evaluation.html" class="quarto-xref"><span>Kapitel 8</span></a>.)</p>
+</section>
+<section id="sec-transkriptgesprochen" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-transkriptgesprochen"><span class="header-section-number">3.2</span> Transkription gesprochener Daten</h2>
+<p>Für die Transkription gesprochener Texte werden zunächst eigene Transkriptionsspuren für Schüler:in und Interviewer:in angelegt. <a href="#fig-transcription_spoken" class="quarto-xref">Abbildung&nbsp;<span>3.1</span></a> zeigt eine typische Ansicht einer EXMARaLDA-Datei während der Transkription.</p>
+<div id="fig-transcription_spoken" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htbp" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-transcription_spoken-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ABB/transcription_spoken.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-pos="!htbp">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-transcription_spoken-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3.1: Ansicht des Partitur-Editors bei der Transkription mündlicher Texte
+</figcaption>
+</figure>
+</div>
+<section id="äußerungsnahe-wiedergabe-des-gesagten" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="äußerungsnahe-wiedergabe-des-gesagten"><span class="header-section-number">3.2.1</span> Äußerungsnahe Wiedergabe des Gesagten</h3>
+<p>Äußerungen wurden inklusive subordinierter Äußerungen in einfacher orthographischer Transkription wiedergegeben <span class="citation" data-cites="Schellhardt.Schroeder2015MULTILITManualcriteria">Rehbein et al. (<a href="references.html#ref-Rehbein.etal2004Handbuchfurcomputergestutzte" role="doc-biblioref">2004</a>)</span>. Großbuchstaben wurden dabei nicht verwendet. Subordination wird mit <em>,</em> kenntlich gemacht. Die Transkriptionszeichen (<em>.</em> , <em>?</em> und <em>!</em>) wurden für die Unterscheidung von deklarativen, interrogativen oder exklamativen Äußerungen genutzt. Entscheidend für die Zuordnung war neben der Intonation der Sprecher:innen auch die Interpretation durch die Transkribend:in. Wurde die finale Tonhöhenbewegung am Ende der Äußerung gehalten, wurde <em>-</em> transkribiert. Eventgrenzen wurden nach den gehörten Äußerungseinheiten gesetzt. (Längere Pausen, Störgeräusche u.a. sowie Überlappungen können auch in eigenen Events abgesetzt sein.)</p>
+<p>Gesprochensprachliche Phänomene wurden möglichst originalgetreu wiedergegeben. Beispiele: <span class="beispiel">und er hat <em>ein</em> punkt für sein team (E02_B02)</span> <span class="beispiel"><em>ne</em> andere person (E02_A05)</span></p>
+<p>Systematische (und obligatorische) Reduktionen der gesprochenen Sprache wurden nach orthographischen Standards transkribiert. Auch leichte sprachliche Verschleifungen wurden aufgelöst (z.B. <em>und dann</em>, nicht <em>undann</em>, <em>ich</em>, nicht <em>isch</em>).</p>
+<p>Fremdsprachiges Material wurde möglichst originalgetreu wiedergegeben und pro Wort mit <em>[]</em> markiert. <span class="beispiel">Beispiel: mit <em>[tea] [and]</em> buch (E01_B07)</span></p>
+<p>Buchstabierte Abkürzungen wurden ohne Leerzeichen zwischen den Buchstaben ergänzt.</p>
+</section>
+<section id="unverständliches-und-unklares" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="unverständliches-und-unklares"><span class="header-section-number">3.2.2</span> Unverständliches und Unklares</h3>
+<p>Für unklare Äußerungen, die mit <em>#</em> annotiert werden, ist potentiell eine alternative Transkription auf [com] angegeben. Diese ist mit einem vorangestellten <em>?</em> markiert.</p>
+<p>Beispiel:</p>
+<div id="fig-unklare-transcription" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htbp" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-unklare-transcription-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ABB/alternative_Interpretation.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-pos="!htbp">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-unklare-transcription-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3.2: Unklare Transkription (E15_B07)
+</figcaption>
+</figure>
+</div>
+<p>Gänzlich unverständliche Passagen wurden mit <em>XXX</em> markiert. <span class="beispiel">Beispiel: die eine mann hat eis <em>XXX</em> mit hände (E02_B10)</span></p>
+</section>
+<section id="pausen" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="pausen"><span class="header-section-number">3.2.3</span> Pausen</h3>
+<p>Zur vereinfachten Darstellung von Pausen wurden Pausenzeichen und exakte Angaben der Pausenlänge verwendet.</p>
+<p>Ein kurzes Stocken im Redefluss kann mit einem Punktzeichen • transkribiert werden.</p>
+<p>Eine Pause mit einer geschätzten Länge von bis zu einer halben Sekunde wird mit zwei Punktzeichen •• , eine geschätzte Pause von bis zu einer dreiviertel Sekunde mit drei Punktzeichen ••• transkribiert.</p>
+<p>Längere Pausen wurden gemessen und numerisch in Doppelklammern angegeben. (z.B. <em>((2.5))</em> oder <em>((2.5s))</em></p>
+<p>Pausen innerhalb eines Wortes wurden auf [com] notiert.</p>
+<p><span class="beispiel">Beispiel: kon((••))trolleur (E10_B11)</span></p>
+</section>
+<section id="abbrüche-und-selbstkorrekturen" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="abbrüche-und-selbstkorrekturen"><span class="header-section-number">3.2.4</span> Abbrüche und Selbstkorrekturen</h3>
+<p>Abbrüche auf Wortebene wurden mit <em>/</em> unmittelbar am Wortende transkribiert.</p>
+<p><span class="beispiel">Beispiel: im fahrrad steckt <em>ei/</em> ein tüte (E15_B08)</span></p>
+<p>Satzabbrüche wurden mit <em>//</em> am Ende des abgebrochenen Satzes und nach einem Leerzeichen markiert.</p>
+<p><span class="beispiel">Beispiel: und dann // (E01_B09)</span></p>
+</section>
+<section id="überlappungen" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="überlappungen"><span class="header-section-number">3.2.5</span> Überlappungen</h3>
+<p>Für überlappende Äußerungen wurde auf der jeweiligen Spur der Sprecher:innen der Audioabschnitt identifiziert und in entsprechenden Events transkribiert. Anschließend wurden die Eventgrenzen so gesetzt, dass die Extension der Überlappung auch in der Transkription sichtbar wird, wobei einzelne Worte nicht auf verschiedene Events aufgeteilt wurden (vgl. Event 52 in <a href="#fig-transcription_spoken" class="quarto-xref">Abbildung&nbsp;<span>3.1</span></a>).</p>
+<p>Wenn eine Sprecher:in unterbrochen wird, wurde die Unterbrechung als Pause und Überlappung transkribiert.</p>
+</section>
+<section id="paralinguistische-phänomene" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="paralinguistische-phänomene"><span class="header-section-number">3.2.6</span> Paralinguistische Phänomene</h3>
+<p>Paralinguistische Phänomene wie Lachen, Flüstern etc. wurden auf [com] notiert und mit [&amp;] markiert (z.B. <em>&amp;lachen</em> oder <em>&amp;lachend</em>).</p>
+<section id="sec-hesitation" class="level4" data-number="3.2.6.1">
+<h4 data-number="3.2.6.1" class="anchored" data-anchor-id="sec-hesitation"><span class="header-section-number">3.2.6.1</span> Fragen, Rückversicherungen, Zögern</h4>
+<p>Fragen und Rückversicherungen wurden standardisiert mit <em>mh ?</em>, <em>ne ?</em> und <em>hee ?</em> wiedergegeben.</p>
+<p>Markierung von Zögern (<em>hesitation markers</em>) und hörbares Nachdenken (<em>turn holding</em>) wurden mit <em>em</em>, <em>mh</em>, <em>hm</em> und <em>ee</em> transkribiert.</p>
+</section>
+<section id="zustimmung-und-negation" class="level4" data-number="3.2.6.2">
+<h4 data-number="3.2.6.2" class="anchored" data-anchor-id="zustimmung-und-negation"><span class="header-section-number">3.2.6.2</span> Zustimmung und Negation</h4>
+<p>Zustimmung wurde mit <em>mhm</em>, <em>ehe</em>, <em>ah</em>, <em>aha</em>, <em>oke</em> oder <em>okei</em> wiedergegeben.</p>
+<p>Negation wurde als <em>hmhm</em>, <em>eheh</em>, <em>nee</em> transkribiert.</p>
+</section>
+</section>
+</section>
+<section id="sec-transkriptgeschrieben" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-transkriptgeschrieben"><span class="header-section-number">3.3</span> Transkription geschriebener Texte</h2>
+<p>Die Transkription der geschriebenen Texte erfolgte auf Grundlage der gescannten handschriftlichen Produktionen der Schüler:innen. Bei schriftlichen Texten wurde bereits während der Transkription eine Tokenisierung der Texte vorgenommen. <a href="#fig-transcription_written" class="quarto-xref">Abbildung&nbsp;<span>3.3</span></a> zeigt daher eine Transkriptionsspur für den originalen Text in seinem ursprünglichen Wortlaut [v], eine tokenisierte Spur [tok_part], in denen von den Lerner:innen vorgenommene Selbstkorrekturen umgesetzt sind (vgl. dazu <a href="#sec-vorbereitung-tok-written" class="quarto-xref"><span>Kapitel 3.3.4.2</span></a>) sowie eine Spur zur Wiedergabe des Textlayouts [lay] und eine Spur zur Darstellung von Korrekturen [excl]. Optional konnte die [com]-Spur zum Vermerken von Kommentaren eingesetzt werden.</p>
+<div id="fig-transcription_written" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htbp" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-transcription_written-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ABB/transcription_written.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-pos="!htbp">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-transcription_written-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3.3: Ansicht des Partitur-Editors bei der Transkription schriftlicher Texte (E01_B10)
+</figcaption>
+</figure>
+</div>
+<section id="textnahe-wiedergabe" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="textnahe-wiedergabe"><span class="header-section-number">3.3.1</span> Textnahe Wiedergabe</h3>
+<p>Analog zu den mündlichen Texte wurden auch die geschriebenen Texte der Schüler:innen möglichst originalgetreu wiedergegeben. Die Schreibweisen werden dokumentiert, d.h. Orthographie und Interpunktion wurden nicht verändert. Dabei wurde auch die jeweilige Groß- und Kleinschreibung berücksichtigt. Die Eventgrenzen orientieren sich an der Interpunktion der Schüler:innen.</p>
+</section>
+<section id="unleserliches" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="unleserliches"><span class="header-section-number">3.3.2</span> Unleserliches</h3>
+<p>Unleserliches wurde möglichst pro Buchstabe mit @ wiedergegeben: z.B. <em>ge@aufen</em>.</p>
+</section>
+<section id="korrekturen" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="korrekturen"><span class="header-section-number">3.3.3</span> Korrekturen</h3>
+<p>Korrekturen werden grundsätzlich auf der [v]/Transkriptionsspur erfasst. In den tokenisierten Spuren steht nur die finale Fassung des Textes vgl. dazu auch <a href="#sec-vorbereitung-tok-written" class="quarto-xref"><span>Kapitel 3.3.4.2</span></a>.</p>
+<p>Durchgestrichene Wörter wurden mit XX XX transkribiert (vgl. auch Event 32 in <a href="#fig-transcription_written" class="quarto-xref">Abbildung&nbsp;<span>3.3</span></a>).</p>
+<p><span class="beispiel">Beispiel: XXgelauXX</span></p>
+<p>Durchgestrichene Buchstaben wurden mit X X wiedergegeben (vgl. auch <a href="#fig-streichungen-einfuegungen" class="quarto-xref">Abbildung&nbsp;<span>3.4</span></a>).</p>
+<p><span class="beispiel">Beispiel: geXeXlaufen</span></p>
+<p>Nachträglich ergänzte Buchstaben wurden mit <em>&lt;&gt;</em> markiert (vgl. auch <a href="#fig-streichungen-einfuegungen" class="quarto-xref">Abbildung&nbsp;<span>3.4</span></a>).</p>
+<p><span class="beispiel">Beispiel: ge&lt;lau&gt;en</span></p>
+<p>Ein nachträglich eingefügtes Wort wurde mit <em>&lt;</em> markiert.</p>
+<p><span class="beispiel">Beispiel: ich <em>&lt;bin</em> gelaufen</span></p>
+<p>Bei mehreren nachträglich eingefügten Wörtern wurde vor jedem Wort die Einfügung mit <em>&lt; &lt;</em> kenntlich gemacht.</p>
+<p><span class="beispiel">Beispiel: ich &lt; &lt;bin &lt; &lt;dann gelaufen</span></p>
+<div id="fig-streichungen-einfuegungen" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htbp" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-streichungen-einfuegungen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ABB/Streichungen_Einfuegungen.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-pos="!htbp">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-streichungen-einfuegungen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3.4: Durchgestrichene Buchstaben und nachträglich eingefügte Buchstaben (E01_B10)
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="tokenisierung-im-transkriptionsprozess-und-zusätzliche-spuren" class="level3" data-number="3.3.4">
+<h3 data-number="3.3.4" class="anchored" data-anchor-id="tokenisierung-im-transkriptionsprozess-und-zusätzliche-spuren"><span class="header-section-number">3.3.4</span> Tokenisierung im Transkriptionsprozess und zusätzliche Spuren</h3>
+<p>Schriftliche Texte wurden bereits im Transkriptionsprozess tokenisiert. Die tokenisierte Spur wurde anhand der in <a href="#sec-vorbereitung-tok-written" class="quarto-xref"><span>Kapitel 3.3.4.2</span></a> dargestellten Vorgaben angepasst. Außerdem wurde eine zusätzliche Spur mit Hinweisen zum Layout ([lay]) und zu ausgeschlossenem Material ([excl]) ergänzt.</p>
+<section id="layout" class="level4" data-number="3.3.4.1">
+<h4 data-number="3.3.4.1" class="anchored" data-anchor-id="layout"><span class="header-section-number">3.3.4.1</span> Layout</h4>
+<p>Die [lay]-Spur umfasst eine Markierung des Zeilenendes, von Absätzen, Leerzeilen und Einrückungen.</p>
+<p>Das Zeilenende wurde mit <em>/</em> unter dem Event des letzten Worts dieser Zeile markiert. Bei Worttrennung wurde die Trennung (z.B. <em>gelau- / fen</em> und <em>/</em>) unter dem letzten Wortbestandteil dargestellt.</p>
+<p>Absätze und Leerzeilen wurden mit <em>//</em> im Event des letzten Worts im Absatz transkribiert.</p>
+<p>Leichte Einrückungen wurden mit <em>§</em>, starke Einrückungen mit <em>§§</em> im Event des eingerückten Worts bzw. des ersten eingerückten Worts wiedergegeben.</p>
+<p>Große Lücken zwischen Wörtern wurden mit <em>==</em> im Event des Wortes nach dieser Lücke transkribiert.</p>
+</section>
+<section id="sec-vorbereitung-tok-written" class="level4" data-number="3.3.4.2">
+<h4 data-number="3.3.4.2" class="anchored" data-anchor-id="sec-vorbereitung-tok-written"><span class="header-section-number">3.3.4.2</span> Korrekturen als Vorbereitung für das automatische Tagging</h4>
+<p>Anders als bei der Transkription mündlicher Daten erfolgte für die schriftlichen Texte eine manuelle Korrektur der [tok_part]-Spur. Dies ist notwendig, um bessere Ergebnisse bei der automatischen Annotation (vgl. <a href="lemmapos.html" class="quarto-xref"><span>Kapitel 5</span></a>) zu erzielen.</p>
+<p>Korrekturtranskriptionen wie das Einfügen von Buchstaben oder Wörtern werden auf [tok_part] bereinigt. Vollständig korrigierte Wörter, die erkennbar von der Schreiber:in aus der “finalen Fassung” des Textes gestrichen wurden und nicht Teil der “letzten finalen Fassung des Textes” sein sollten, werden auf einer separaten Spur [excl] mit dem Tag <em>repair</em> markiert. Das heißt, [tok_part] enthält den Lerner:innentext in der “letzten Fassung”.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Meyermann.Porzelt2014HinweisezurAnonymisierung" class="csl-entry" role="listitem">
+Meyermann, Alexia, &amp; Porzelt, Maike. (2014). <em>Hinweise zur <span>Anonymisierung</span> von qualitativen <span>Daten</span>. <span>Version</span> 1.0</em>. Leibniz-Institut für Bildungsforschung und Bildungsinformation.
+</div>
+<div id="ref-Rehbein.etal2004Handbuchfurcomputergestutzte" class="csl-entry" role="listitem">
+Rehbein, Jochen, Schmidt, Thomas, Meyer, Bernd, Watzke, Franziska, &amp; Herkenrath, Annette. (2004). <em>Handbuch für das computergestützte <span>Transkribieren</span> nach <span>HIAT</span></em>. Institut für Deutsche Sprache.
+</div>
+<div id="ref-Schellhardt.Schroeder2015MULTILITManualcriteria" class="csl-entry" role="listitem">
+Schellhardt, Christin, &amp; Schroeder, Christoph. (2015). <em><span>MULTILIT</span>: <span>Manual</span>, criteria of transcription and analysis for <span>German</span>, <span>Turkish</span> and <span>English</span></em>.
+</div>
+<div id="ref-Schmidt.Worner2014EXMARaLDA" class="csl-entry" role="listitem">
+Schmidt, Thomas, &amp; Wörner, Kai. (2014). <span>EXMARaLDA</span>. In <em>Handbook on <span>Corpus Phonology</span></em> (S. 402–419). Oxford University Press.
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><a href="https://exmaralda.org/de/partitur-editor-de/" class="uri">https://exmaralda.org/de/partitur-editor-de/</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./datenerhebung.html" class="pagination-link" aria-label="Korpusdesign und Datenerhebung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Korpusdesign und Datenerhebung</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./segmentierung.html" class="pagination-link" aria-label="Segmentierung der Äußerungseinheiten">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Segmentierung der Äußerungseinheiten</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

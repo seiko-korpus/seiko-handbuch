@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; Segmentierung der Äußerungseinheiten – SeiKo (Korpus Seiteneinsteiger:innen in Vorbereitungsklassen): Handbuch zu Korpusdesign und Datenaufbereitung</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./lemmapos.html" rel="next">
+<link href="./transkription.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-48c60cb7732cd05bfba6f296ac703904.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./segmentierung.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Segmentierung der Äußerungseinheiten</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./cover/handbuch_deckblatt.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">SeiKo-Handbuch</a> 
+        <div class="sidebar-tools-main">
+    <a href="mailto:seiko@uni-giessen.de" title="Kontakt" class="quarto-navigation-tool px-1" aria-label="Kontakt"><i class="bi bi-envelope"></i></a>
+    <a href="./seiko-handbuch.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vorwort</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Allgemeines</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datenerhebung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Korpusdesign und Datenerhebung</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./transkription.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Transkription</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./segmentierung.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Segmentierung der Äußerungseinheiten</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lemmapos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lemmatisierung und POS-Tagging</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ngr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Annotation Nominalgruppen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./verb.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Annotation Verben</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./evaluation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Qualitätssicherung und Evaluation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Literaturverzeichnis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nutzungsbedingungen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">SeiKo-Nutzungsbedingungen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Anhang/anhang.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Anhang</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#sec-spuren-seg" id="toc-sec-spuren-seg" class="nav-link active" data-scroll-target="#sec-spuren-seg"><span class="header-section-number">4.1</span> Spuren bei der Segmentierung</a></li>
+  <li><a href="#sec-seggrundlage" id="toc-sec-seggrundlage" class="nav-link" data-scroll-target="#sec-seggrundlage"><span class="header-section-number">4.2</span> Grundlage der Segmentierung</a></li>
+  <li><a href="#sec-unit" id="toc-sec-unit" class="nav-link" data-scroll-target="#sec-unit"><span class="header-section-number">4.3</span> Definition einer Äußerungseinheit (=unit)</a></li>
+  <li><a href="#sec-unvollstaendig" id="toc-sec-unvollstaendig" class="nav-link" data-scroll-target="#sec-unvollstaendig"><span class="header-section-number">4.4</span> Unvollständige Äußerungseinheiten</a></li>
+  <li><a href="#sec-matrix" id="toc-sec-matrix" class="nav-link" data-scroll-target="#sec-matrix"><span class="header-section-number">4.5</span> Matrixsätze</a></li>
+  <li><a href="#vor--und-nachlaufelemente" id="toc-vor--und-nachlaufelemente" class="nav-link" data-scroll-target="#vor--und-nachlaufelemente"><span class="header-section-number">4.6</span> Vor- und Nachlaufelemente</a></li>
+  <li><a href="#sec-tags_unit" id="toc-sec-tags_unit" class="nav-link" data-scroll-target="#sec-tags_unit"><span class="header-section-number">4.7</span> Tagübersicht für [unit]</a>
+  <ul class="collapse">
+  <li><a href="#sec-tags_unitverb" id="toc-sec-tags_unitverb" class="nav-link" data-scroll-target="#sec-tags_unitverb"><span class="header-section-number">4.7.1</span> verbhaltige units</a></li>
+  <li><a href="#sec-tags_subclausal" id="toc-sec-tags_subclausal" class="nav-link" data-scroll-target="#sec-tags_subclausal"><span class="header-section-number">4.7.2</span> nicht verbhaltige (<em>sub-clausal</em>) units</a></li>
+  </ul></li>
+  <li><a href="#sec-subclause" id="toc-sec-subclause" class="nav-link" data-scroll-target="#sec-subclause"><span class="header-section-number">4.8</span> Abhängige clauses / Nebensätze</a></li>
+  <li><a href="#sec-tags_subclause" id="toc-sec-tags_subclause" class="nav-link" data-scroll-target="#sec-tags_subclause"><span class="header-section-number">4.9</span> Tagübersicht für [subclause]</a></li>
+  <li><a href="#mehrfache-einbettung-einschübe" id="toc-mehrfache-einbettung-einschübe" class="nav-link" data-scroll-target="#mehrfache-einbettung-einschübe"><span class="header-section-number">4.10</span> Mehrfache Einbettung / Einschübe</a></li>
+  <li><a href="#sec-excludings" id="toc-sec-excludings" class="nav-link" data-scroll-target="#sec-excludings"><span class="header-section-number">4.11</span> Ausgeschlossenes Material</a>
+  <ul class="collapse">
+  <li><a href="#sec-abbrueche" id="toc-sec-abbrueche" class="nav-link" data-scroll-target="#sec-abbrueche"><span class="header-section-number">4.11.1</span> Abbrüche (<em>false starts</em>)</a></li>
+  <li><a href="#sec-wiederholungen" id="toc-sec-wiederholungen" class="nav-link" data-scroll-target="#sec-wiederholungen"><span class="header-section-number">4.11.2</span> Wiederholungen</a></li>
+  <li><a href="#sec-korrekturen" id="toc-sec-korrekturen" class="nav-link" data-scroll-target="#sec-korrekturen"><span class="header-section-number">4.11.3</span> Selbst-Reparaturen / Korrekturen</a></li>
+  <li><a href="#sec-reading" id="toc-sec-reading" class="nav-link" data-scroll-target="#sec-reading"><span class="header-section-number">4.11.4</span> Vorgelesene Passagen</a></li>
+  <li><a href="#sec-hesitationexcl" id="toc-sec-hesitationexcl" class="nav-link" data-scroll-target="#sec-hesitationexcl"><span class="header-section-number">4.11.5</span> Hesitationsmarker</a></li>
+  <li><a href="#sec-scaffolding" id="toc-sec-scaffolding" class="nav-link" data-scroll-target="#sec-scaffolding"><span class="header-section-number">4.11.6</span> Unterbrechungen / Scaffolding</a></li>
+  <li><a href="#sec-tags_excl" id="toc-sec-tags_excl" class="nav-link" data-scroll-target="#sec-tags_excl"><span class="header-section-number">4.11.7</span> Tagübersicht für [excl]</a></li>
+  </ul></li>
+  <li><a href="#ziel-der-segmentierung-und-der-selektion-ausgeschlossenen-materials" id="toc-ziel-der-segmentierung-und-der-selektion-ausgeschlossenen-materials" class="nav-link" data-scroll-target="#ziel-der-segmentierung-und-der-selektion-ausgeschlossenen-materials"><span class="header-section-number">4.12</span> Ziel der Segmentierung und der Selektion ausgeschlossenen Materials</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-segmentierung" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Segmentierung der Äußerungseinheiten</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-spuren-seg" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-spuren-seg"><span class="header-section-number">4.1</span> Spuren bei der Segmentierung</h2>
+<p>Für die Segmentierung wurden folgende zusätzliche Spuren eingerichtet:</p>
+<table class="caption-top table">
+<caption>Spuren bei der Segmentierung</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>[unit]</td>
+<td>segmentierte Äußerungseinheiten</td>
+</tr>
+<tr class="even">
+<td>[subclause]</td>
+<td>abhängige Nebensätze</td>
+</tr>
+<tr class="odd">
+<td>[excl]</td>
+<td>ausgeschlossenes Material (z.B. Korrekturen, Wiederholungen)</td>
+</tr>
+</tbody>
+</table>
+<p>Bei Bedarf können zusätzlich folgende Spuren (ebenfalls als Annotationsspuren) erzeugt werden:</p>
+<table class="caption-top table">
+<caption>Optionale Spuren bei der Segmentierung</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>[unit2-x]</td>
+<td>Einschübe in Form von Äußerungseinheiten, analog zu [unit]</td>
+</tr>
+<tr class="even">
+<td>[subclause2-x]</td>
+<td>abhängige Nebensätze</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sec-seggrundlage" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-seggrundlage"><span class="header-section-number">4.2</span> Grundlage der Segmentierung</h2>
+<p>Um die Transkripte in Äußerungseinheiten zu segmentieren, die die Arbeit des automatisierten POS-Taggings und der Lemmatisierung erleichtern, wurde sich an der <em>Analysis of Speech Unit</em> von <span class="citation" data-cites="Foster.etal2000Measuringspokenlanguage">Foster et al. (<a href="references.html#ref-Foster.etal2000Measuringspokenlanguage" role="doc-biblioref">2000</a>)</span> orientiert und die Operationalisierung der Segmentierungseinheiten fürs Deutsche spezifiziert und exemplifiziert. Das folgende Kapitel dokumentiert das Vorgehen und markiert allgemeine Modifikationen aus dem Vorgehen von <span class="citation" data-cites="Foster.etal2000Measuringspokenlanguage">Foster et al. (<a href="references.html#ref-Foster.etal2000Measuringspokenlanguage" role="doc-biblioref">2000</a>)</span>. Die Segmentierung beruhte v.a. auf syntaktischen Kriterien, wobei zur Disambiguierung teilweise auch semantische und/oder intonatorische Kriterien herangezogen wurden.</p>
+<p>Jedes Token (außer Pausen) der [tok_part]-Spur ist von einer Annotation auf [unit] oder [excl] überspannt. Wo möglich, wurden Spannannotationen der Annotation einzelner Tokens vorgezogen. (So wurde etwa bei zwei Tokens, die als <em>false start</em> gewertet wurden, eine Spanne mit entsprechendem Tag über beide Tokenevents auf [excl] gezogen.) Grundsätzlich wurden Spannen auf [unit] so eng wie möglich angelegt, um einem möglichst minimalen Anspruch an Äußerungseinheiten gerecht zu werden.</p>
+</section>
+<section id="sec-unit" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-unit"><span class="header-section-number">4.3</span> Definition einer Äußerungseinheit (=unit)</h2>
+<p><span class="citation" data-cites="Foster.etal2000Measuringspokenlanguage">Foster et al. (<a href="references.html#ref-Foster.etal2000Measuringspokenlanguage" role="doc-biblioref">2000</a>)</span> orientieren sich bei der Definition ihrer AS-Unit an der t-unit. Eine Äußerungseinheit oder AS-unit (unit) ist eine Äußerung einer Sprecher:in, die aus einer eigenständigen/unabhängigen clause (“independent clause”) oder einer “sub-clausal unit” zusammen mit allen abhängigen clauses/Nebensätzen besteht.</p>
+<p>Eine eigenständige/unabhängige clause besteht aus mindestens einem Verb, das, anders als bei <span class="citation" data-cites="Foster.etal2000Measuringspokenlanguage">Foster et al. (<a href="references.html#ref-Foster.etal2000Measuringspokenlanguage" role="doc-biblioref">2000</a>)</span>, finit oder infinit sein kann, und maximal einem Verbalkomplex auf unit-Ebene. Weitere Verbalkomplexe können in abhängigen Nebensätzen auftreten.</p>
+<p>Eine eigenständige Äußerungseinheit bilden Matrixsätze (vgl. <a href="#sec-matrix" class="quarto-xref"><span>Kapitel 4.5</span></a>) auch dann mit den von ihnen abhängigen clauses, wenn diese keine Nebensatzwortstellung aufweisen (vgl. <a href="#sec-subclause" class="quarto-xref"><span>Kapitel 4.8</span></a>).</p>
+<p><span class="beispiel">Beispiel: sie hat gesagt ich hab keine fahrkarte (E10_B10)</span></p>
+<p>Äußerungseinheiten wurden auf der Spur [unit] als Spannen annotiert. Dabei wurde differenziert zwischen eigenständigen verbhaltigen clauses und nicht verbhaltigen sub-clausal units. Die Tags ergänzen die Funktion der Äußerungseinheit oder den Typ der sub-clausal unit (vgl. <a href="#sec-tags_unit" class="quarto-xref"><span>Kapitel 4.7</span></a>).</p>
+</section>
+<section id="sec-unvollstaendig" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-unvollstaendig"><span class="header-section-number">4.4</span> Unvollständige Äußerungseinheiten</h2>
+<p>Unvollständige units (und auch Nebensätze) können mit folgenden Tags differenziert werden (vgl. <a href="#sec-tags_unit" class="quarto-xref"><span>Kapitel 4.7</span></a>):</p>
+<p>Wenn eine unit nach Produktion eines Verbs ersichtlicherweise abgebrochen wurde, wird sie mit dem zusätzlichen Tag BREAK getagged.</p>
+<p><span class="beispiel">Beispiel: die buch ist (E02_B02)</span></p>
+<p>Handelt es sich um eine unvollständige, aber verbhaltige und nicht abgebrochene Äußerung, die durch den diskursiven Kontext sinnvoll erweiterbar ist, wird mit dem zusätzlichen Tag DISC gearbeitet.</p>
+<p><span class="beispiel">Beispiel: was macht die mutter da? – <em>schimpfen</em> (E01_A05)</span></p>
+<p><span class="beispiel">Beispiel: diesen schockmoment, das kann man richtig fühlen, wenn man in die tasche guckt und – <em>die hausaufgaben nicht hat</em> (E11_B02)</span></p>
+</section>
+<section id="sec-matrix" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-matrix"><span class="header-section-number">4.5</span> Matrixsätze</h2>
+<p>Als Matrixsätze werden alle Sätze bezeichnet, von denen eine subclause abhängig ist. Matrixsätze wurden entsprechend der auf [unit] eingerichteten Tags annotiert; die Eigenschaft eines Satzes als Matrixsatz wird durch die Integration einer subclause und die entsprechende Spurstruktur erfasst, die Tags selbst differenzieren zwischen unterschiedlichen Äußerungstypen und sind nicht explizit als Matrixsätze erfasst.</p>
+<p>Nicht realisierte Matrixsätze, von denen eine subclause abhängig ist, wurden mit Ø auf [unit] dargestellt. Die Extension entspricht der Spanne auf [subclause].</p>
+<div id="fig-nicht-realisierter-matrixsatz" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htbp" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nicht-realisierter-matrixsatz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ABB/abb_nicht_realisierter_matrixsatz.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-pos="!htbp">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nicht-realisierter-matrixsatz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4.1: Nicht realisierter Matrixsatz (E16_A04)
+</figcaption>
+</figure>
+</div>
+<p>Hauptsatzförmige Sätze, die von einem Matrixsatz abhängig sind, wurden als abhängige Sätze auf [subclause] erfasst (vgl. <a href="#sec-subclause" class="quarto-xref"><span>Kapitel 4.8</span></a> für das spezifische Vorgehen).</p>
+</section>
+<section id="vor--und-nachlaufelemente" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="vor--und-nachlaufelemente"><span class="header-section-number">4.6</span> Vor- und Nachlaufelemente</h2>
+<p>Topikalisierte NPs und adverbiale Prä-Vorfelder wurden als Teil der unit erfasst.</p>
+<p><span class="beispiel">Beispiel: <em>dann</em> er hat lachen (E06_B11)</span></p>
+<p>Nachlaufelemente wurden entweder als Teil der vorangegangenen unit erfasst oder bildeten eine eigene unit:</p>
+<p>Sie wurden, sofern sie aus syntaktischer, intonatorischer und pragmatischer Perspektive als Nachfeldbesetzung gesehen werden können, als Teil der unit “eingespannt”.</p>
+<p><span class="beispiel">Beispiel: ich hab nicht geschwommen <em>leider</em> (E02_B02)</span></p>
+<p>Auch tag questions wie <em>oder</em> wurden als Teil der vorigen unit gefasst, deren Annotation sich aus der Struktur der Äußerung ergibt; die Äußerung einer tag question führte nicht dazu, dass die gesamte Äußerung als Frage (WINT/INT) erfasst wird.</p>
+<p>Eine lange Pause und/oder anaphorische Marker (z.B. <em>also</em>) führten hingegen dazu, die beiden Äußerungen als getrennt zu betrachten und das Nachlaufelement einzeln zu taggen. Das Nachlaufelement konnte hierbei oft als DISC erfasst werden (vgl. <a href="#sec-tags_subclausal" class="quarto-xref"><span>Kapitel 4.7.2</span></a>).</p>
+<p><span class="beispiel">Beispiel: die anderen sprechen mit den. <em>also mit diese mädchen</em> (E16_B10)</span></p>
+</section>
+<section id="sec-tags_unit" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="sec-tags_unit"><span class="header-section-number">4.7</span> Tagübersicht für [unit]</h2>
+<section id="sec-tags_unitverb" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="sec-tags_unitverb"><span class="header-section-number">4.7.1</span> verbhaltige units</h3>
+<p>In <a href="#tbl-unit-verb" class="quarto-xref">Tabelle&nbsp;<span>4.1</span></a> werden alle Tags für verbhaltige Units dargestellt.</p>
+<div class="cell">
+<div id="tbl-unit-verb" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-unit-verb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;4.1: Übersicht der annotierten verbhaltigen units
+</figcaption>
+<div aria-describedby="tbl-unit-verb-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-hover table-condensed do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tag</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Beschreibung</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">DEC</td>
+<td style="text-align: left;">Äußerungseinheit in Form eines Deklarativs</td>
+<td style="text-align: left;">und dann hat der kleiner bruder n ball so geworfen (E19_A05)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">INT</td>
+<td style="text-align: left;">Äußerungseinheit in Form eines Interrogativs</td>
+<td style="text-align: left;">hast du fahrkarte oder (E04_B10)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">WINT</td>
+<td style="text-align: left;">Äußerungseinheit in Form eines W-Interrogativs</td>
+<td style="text-align: left;">was passiert (E05_B08)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IMP</td>
+<td style="text-align: left;">Äußerungseinheit in Form eines Imperativs</td>
+<td style="text-align: left;">Und dass wegen lass die leute in ruhe (E18_A04)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BREAK</td>
+<td style="text-align: left;">(+) als ergänzendes Tag für abgebrochene, verbhaltige Äußerungen</td>
+<td style="text-align: left;">aber ich hab ge/ (DECBREAK, E14_B07)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DISC</td>
+<td style="text-align: left;">(+) als ergänzendes Tag für unvollständige verbhaltige Units, die durch diskursive Rekonstruktion sinnvoll erweitert werden können</td>
+<td style="text-align: left;">diesen schockmoment, das kann man richtig fühlen, wenn man in die tasche guckt und – die hausaufgaben nicht hat (E11_B02)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="sec-tags_subclausal" class="level3" data-number="4.7.2">
+<h3 data-number="4.7.2" class="anchored" data-anchor-id="sec-tags_subclausal"><span class="header-section-number">4.7.2</span> nicht verbhaltige (<em>sub-clausal</em>) units</h3>
+<p>Nicht verbhaltige units (<em>sub-clausal units</em>) werden in <a href="#tbl-unit-subclausal" class="quarto-xref">Tabelle&nbsp;<span>4.2</span></a> dargestellt:</p>
+<div class="cell">
+<div id="tbl-unit-subclausal" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-unit-subclausal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;4.2: Übersicht der annotierten verblosen units
+</figcaption>
+<div aria-describedby="tbl-unit-subclausal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-hover table-condensed do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tag</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Beschreibung</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">DISC</td>
+<td style="text-align: left;">eine oder mehrere Phrasen, die aus dem diskursiven/situationen Kontext zu einer vollen clause rekonstruierbar sind. Dieses Tag ist operationalisiert als eine alleinstehende clause, die aus dem diskursiven/situativen Kontext verständlich ist; z.B. als Antwort auf eine Frage.</td>
+<td style="text-align: left;">was könnte das sein? – papier, oder? (E06_A05)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IRNON</td>
+<td style="text-align: left;">reguläre, zielsprachenkonforme Äußerungen. Dazu zählen auch *ja, nein, oke* etc.). Mit IRNON markierte Strukturen sind dabei grundsätzlich nicht satzförmig rekonstruierbar.</td>
+<td style="text-align: left;">ja, nein, oke</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SCU</td>
+<td style="text-align: left;">bruchstückhafte, nicht verbhaltige Äußerungen, bei denen es sich auch nicht um DISC, IRNON, *false starts* oder Abbrüche handelt. Dieses Tag erfasst klassische lerner:innensprachliche Äußerungen mit pragmatischem Gehalt. Diese Kategorie wird bei Foster et al. 2000 so nicht erfasst.</td>
+<td style="text-align: left;">von feuer (E05_B08)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ø</td>
+<td style="text-align: left;">nicht realisierte Äußerungseinheit (Matrixsatz), von der eine subclause abhängt</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>DISC kann also bei verbhaltigen units angehängt werden (vgl. <a href="#sec-unit" class="quarto-xref"><span>Kapitel 4.3</span></a>), markiert alleinstehend aber nicht verbhaltige und aus dem Kontext rekonstruierbare Äußerungen. IRNON können “minor utterances”, “irregular sentences”, “nonsentences” nach <span class="citation" data-cites="Quirk.etal1985ComprehensivegrammarEnglish">Quirk et al. (<a href="references.html#ref-Quirk.etal1985ComprehensivegrammarEnglish" role="doc-biblioref">1985</a>)</span> sein. Das Sammeltag SCU wird in Abgrenzung zu den anderen verblosen Annotationen und Abbrüchen (vgl. <a href="#sec-abbrueche" class="quarto-xref"><span>Kapitel 4.11.1</span></a>) vergeben und bei <span class="citation" data-cites="Foster.etal2000Measuringspokenlanguage">Foster et al. (<a href="references.html#ref-Foster.etal2000Measuringspokenlanguage" role="doc-biblioref">2000</a>)</span> so nicht verwendet. Für nicht realisierte Matrixsätze vgl auch <a href="#sec-matrix" class="quarto-xref"><span>Kapitel 4.5</span></a>.</p>
+</section>
+</section>
+<section id="sec-subclause" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="sec-subclause"><span class="header-section-number">4.8</span> Abhängige clauses / Nebensätze</h2>
+<p>Abhängige Sätze bestehen aus mindestens einem finiten oder infiniten Verb und einem weiteren Element (Subjekt, Objekt, Komplement oder Adverbial) (vgl. <span class="citation" data-cites="Foster.etal2000Measuringspokenlanguage">Foster et al. (<a href="references.html#ref-Foster.etal2000Measuringspokenlanguage" role="doc-biblioref">2000</a>)</span>). Anders als bei Foster et al.&nbsp;(2000) zählen hier auch Subjunktionen und <em>zu</em>-Infinitive als weitere Elemente.</p>
+<p>Nebensätze wurden auf der Spur [subclause] nach Typ in Form von Spannen unterhalb der [unit]-Spur annotiert. Die Differenzierung nach Typen ist nicht <span class="citation" data-cites="Foster.etal2000Measuringspokenlanguage">Foster et al. (<a href="references.html#ref-Foster.etal2000Measuringspokenlanguage" role="doc-biblioref">2000</a>)</span> entnommen.</p>
+<p>Auch Nebensätze mit abweichender Verbstellung wurden nach Funktion in Form von Spannen unterhalb der [unit]-Spur annotiert; Verbletztstellung ist also kein ausschlaggebendes Kriterium dafür, auf [subclause] getagged zu werden. Relevant war ihre Abhängigkeit von einem Matrixsatz.</p>
+<p>Nebensätze, die von Matrixsätzen auf [unit2] abhängig sind, werden unabhängig davon auf [subclause] (bzw. [subclause2], wenn [subclause] schon “belegt” ist) annotiert.</p>
+<p><span class="beispiel">Beispiel: dann mama hat hm ich hab vergessen <em>wie heißt das auf deutsch</em> tea zum diese junge geben (E01_C02)</span></p>
+<p>Auch hauptsatzförmige Sätze, die von einem Matrixsatz abhängig sind, wurden auf [subclause] erfasst. Diese wurden mit dem Tag MCSUB markiert und einem Zusatztag, das, analog zu den Tags auf DEC, die Funktion der Äußerung annotiert.</p>
+<p><span class="beispiel">Beispiel MCSUBDEC: ich glaube <em>ich habe namen falsch gesagt</em> (E12_B07)</span></p>
+<p><span class="beispiel">Beispiel MCSUBWINT: und hier die fragt, <em>wie viel kostet ee so etwas</em> (E02_B09)</span></p>
+<p>Die Entscheidung, ob der potenzielle MCSUB eingebettet ist oder nicht, ergab sich daraus, ob der potenzielle Matrixsatz alleinstehen kann. Wenn er nicht alleinstehen kann, liegt auf [subclause] ein MCSUB vor:</p>
+<p><span class="beispiel">Beispiel: ich glaube <em>ich habe namen falsch gesagt</em> (E12_B07)</span></p>
+<p>Hier liegt auf [subclause]-Ebene ein MCSUBDEC vor.</p>
+<p>Können dagegen beide Sätze alleinstehen, wird DEC DEC erfasst.</p>
+<p><span class="beispiel">Beispiel: <em>ich denke gerade. unterbrich mich nicht.</em> (konstruiertes Beispiel)</span></p>
+<p>So wurde zum Beispiel auch wörtliche Rede als MCSUB und die sie einleitende Äußerung auf [unit] als Matrixsatz getagged.</p>
+<p><span class="beispiel">Beispiel: der hat halt gesagt <em>was machst du</em> (E12_B07)</span></p>
+<p>Zusätzlich differenzieren wir, analog zu den Tags auf [unit]:</p>
+<ol type="1">
+<li><p>verbhaltige, aber abgebrochene Nebensätze mit dem Tag-Zusatz BREAK (Intonation beachten!)</p>
+<p><span class="beispiel">Beispiel: weil die haben ee in bücher ge/ (E05_B09)</span></p></li>
+<li><p>DISC: auf [subclause] nur bei verbhaltigen Äußerungen, die aus dem diskursiven Kontext heraus sinnvoll erweitert werden könnten.</p>
+<p><span class="beispiel">Beispiel: entschuldigung, dass ich diesen buk zerstört habe <em>oder ja zerstört</em> (E07_B02)</span></p></li>
+<li><p><em>subclausal units</em> auf [subclause], also nicht verbhaltige, aber eingeleitete und nach Funktion differenzierbare Nebensätze mit dem Tag-Zusatz SCU. Dieses Vorgehen weicht von Foster et al.&nbsp;(2000: 368) ab, die nicht verbhaltige subordinierte Einheiten exkludieren.</p>
+<p><span class="beispiel">Beispiel: weil ich kein ticket (E04_B07)</span></p></li>
+</ol>
+</section>
+<section id="sec-tags_subclause" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="sec-tags_subclause"><span class="header-section-number">4.9</span> Tagübersicht für [subclause]</h2>
+<p><a href="#tbl-subclause" class="quarto-xref">Tabelle&nbsp;<span>4.3</span></a> verzeichnet mögliche Tags der Annotationsebene [subclause]. Diese können sowohl Einbettungen in Form von Nebensätzen (Tags mit SC…) als auch in Form von Hauptsätzen umfassen (Tags mit MCSUB…).</p>
+<div class="cell">
+<div id="tbl-subclause" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-subclause-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;4.3: Übersicht der annotierten Nebensätze
+</figcaption>
+<div aria-describedby="tbl-subclause-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-hover table-condensed do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tag</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Beschreibung</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">SCREL</td>
+<td style="text-align: left;">Relativsatz</td>
+<td style="text-align: left;">sachen das sie verkaufen (E08_B09)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SCADV</td>
+<td style="text-align: left;">eingebetteter Adverbialsatz</td>
+<td style="text-align: left;">er wart bis das ball zu ihn kommt (E04_B09)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SCINDER</td>
+<td style="text-align: left;">indirekter Fragesatz-</td>
+<td style="text-align: left;">ein schülerin gucken was passiert (E06_B07)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SCCOMP</td>
+<td style="text-align: left;">Komplementsatz</td>
+<td style="text-align: left;">er guckt dass sie frau guckt oder nicht (E08_B10)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SCINFUM</td>
+<td style="text-align: left;">eingebetteter Infinitivsatz</td>
+<td style="text-align: left;">und der mann benutzt den perfekten moment um abzuhauen (E20_A04)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SCINF</td>
+<td style="text-align: left;">nicht eingebetteter Infinitvsatz</td>
+<td style="text-align: left;">sie sehen ein junge gucken für sie (E02_C05)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SCNON</td>
+<td style="text-align: left;">nicht eingeleitete Nebensatz</td>
+<td style="text-align: left;">und die beide will kuchen geht ofen (E05_D02)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BREAK</td>
+<td style="text-align: left;">als ergänzendes Tag für abgebrochene, verbhaltige Äußerungen</td>
+<td style="text-align: left;">Beispiele ab hier s. Tagübersicht für [unit]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DISC</td>
+<td style="text-align: left;">als ergänzenders Tag für verbhaltige subclauses, die durch diskursive Rekonstruktion sinnvoll erweitert werden können</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SCU</td>
+<td style="text-align: left;">als ergänzendes Tag für SCUs auf subclause-Ebene</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MCSUBDEC</td>
+<td style="text-align: left;">Äußerungseinheit in Form eines Deklarativs</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MCSUBINT</td>
+<td style="text-align: left;">Äußerungseinheit in Form eines Interrogativs</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MCSUBWINT</td>
+<td style="text-align: left;">Äußerungseinheit in Form eines W-Interrogativs</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MCSUBIMP</td>
+<td style="text-align: left;">Äußerungseinheit in Form eines Imperativs</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BREAK</td>
+<td style="text-align: left;">als ergänzendes Tag für abgebrochene, verbhaltige Äußerungen</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DISC</td>
+<td style="text-align: left;">als ergänzendes Tag für unvollständige verbhaltige Units, die durch diskursive Rekonstruktion sinnvoll erweitert werden können</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MCSUBDISC</td>
+<td style="text-align: left;">eine oder mehrere Phrasen, die aus dem diskursiven/situativen Kontext zu einer vollen clause rekonstruierbar sind.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MCSUBIRNON</td>
+<td style="text-align: left;">irregular and non-sentences</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MCSUBSCU</td>
+<td style="text-align: left;">Sammeltag: Andere sub-clausal units, die nicht über false starts, DISC oder IRNON erfassbar sind.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MCSUBØ</td>
+<td style="text-align: left;">nicht realisierte Äußerungseinheit, von der eine subclause abhängt</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="mehrfache-einbettung-einschübe" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="mehrfache-einbettung-einschübe"><span class="header-section-number">4.10</span> Mehrfache Einbettung / Einschübe</h2>
+<p>Hauptsatzförmige Einschübe wurden auf [unit2] (im Folgenden Beispiel als DEC) annotiert:</p>
+<p><span class="beispiel">Beispiel: das war <em>ich glaube</em> leichter als die andere drei (E07_B02)</span></p>
+<p>Die Differenzierung zu MCSUB ergibt sich daraus, dass auf unit2 getaggte Äußerungen einen Einschub innerhalb eines Hauptsatzes darstellen, während Matrixsätze mit MCSUB Hauptsätze mit von ihnen abhängigen Äußerungen darstellen.</p>
+<p>Mehrfach eingebettete Nebensätze wurden mit zusätzlichen Spuren [subclause2], [subclause3] annotiert. Wenn sich eine subclause auf [unit2] bezieht, wird diese unabhängig davon trotzdem auf [subclause] (oder [subclause2], wenn [subclause] schon “belegt” ist) annotiert.</p>
+</section>
+<section id="sec-excludings" class="level2" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="sec-excludings"><span class="header-section-number">4.11</span> Ausgeschlossenes Material</h2>
+<p>Abbrüche, Wiederholungen und Selbstreparaturen wurden von den weiteren Annotationsschritten ausgeschlossen. Sie wurden daher auf einer separaten Spur [excl] annotiert und klassifiziert. Ausnahmen bildeten verbhaltige Abbrüche, die auf [unit] und [subclause] entsprechend getagged und zusätzlich mit BREAK markiert wurden (vgl. <a href="#sec-unvollstaendig" class="quarto-xref"><span>Kapitel 4.4</span></a>).</p>
+<section id="sec-abbrueche" class="level3" data-number="4.11.1">
+<h3 data-number="4.11.1" class="anchored" data-anchor-id="sec-abbrueche"><span class="header-section-number">4.11.1</span> Abbrüche (<em>false starts</em>)</h3>
+<p>Abgebrochene, verblose Äußerungen (egal, ob es durch die Sprecher:in selbst oder eine Unterbrechung geschieht) wurden nicht als Äußerungseinheiten, sondern mit dem Tag falst als Abbrüche markiert.</p>
+<p><span class="beispiel">Beispiel: und dann (E06_A05)</span></p>
+<p>Verbhaltige Abbrüche wurden, anders als bei <span class="citation" data-cites="Foster.etal2000Measuringspokenlanguage">Foster et al. (<a href="references.html#ref-Foster.etal2000Measuringspokenlanguage" role="doc-biblioref">2000</a>)</span> nicht exkludiert, sondern gemäß ihrer Funktion (also bspw. mit DEC) getagged und zusätzlich mit BREAK markiert (vgl. <a href="#sec-unvollstaendig" class="quarto-xref"><span>Kapitel 4.4</span></a>).</p>
+</section>
+<section id="sec-wiederholungen" class="level3" data-number="4.11.2">
+<h3 data-number="4.11.2" class="anchored" data-anchor-id="sec-wiederholungen"><span class="header-section-number">4.11.2</span> Wiederholungen</h3>
+<p>Bei Wiederholungen wurde zwischen unterbrochenem Redefluss, Stottern sowie Halten des Rederechts auf der einen Seite und rhetorisch motivierten Wiederholungen auf der anderen Seite unterschieden; erstere wurden mit doub als Wiederholungen markiert.</p>
+<p><span class="beispiel">Beispiel: <em>die</em> die kinder spielen (E01_A05)</span></p>
+<p>Dabei wurde nur das jeweils letzte Wort bzw. die jeweils letzte Phrase nicht markiert. Rhetorisch motivierte Wiederholungen (<span class="beispiel">Beispiel: <em>Das ist sehr sehr lecker</em></span>) werden als Teil der Äußerungseinheit angesehen und nicht auf [excl] markiert.</p>
+</section>
+<section id="sec-korrekturen" class="level3" data-number="4.11.3">
+<h3 data-number="4.11.3" class="anchored" data-anchor-id="sec-korrekturen"><span class="header-section-number">4.11.3</span> Selbst-Reparaturen / Korrekturen</h3>
+<p>Wird ein Teil einer Äußerung unmittelbar durch eine Reformulierung repariert / korrigiert, wurde der zu reparierende Teil nicht als Teil der Äußerungseinheit segmentiert, sondern mit repair auf [excl] getagged.</p>
+<p><span class="beispiel">Beispiel: deine bruder <em>lernen</em> ee ein buch lesen (E01_B07)</span></p>
+<p>Äußerungen, für die lediglich ein Korrekturbedarf angezeigt wird, wie z.B. <span class="beispiel"><em>Das ist ein Hund – Nein!</em></span> oder auch <span class="beispiel"><em>Das ist ein Hund – Nein! Kein Hund!</em></span> (konstruiertes Beispiel) wurden nicht ausgeschlossen.</p>
+</section>
+<section id="sec-reading" class="level3" data-number="4.11.4">
+<h3 data-number="4.11.4" class="anchored" data-anchor-id="sec-reading"><span class="header-section-number">4.11.4</span> Vorgelesene Passagen</h3>
+<p>Wird sprachliches Material von der Proband:in vorgelesen, aus dem Gedächtnis “zitiert”, wie bei der Wiedergabe von Aufgabenstellungen, oder direkt von der Interviewer:in übernommen, wird dies mit dem Tag read ebenfalls exkludiert.</p>
+<p><span class="beispiel">Beispiel: thema ist <em>wie hast du mutti kennengelernt</em> (E02_B02)</span></p>
+<p><span class="beispiel">Beispiel: das ist ein korb, sagt man – <em>ein korb</em>? (E03_A04)</span></p>
+</section>
+<section id="sec-hesitationexcl" class="level3" data-number="4.11.5">
+<h3 data-number="4.11.5" class="anchored" data-anchor-id="sec-hesitationexcl"><span class="header-section-number">4.11.5</span> Hesitationsmarker</h3>
+<p>Isolierte, also außerhalb von units auftretende Hesitationsmarker (<em>em, mh, ee</em>) wurden mit dem Tag <em>hes</em> ebenfalls auf [excl] getagged und damit ausgeschlossen.</p>
+<p>Äußerungsinterne Hesitationsmarker, Interjektionen, fremdsprachliches Material etc. wurde im folgenden Annotationsschritt auf der [pos]-Spur markiert bzw. korrigiert und differenziert.</p>
+</section>
+<section id="sec-scaffolding" class="level3" data-number="4.11.6">
+<h3 data-number="4.11.6" class="anchored" data-anchor-id="sec-scaffolding"><span class="header-section-number">4.11.6</span> Unterbrechungen / Scaffolding</h3>
+<p>Unterbrechungen durch die Gesprächspartner:in oder Dritte müssen bei der Segmentierung in Äußerungseinheiten nicht beachtet werden. Die Spanne wird ungeachtet der Unterbrechung über die von der Lerner:in geäußerte Einheit gezogen.</p>
+</section>
+<section id="sec-tags_excl" class="level3" data-number="4.11.7">
+<h3 data-number="4.11.7" class="anchored" data-anchor-id="sec-tags_excl"><span class="header-section-number">4.11.7</span> Tagübersicht für [excl]</h3>
+<p><a href="#tbl-excl" class="quarto-xref">Tabelle&nbsp;<span>4.4</span></a> zeigt eine Übersicht der Tags für die Annotationsebene [excl].</p>
+<div class="cell">
+<div id="tbl-excl" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-excl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;4.4: Übersicht der annotierten ausgeschlossenen Äußerungsanteile
+</figcaption>
+<div aria-describedby="tbl-excl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-hover table-condensed do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tag</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">falst</td>
+<td style="text-align: left;">False starts / Abbrüche</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">doub</td>
+<td style="text-align: left;">Wiederholungen, die nicht rhetorisch motiviert sind. (Ausgeschlossen werden die vorangegangenen Wörter/Phrasen.)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">repair</td>
+<td style="text-align: left;">Wörter, Phrasen oder Äußerungseinheiten, die als Selbstreparatur markiert sind</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">read</td>
+<td style="text-align: left;">Vorgelesene Äußerungen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">hes</td>
+<td style="text-align: left;">Hesitationssignal außerhalb von units</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+</section>
+<section id="ziel-der-segmentierung-und-der-selektion-ausgeschlossenen-materials" class="level2" data-number="4.12">
+<h2 data-number="4.12" class="anchored" data-anchor-id="ziel-der-segmentierung-und-der-selektion-ausgeschlossenen-materials"><span class="header-section-number">4.12</span> Ziel der Segmentierung und der Selektion ausgeschlossenen Materials</h2>
+<p>Am Ende dieses Verarbeitungsschrittes liegt ein Transkript vor, in dem alle Lerner:innen-Äußerungen mindestens über [unit] ODER [excl] getagged wurden. Außerdem wurden ggf. subclauses und verbale Koordination erfasst. Anhand der excl-Spur konnte anschließend eine “cleane” Spur ([ctok_part]) erzeugt werden, die nur Tokens enthält, die auch über [unit] erfasst wurden, und alles, was über [excl] erfasst wurde, ausschließt.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Foster.etal2000Measuringspokenlanguage" class="csl-entry" role="listitem">
+Foster, Pauline, Tonkyn, Alan, &amp; Wigglesworth, Gillian. (2000). Measuring spoken language: <span>A</span> unit for all reasons. <em>Applied Linguistics</em>, <em>21</em>(3), 354–375. <a href="https://doi.org/10.1093/applin/21.3.354">https://doi.org/10.1093/applin/21.3.354</a>
+</div>
+<div id="ref-Quirk.etal1985ComprehensivegrammarEnglish" class="csl-entry" role="listitem">
+Quirk, Randolph, Greenbaum, Sidney, Leech, Geoffrey, &amp; Svartvik, Jan. (1985). <em>A <span>Comprehensive</span> grammar of the <span>English</span> language</em>. Longman.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./transkription.html" class="pagination-link" aria-label="Transkription">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Transkription</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./lemmapos.html" class="pagination-link" aria-label="Lemmatisierung und POS-Tagging">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lemmatisierung und POS-Tagging</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

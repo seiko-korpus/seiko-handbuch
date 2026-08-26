@@ -1,0 +1,722 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SeiKo (Korpus Seiteneinsteiger:innen in Vorbereitungsklassen): Handbuch zu Korpusdesign und Datenaufbereitung",
+    "section": "",
+    "text": "Vorwort\nDas vorliegende Handbuch beschreibt das Seiteneinsteiger:innen-Korpus (SeiKo), sein Design, die Datenerhebungen sowie das Vorgehen der Datenaufbereitung und die Korpusnutzung.\nSeiKo1 wurde an der Justus-Liebig-Universität Gießen im Zeitraum von 2020 bis 2026 erstellt und von 2023 bis 2026 von der Deutschen Forschungsgemeinschaft (DFG) im Rahmen des Projekts “Erwerb und Ausbau von Nominalgruppen durch neu zugewanderte jugendliche Lerner:innen” (Projekt-Nr. 527339472, Leitung: Jana Gamper) unterstützt. Ziel des Korpus ist es, die Entwicklung der sprachlichen Fähigkeiten von neu zugewanderten Schüler:innen zu modellieren. Ein besonderer Schwerpunkt der Annotationen liegt dabei auf dem Ausbau von Nominalgruppen sowie der Verbstellung.\nAn der Korpuserstellung beteiligt waren:",
+    "crumbs": [
+      "Vorwort"
+    ]
+  },
+  {
+    "objectID": "index.html#dieses-handbuch-und-seiko-zitieren",
+    "href": "index.html#dieses-handbuch-und-seiko-zitieren",
+    "title": "SeiKo (Korpus Seiteneinsteiger:innen in Vorbereitungsklassen): Handbuch zu Korpusdesign und Datenaufbereitung",
+    "section": "Dieses Handbuch und SeiKo zitieren",
+    "text": "Dieses Handbuch und SeiKo zitieren\nBitte zitieren Sie dieses Handbuch wie folgt:\nSchlauch, Julia; Braunewell, Aylin; Gamper, Jana (2026): SeiKo: Korpus Seiteneinsteiger:innen in Vorbereitungsklassen. Handbuch zu Korpusdesign und Datenaufbereitung. (Version 1.0-preview). Zenodo. DOI: 10.5281/zenodo.21495943\nBitte zitieren Sie SeiKo wie folgt:\nSchlauch, Julia; Braunewell, Aylin; Gamper, Jana; Klotz, Martin (2026). SeiKo: Ein Lernerkorpus neu zugewanderter Schüler:innen (Seiteneinsteiger:innen) in Vorbereitungsklassen (Version XX). Zenodo. DOI: 10.5281/zenodo.21476830",
+    "crumbs": [
+      "Vorwort"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "SeiKo (Korpus Seiteneinsteiger:innen in Vorbereitungsklassen): Handbuch zu Korpusdesign und Datenaufbereitung",
+    "section": "",
+    "text": "Die Korpuswebseite finden Sie unter: https://www.uni-giessen.de/seiko.↩︎",
+    "crumbs": [
+      "Vorwort"
+    ]
+  },
+  {
+    "objectID": "einleitung.html",
+    "href": "einleitung.html",
+    "title": "1  Allgemeines",
+    "section": "",
+    "text": "1.1 Hinweise zur Korpusnutzung\nSeiKo ist nach Anmeldung für die Nutzung zu Lehr- und Forschungszwecken verfügbar. Eine Übersicht zum Zugang findet sich in Kapitel 1.5.\nWenn Sie mit SeiKo arbeiten, bitten wir Sie, uns auf Publikationen aufmerksam zu machen, die wir dann sehr gerne auf der Korpuswebseite referenzieren.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Allgemeines</span>"
+    ]
+  },
+  {
+    "objectID": "einleitung.html#wie-ist-dieses-handbuch-zu-nutzen",
+    "href": "einleitung.html#wie-ist-dieses-handbuch-zu-nutzen",
+    "title": "1  Allgemeines",
+    "section": "1.2 Wie ist dieses Handbuch zu nutzen?",
+    "text": "1.2 Wie ist dieses Handbuch zu nutzen?\nDas vorliegende Handbuch dient dazu, die Entstehung des Korpus nachzuvollziehen und die Korpusnutzung zu ermöglichen. Dafür ist es in zehn Teile gegliedert.\nKapitel 1 enthält eine allgemeine Übersicht über das Korpus, Angaben zum Korpusbau und zur Korpusnutzung sowie Hinweise zu diesem Handbuch. Kapitel 2 beschreibt das Korpusdesign und die Datenerhebung. Kapitel 3 stellt die Transkriptionskonventionen für die mündlichen und schriftlichen Daten mittels des genutzten Transkriptionstools (EXMARaLDA, Schmidt & Wörner, 2014) vor. In Tabelle 1.1 finden sich die unterschiedlichen Annotationsschritte, die in entsprechenden Kapiteln ausgeführt werden: Zunächst wird die manuelle Segmentierung auf Grundlage von Äußerungseinheiten beschrieben (Kapitel 4). Die automatisch durchgeführten und manuell korrigierten Schritte der Lemmatisierung und des POS-Taggings werden in Kapitel 5 dargestellt. Die manuelle Annotation der Nominalgruppen und der Verbstellung wird in Kapitel 6 bzw. Kapitel 7 beschrieben.1 Anschließend enthält Kapitel 8 eine Übersicht zu Maßnahmen, die zur Qualitätssicherung ergriffen wurden, und berichtet Ergebnisse der errechneten Inter-Annotator-Agreements.\nIn Kapitel 1.3 und Kapitel 1.4 finden sich Angaben zum Korpusumfang und eine Übersicht der Arbeitsprozesse. In Kapitel 1.5 wird der Zugang zum Korpus beschrieben. Das Kapitel enthält auch eine Übersicht der Daten und Metadaten des Korpus.\nDer Anhang umfasst das genutzte Stimulusmaterial (Kapitel 11.1). Im Anhang ist außerdem der genutzte Interviewleitfaden (Kapitel 11.2) sowie eine Übersicht der in diesem Handbuch genutzten Schriftkonventionen zu finden (Kapitel 11.3). Die Nutzungsbedingungen des Korpus finden sich in Kapitel 10.\nFür Nutzer:innen, die eigene Annotationsebenen ergänzen wollen, stellen wir die .exb-files sowie die von uns genutzte Pipeline zur Verfügung (vgl. Kapitel 1.5).\n\n\n\n\nTabelle 1.1: Übersicht aller Annotationsebenen\n\n\n\n\n\n\n\nKapitel\nAnnotationsebene\nBeschreibung\nBeispielanfrage\nBeispielergebnis auf ctok_part\n\n\n\n\nTranskription\nINT[v]\nUrsprüngliche Transkriptionsspur der Interviewer:in\n-\n-\n\n\nTranskription\nINT[tok_int]\nTokenisierte Spur von INT[v]\n-\n-\n\n\nTranskription\nB02[v]\nUrsprüngliche Transkriptionsspur der Teilnehmenden\n-\n-\n\n\nTranskription\nB02[tok_part]\nTokenisierte Spur der Teilnehmenden, hier z.B. von B02[v]\ntok_part=‎\"weil‎\"\nweil\n\n\nTranskription\n[com]\nKommentarspur für alternative Transkriptions- oder Annotationsmöglichkeiten und weitere Anmerkungen\n-\n-\n\n\nTranskription\nB02[lay]\nLayout\n-\n-\n\n\nTranskription\nB02[excl]\nAusgeschlossenes Material (z.B. Korrekturen, Wiederholungen)\nexcl=‎\"hes‎\"\n-\n\n\nSegmentierung\nB02[unit]\nsegmentierte Äußerungseinheiten\nunit=‎\"DEC‎\"\nund er hat ein punkt für sein team\n\n\nSegmentierung\nB02[unit2]\nEinschübe in Form von Äußerungseinheiten, analog zu [unit]\nunit2=‎\"IRNON‎\"\nkeine ahnung\n\n\nSegmentierung\nB02[subclause]\nabhängige Nebensätze\nsubclause=‎\"SCADV‎\"\nwenn das eine e mail oder ein brief ist\n\n\nSegmentierung\nB02[subclause2]\nabhängige Nebensätze\nsubclause2=‎\"SCREL‎\"\nwo der tee ist\n\n\nLemmatisierung & POS-Tagging\nPART_CLEAN[ctok_part]\num [excl] und Pausenzeichen bereinigte Version von [tok_part]\nctok_part=”und”\nund\n\n\nLemmatisierung & POS-Tagging\nPART_CLEAN[lemma]\nmanuell korrigierte Version von [auto_lemma]\nlemma=‎\"spielen‎\"\ngespielt\n\n\nLemmatisierung & POS-Tagging\nPART_CLEAN[pos]\nmanuell korrigierte Version von [auto_pos]\npos=‎\"PDAT‎\"\ndiese\n\n\nNominalgruppen\nPART_CLEAN[ngr]\nNominalgruppen\nngr=‎\"NGrADJ‎\"\nmein kleiner bruder\n\n\nNominalgruppen\nPART_CLEAN[kern]\nnominale Kerne\nkern=‎\"KERN‎\"\nzimmer\n\n\nNominalgruppen\nPART_CLEAN[ngr2]\nNominalgruppen\nngr2=”NGrPREP”\ndem jünge\n\n\nNominalgruppen\nPART_CLEAN[kern2]\nnominale Kerne\nkern2=”DET”\ndem\n\n\nVerben\nPART_CLEAN[unit_cons]\nSatzkonstituenten von unit\nunit_cons=”S”\ner\n\n\nVerben\nPART_CLEAN[unit_stage]\nVerbstellungsstufe von unit\nunit_stage=”INV”\nund dann kommt die mutter wahrscheinlich\n\n\nVerben\nPART_CLEAN[unit2_cons]\nSatzkonstituenten von unit2\nunit2_cons=‎\"V‎\"\nwarte\n\n\nVerben\nPART_CLEAN[unit2_stage]\nVerbstellungsstufe von unit2\nunit2_stage=”SV”\nich glaub\n\n\nVerben\nPART_CLEAN[subclause_cons]\nSatzkonstituenten von subclause\nsubclause_cons=‎\"O‎\"\nden spiel\n\n\nVerben\nPART_CLEAN[subclause_stage]\nVerbstellungsstufe von subclause\nsubclause_stage=”VEND”\ndass ee wir den spiel verloren haben\n\n\nVerben\nPART_CLEAN[subclause2_cons]\nSatzkonstituenten von subclause2\nsubclause2_cons=‎\"V‎\"\nsind\n\n\nVerben\nPART_CLEAN[subclause2_stage]\nVerbstellungsstufe von subclause2\nsubclause2_stage=”!SEP NOVEND”\ndass eh sie sind so laut gewesen",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Allgemeines</span>"
+    ]
+  },
+  {
+    "objectID": "einleitung.html#sec-size",
+    "href": "einleitung.html#sec-size",
+    "title": "1  Allgemeines",
+    "section": "1.3 Korpusgröße",
+    "text": "1.3 Korpusgröße\nSeiKo umfasst insgesamt 824 Texte (SeiKo1 = 462; SeiKo2 = 362) von insgesamt 17 Lerner:innen (SeiKo1 = 8; SeiKo2 = 9). Die Größe der Teilkorpora und des Gesamtkorpus wird in Tabelle 1.2 dargestellt.\n\n\n\n\nTabelle 1.2: Übersicht der Tokenzahl je Annotationsebene der Teilkorpora SeiKo1 und SeiKo2\n\n\n\n\n\n\n\nEbene\nSeiKo1\nSeiKo2\ngesamt\n\n\n\n\ntok_part\n68114\n83717\n151831\n\n\nctok_part\n42996\n45585\n88581\n\n\nunit (Satzgefüge)\n9364\n9174\n18538\n\n\nstage (verbhaltige Sätze)\n7195\n7456\n14651\n\n\nNominalgruppen\n6089\n6812\n12901",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Allgemeines</span>"
+    ]
+  },
+  {
+    "objectID": "einleitung.html#sec-workflow",
+    "href": "einleitung.html#sec-workflow",
+    "title": "1  Allgemeines",
+    "section": "1.4 Übersicht des Workflows",
+    "text": "1.4 Übersicht des Workflows\nAbbildung 1.1 stellt den Ablauf der einzelnen Arbeitsschritte bei der Erhebung und Aufbereitung der SeiKo-Daten dar.\nAm Anfang des Prozesses stand die Planung des Korpusprojektes sowie die Erstellung eines Korpusdesigns. Nach dem Genehmigungsverfahren2 konnte mit der Datenerhebung begonnen werden. Anschließend an jeden Datenerhebungstermin wurden die Audiodateien abgelegt und archiviert; die geschriebenen Texte wurden eingescannt und ebenfalls archiviert. Es folgte die Transkription der Daten. Die transkribierten Daten wurden von einer anderen Bearbeiter:in im nächsten Schritt korrigiert sowie segmentiert. Anschließend wurden die Daten automatisch lemmatisiert und mit part-of-speech(POS)-Tags annotiert; hierfür wurde der TreeTagger (vgl. Schmid, 1994, 1995) verwendet. Danach wechselte erneut die Bearbeiter:in, sodass im gleichen Schritt eine Kontrolle der manuellen Segmentierung sowie der automatischen Lemmatisierung und des POS-Taggings vorgenommen werden konnte. Zudem wurden in diesem Schritt manuell Nominalgruppen und Verbkonstituenten und -stufen annotiert. Ein Teil der Daten wurde von zwei Bearbeiter:innen annotiert, sodass darauf ein Inter-Annotator-Agreement durchgeführt werden konnte; generell wurden Zweifelsfälle vor allem in anfänglichen Phasen der Segmentierung und Annotation gemeinsam diskutiert und aufgelöst. Über eine Annatto-Pipeline wird aus den einzelnen .exb-Daten und den Metadaten ein Annis-Korpus gebaut, das über eine lokale ANNIS-Schnittstelle (Krause & Zeldes, 2016)3 oder Annimate4 durchsucht werden kann.5\n\n\n\n\n\n\nAbbildung 1.1: Ablauf der Arbeitsprozesse an SeiKo",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Allgemeines</span>"
+    ]
+  },
+  {
+    "objectID": "einleitung.html#sec-where",
+    "href": "einleitung.html#sec-where",
+    "title": "1  Allgemeines",
+    "section": "1.5 Veröffentlichungsorte und Nutzungbedingungen",
+    "text": "1.5 Veröffentlichungsorte und Nutzungbedingungen\nSeiKo ist unter bestimmten Nutzungsbedingungen (Kapitel 10) nutzbar. Der Zugang kann über ZENODO beantragt werden.6\n\n[LINK]\n\nDaneben ist eine Veröffentlichung in der DAKODA-Infrastruktur geplant.7\nDie Datenverarbeitungspipeline ist hier veröffentlicht: https://github.com/seiko-korpus/seiko-pipeline/\nFür eine Nutzung der Audiodaten beachten Sie bitte die Angaben in den Nutzungsbedingungen.\n\n\n\n\nBley-Vroman, Robert. (1983). The comparative fallacy in interlanguage studies: The case of systematicity. Language Learning, 33(1), 1–17. https://doi.org/10.1111/j.1467-1770.1983.tb00983.x\n\n\nGilquin, Gaëtanelle. (2022). One norm to rule them all? Corpus-derived norms in learner corpus research and foreign language teaching. Language Teaching, 55(1), 87–99. https://doi.org/10.1017/S0261444821000094\n\n\nKrause, Thomas, & Zeldes, Amir. (2016). ANNIS3: A new architecture for generic corpus query and visualization. Digital Scholarship in the Humanities, 31(1), 118–139. https://doi.org/10.1093/llc/fqu057\n\n\nSchmid, Helmut. (1994). Probabilistic Part-of-Speech Tagging Using Decision Trees. Proceedings of International Conference on New Methods in Language Processing.\n\n\nSchmid, Helmut. (1995). Improvements in Part-of-Speech Tagging with an Application to German. Proceedings of the ACL SIGDAT-Workshop. Dublin, Ireland.\n\n\nSchmidt, Thomas, & Wörner, Kai. (2014). EXMARaLDA. In Handbook on Corpus Phonology (S. 402–419). Oxford University Press.\n\n\nSchwendemann, Matthias, Portmann, Annette, Schlauch, Julia, Gamper, Jana, & Wisniewski, Katrin. (2024). Forschungsdaten für alle. Rechtliche Möglichkeiten und Herausforderungen bei der Veröffentlichung von Lernerkorpora. 4(2), 149–176. https://doi.org/10.48694/kordaf.4138",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Allgemeines</span>"
+    ]
+  },
+  {
+    "objectID": "einleitung.html#footnotes",
+    "href": "einleitung.html#footnotes",
+    "title": "1  Allgemeines",
+    "section": "",
+    "text": "Um der Überzeugung gerecht zu werden „that the learner’s system is worthy of study in its own right, not just as a degenerate form of the target system“ (Bley-Vroman, 1983: 4) und Lerner:innensprache nicht an einer „native norm“ (Gilquin, 2022: 87) zu messen, wurde im Korpus bewusst auf die Formulierung von Zielhypothesen verzichtet. Zugleich bleibt jede Annotation durch die ihr vorausgehenden Deutungen der sprachlichen Elemente auch interpretativ. Um auch ohne Zielhypothesen eine möglichst hohe Transparenz zu gewährleisten, sind alle Schritte der Annotation – von der Segmentierung über POS- und Lemma-Annotationen bis hin zur auf diesen Annotationen basierenden Bestimmung von Verbstellung und Nominalgruppen – im Korpus einsehbar und in diesem Handbuch umfassend beschrieben und damit in ihrer Entstehung nachvollziehbar gemacht.↩︎\nFür Hinweise zu Forschungsvorhaben an Schulen und den Voraussetzungen für nachnutzbare Forschungsdaten vgl. z.B. Schwendemann et al. (2024).↩︎\nhttps://corpus-tools.org/annis/↩︎\nhttps://github.com/matthias-stemmler/annimate↩︎\nDie Pipeline zur automatischen Datenaufbereitung und zum Korpusbau ist unter https://github.com/seiko-korpus/seiko-pipeline/ verfügbar.↩︎\nVgl. hierzu: https://help.zenodo.org/docs/share/access-requests/request-access/.↩︎\nhttps://dakoda.org/index.de.html.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Allgemeines</span>"
+    ]
+  },
+  {
+    "objectID": "datenerhebung.html",
+    "href": "datenerhebung.html",
+    "title": "2  Korpusdesign und Datenerhebung",
+    "section": "",
+    "text": "2.1 Korpusdesign und Ziele\nDieses Kapitel stellt die Grundlagen des Korpus- bzw. Erhebungsdesigns dar (vgl. Kapitel 2.1). Außerdem findet sich hier eine Übersicht zu den Datenerhebungen (vgl. Kapitel 2.2).\nDas Ziel bei der Erstellung von SeiKo war es, den Spracherwerb neu zugewanderter Schüler:innen zu begleiten, die in sogenannten Intensivklassen zur Deutschförderung an Sekundarschulen beschult werden. Diese Seiteneinsteiger:innen werden ungeachtet ihrer heterogenen Zusammensetzung auf der Grundlage als Gruppe konstruiert, dass sie zu geringe Deutschkompetenzen aufweisen, um am Regelunterricht teilnehmen zu können (vgl. Massumi & von Dewitz, 2015).\nDas Korpus sollte die individuelle sprachliche Entwicklung einzelner Lerner:innen durch möglichst dichte Datenerhebungen sichtbar machen. Geplant wurde ein longitudinales Datenerhebungsschema mit Erhebungen im Abstand von etwa vier Wochen.\nHerausforderungen bei der Konzeption der Datenerhebungen waren bestimmte praktische und organisatorische Gegebenheiten. Die Datenerhebungen durften insgesamt nicht mehr als 20 bis 30 Minuten pro Schüler:in in Anspruch nehmen, um die Beeinträchtigung der Lernzeit im Unterricht möglichst gering zu halten. Die Aufgaben selbst mussten so strukturiert sein, dass sie einerseits von Lerner:innen, die erst eine kurze Beschulungsdauer und eine kurze Kontaktzeit mit dem Deutschen aufweisen, trotz sehr geringer Deutschkenntnisse ohne Frust bearbeitet werden können und andererseits fortgeschrittene Lerner:innen nicht langweilen. Die Erhebungen mussten gleichzeitig gewährleisten, dass das erhobene Sprachmaterial sowohl über den Erwerbsverlauf einer Lerner:in als auch für die anderen Lerner:innen in der Gruppe vergleichbar ist. Daher wurde ein mehrfach gestuftes Erhebungsdesign konzipiert, das im Folgenden dargestellt wird.\nDas Erhebungsdesign besteht aus einem individuellen Interviewsetting, das vom Vorgehen in Wiese (2020) inspiriert ist. Ziel ist die Erhebung mündlicher und schriftlicher Texte, die je zu einer bestimmten kommunikativen Aufgabe produziert werden sollen (vgl. Abbildung 2.1). Hintergrund dieser Variation in Modalität und Aufgabe sind die kontextuellen Bedingungen, in denen und für die die Schüler:innen lernen: Für das erfolgreiche Bestehen in der Regelklasse sind das Beherrschen zunehmend dekontextualisierter Sprache und der selbstständige schriftliche Ausdruck notwendig; Schüler:innen müssen eigenständig zwischen unterschiedlichen sprachlichen Registern variieren und sich dem sozialen Kontext anpassen können. Um die Entwicklung der entsprechenden Fähigkeiten modellieren zu können, wurden daher sowohl mündliche und alltagsnahe (Teil N und Q), mündliche und dekontextualisierte (Teil D) als auch schriftliche dekontextualisierte Daten (Teil T) erhoben, die die Registerdifferenzierung der Seiteneinsteiger:innen erfassen sollen.\nJeder Erhebungszeitpunkt gliedert sich in vier entsprechende Aufgaben, die auf Grundlage einer Bildergeschichte als Stimulus produziert werden.\nDie Bildstimuli stellen alltagsnahe Situationen in der Schule (Hausaufgaben und Sportunterricht), im häuslichen Umfeld (Teekanne und Kuchen) und im öffentlichen Raum (Busticket und Fahrradtasche) dar, in denen jeweils eine Problemsituation entsteht.1 Zum Beispiel wird in der Geschichte Fahrradtasche der Diebstahl einer Fahrradtasche auf einem Markt beobachtet. Grundsätzlich werden im Erhebungsverlauf alle Bildergeschichten in einem Turnus als Stimuli angeboten (vgl. Abbildung 2.2), sodass jede Geschichte sich maximal viermal im gesamten Erhebungsverlauf wiederholt. (Die meisten Schüler:innen bemerkten nach ein paar Monaten, dass die Auswahl der Geschichte nicht wie zuvor suggeriert zufällig ist und dass sich die Geschichten wiederholen. In diesem Fall wurde den Schüler:innen das Vorgehen erklärt. In keinem Fall führte das zu einem Abfall an Motivation bei der Teilnahme.)\nTeil N - mündliche Erzählung\nZunächst wählen die Schüler:innen vermeintlich zufällig eine Geschichte aus, die in einem Umschlag verborgen ist, und werden dazu aufgefordert, die Bilder zunächst allein zu betrachten. Dann sollen sie für die Interviewer:in das dargestellte Geschehen nacherzählen, ohne die Bilder zu zeigen. Durch dieses Vorgehen sollen die Schüler:innen davon ausgehen, dass die Interviewer:in nicht weiß, welche Geschichte erzählt werden soll. Zusätzlich sollen die Bilder nicht offen gezeigt werden, damit kein geteilter Referenzraum entsteht und die Schüler:innen möglichst umfangreich erzählen. Die Interviewer:in soll hier lediglich mit ermunternden Rezeptionssignalen interagieren.\nTeil Q - Fragen zur Erzählung\nWenn die Schüler:innen die Erzählung beendet haben, hat die Interviewer:in im zweiten Interviewteil die Gelegenheit, Rückfragen zu stellen und damit weitere Handlungselemente, Beschreibungen etc. zu erfragen.2 Hier kann eine grundsätzliche Sicherung aller in der Bildergeschichte dargestellten Handlungsschritte erfolgen. Dabei wird die Geschichte auch auf den Tisch gelegt, sodass beide Gesprächsteilnehmer:innen die Bilder sehen können.\nTeil D - Dekontextualisierung durch Diktieren eines Berichts\nIm folgenden Interviewteil werden die Schüler:innen dazu aufgefordert, das Geschehen noch einmal für eine nicht anwesende Person zu berichten. Im Falle des obigen Beispiels der gestohlenen Fahrradtasche wird etwa erklärt, dass die bestohlene Frau den Vorfall selbst nicht beobachten konnte und nun einen Bericht für die Polizei benötigt. Das Vorgehen schließt dabei ein, dass die Interviewer:in diesen Bericht aufschreibt, während die Schüler:innen diesen diktieren sollen. Die Interviewer:in verschriftlicht den mündlichen Bericht nicht tatsächlich; es geht im Teil D um die mündliche Produktion.\nTeil T - eigenständige schriftliche Textproduktion\nNach dem letzten Interviewteil sollen die Schüler:innen den Bericht schließlich noch einmal selbst verfassen. Die Idee der Trennung in Teil D und T besteht darin, dass durch den Teil D (ggf.) konzeptionell schriftliche Texte auch dann erhoben werden können, wenn die Schüler:innen selbst mit den Anforderungen des medialen Schreibens noch überfordert sind.\nZusätzlich wurde bei jeder Datenerhebung auch ein freier Interviewteil erhoben, der jedoch für das Korpus nicht aufbereitet wurde. In diesem wurden entweder Angaben zu den Metadaten erfragt oder über den Unterricht und Schulalltag sowie Freizeitaktivitäten gesprochen.\nMetadaten\nDie Erhebung von Metadaten des Korpus war durch das notwendige Genehmigungsverfahren leider stark beschränkt. Neben den erhebungsspezifischen Metadaten konnte für jede Schüler:in das Alter bei der ersten Erhebung, gesprochene Sprachen und deren Erwerbskontext, die Beschulungsdauer und der Beschulungskontext (exklusiver Besuch einer Intensivklasse, Teil- bzw. Vollintegration in die Regelklasse) für jede Datenerhebung erfasst werden.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Korpusdesign und Datenerhebung</span>"
+    ]
+  },
+  {
+    "objectID": "datenerhebung.html#sec-design",
+    "href": "datenerhebung.html#sec-design",
+    "title": "2  Korpusdesign und Datenerhebung",
+    "section": "",
+    "text": "Abbildung 2.1: Übersicht des Interviewablaufs\n\n\n\n\n\n\n\n\n\n\nAbbildung 2.2: Rotation der Bildimpulse",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Korpusdesign und Datenerhebung</span>"
+    ]
+  },
+  {
+    "objectID": "datenerhebung.html#sec-erhebung",
+    "href": "datenerhebung.html#sec-erhebung",
+    "title": "2  Korpusdesign und Datenerhebung",
+    "section": "2.2 Datenerhebung, Datenerhebungszeitpunkte",
+    "text": "2.2 Datenerhebung, Datenerhebungszeitpunkte\nDie Datenerhebungen zu SeiKo fanden in zwei Erhebungswellen von Mai 2021 bis April 2023 (SeiKo1) und von Mai 2024 bis September 2025 (SeiKo2) statt. Ursprünglich konnten 25 Schüler:innen für die Teilnahme gewonnen werden, durch Fluktuation und beschränkte Zustimmung zur Publikation der Daten konnten schließlich 17 individuelle Datenreihen im veröffentlichten Korpus inkludiert werden.\nAlle teilnehmenden Schulen, Lehrer:innen, Schüler:innen und deren Sorgeberechtigten wurden vorab über die Abläufe und Ziele der Datenerhebungen informiert und gaben ihr Einverständnis. (Alle Informationsschreiben und Formulare wurden dabei sowohl auf Deutsch als auch in Übersetzung in eine Erst- oder andere gewünschte Sprache vorgelegt.) Außerdem wurde eine offizielle Genehmigung der Schulaufsichtsbehörde für die Datenerhebung eingeholt.\nInsgesamt wurden an 79 Tagen Datenerhebungen durchgeführt, aus denen eine Sammlung von 217 N-Texten, 196 Q-Texten, 215 D-Texten und 196 T-Texten resultiert. (Nicht bei jeder Erhebung haben alle Schüler:innen alle Textteile realisiert. Eine Übersicht der Gesamtkorpusgröße findet sich in Kapitel 1.3.)\nAbbildung 2.3 zeigt die individuellen Datenerhebungszeitpunkte je Schüler:in (inkl. des jeweiligen Beschulungskontextes: IKL steht für Intensivklasse, TINT für Teilintegration, InteA für eine Intensivklasse an einer berufsbildenden Schule und RK für Regelklasse). Im Durchschnitt liegen 12,76 Erhebungszeitpunkte pro Schüler:in vor (min. 7, max. 20). Ungefüllte Punkte bei den Erhebungszeitpunkten markieren Erhebungen ohne T-Texte.\n\n\n\n\n\n\nAbbildung 2.3: Übersicht der Datenerhebungszeitpunkte je Schüler:in inkl. Beschulungskontext",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Korpusdesign und Datenerhebung</span>"
+    ]
+  },
+  {
+    "objectID": "datenerhebung.html#sec-metadaten",
+    "href": "datenerhebung.html#sec-metadaten",
+    "title": "2  Korpusdesign und Datenerhebung",
+    "section": "2.3 Metadaten",
+    "text": "2.3 Metadaten\nEine individuelle Darstellung der Metadaten findet sich in den zugangsbeschränkten Korpusdaten (vgl. Kapitel 1.5) Eine Übersicht der Metadatenvariablen finden sich in Tabelle 2.1.\n\n\n\n\nTabelle 2.1: Übersicht der Metadatenvariablen\n\n\n\n\n\n\n\nSeiKo-Variable\nSeiKo-Werte\nDAKODA-Variable\nDAKODA-Werte\n\n\n\n\nfilename\nBsp. E01_A04_Teekanne_D\n\n\n\n\nrefernce_file\nBsp. E01_A04\n\n\n\n\nSCHULE\nA; B; C\n\n\n\n\nPSEUDONYM\nBsp. ORI\n\n\n\n\nPUBLIZIERBAR\nVollständigPublizierbar; anonymPublizierbar_ohneAudio\n\n\n\n\nBESCHULUNG\nIKL; TINT; RK; InteA\n\n\n\n\nPROBANDIN\nBsp. A04\n\n\n\n\nALTER_E1\nBsp. 12\n\n\n\n\nL1\nBsp. Italienisch\n\n\n\n\nLF\nEnglisch; Französisch\n\n\n\n\nERHEBUNG\nBsp. E01\n\n\n\n\nERHEBUNGSDATUM\nBsp. 2020-01-01\n\n\n\n\nBESCHULUNGSMONAT\nBsp. 8\n\n\n\n\nSTORY\nTeekanne; Kuchen; Hausaufgabe; Sportunterricht; Busticket; Fahrradtasche\n\n\n\n\nPART\nNarrative; Questions; Decontext; Text\n\n\n\n\npartshort\nN; Q; D; T\n\n\n\n\nZEITRAUM\nSEIKO1; SEIKO2\n\n\n\n\n\n\n\n\n\n\n\n\n\nAllgemein lag das Alter der Schüler:innen bei der ersten Erhebung lag im Durchschnitt bei 12,65 Jahren (min. 10, max. 16 Jahre). Die Beschulungszeit bei der ersten Erhebung lag im Durchschnitt bei 8,24 Monaten (min. 1, max. 20). Tabelle 2.2 zeigt die angegebenen Sprachkenntnisse (wobei vier Schüler:innen bei L1 mehrere Angaben machten).\n\n\n\nTabelle 2.2: Häufigkeit angegebener Erst- sowie Zweit-/Fremdsprachen\n\n\n\n\n\nSprache\nL1\nL2\n\n\n\n\nArabisch\n5\n-\n\n\nDari\n2\n-\n\n\nEnglisch\n-\n12\n\n\nFranzösisch\n-\n1\n\n\nItalienisch\n2\n-\n\n\nKurmanci\n2\n-\n\n\nPolnisch\n-\n2\n\n\nRumänisch\n1\n-\n\n\nRussisch\n2\n1\n\n\nSomali\n1\n-\n\n\nTürkisch\n4\n5\n\n\nUkrainisch\n2\n-\n\n\n\n\n\n\n\n\n\n\nMassumi, Mona, & von Dewitz, Nora. (2015). Neu zugewanderte Kinder und Jugendliche im deutschen Schulsystem: Bestandsaufnahme und Empfehlungen. https://international.uni-koeln.de/sites/international/aaa/92/92pdf/92pdf_REFUGEES_PUBL_MI_ZfL_Studie_Zugewanderte_im_deutschen_Schulsystem_final_screen.pdf\n\n\nWiese, Heike. (2020). Language Situations: A Method for Capturing Variation within Speakers’ Repertoires. In Yoshiyuki Asahi (Hrsg.), Methods in Dialectology XVI (S. 105–117). Peter Lang.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Korpusdesign und Datenerhebung</span>"
+    ]
+  },
+  {
+    "objectID": "datenerhebung.html#footnotes",
+    "href": "datenerhebung.html#footnotes",
+    "title": "2  Korpusdesign und Datenerhebung",
+    "section": "",
+    "text": "Das gesamte Stimulusmaterial findet sich im Anhang unter Kapitel 11.1.↩︎\nDer dafür genutzte Leitfaden für jede Geschichte findet sich in Kapitel 11.2.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Korpusdesign und Datenerhebung</span>"
+    ]
+  },
+  {
+    "objectID": "transkription.html",
+    "href": "transkription.html",
+    "title": "3  Transkription",
+    "section": "",
+    "text": "3.1 Grundlagen der Transkription\nDieses Kapitel dokumentiert das Vorgehen bei der Transkription der Daten. Allgemeine Grundlagen werden in Kapitel 3.1 dargestellt, während das Vorgehen für mündliche Texte in Kapitel 3.2 sowie für schriftliche Texte in Kapitel 3.3 differenziert wird.\nZur Transkription der Audioaufnahmen sowie der Scans der handschriftlichen Texte der Schüler:innen wurde der EXMARaLDA-Partitur-Editor1 (Schmidt & Wörner, 2014) genutzt.\nDer Wortlaut der mündlichen wie schriftlichen Äußerungen wurde grundsätzlich in einfacher orthographischer Transkription wiedergegeben. Die Extension einer Äußerungseinheit entspricht dabei im Regelfall einem Event. (Bei Äußerungen, die durch viele Pausen unterbrochen werden oder bei Überlappungen mit Äußerungen der Interviewer:innen kann es an einzelnen Stellen nötig sein, Äußerungseinheiten in mehr als einem Event darzustellen. Für eine konsistente Segmentierung in Äußerungseinheiten vgl. Kapitel 4.)\nEs gilt zu beachten, dass jede Transkription immer auch eine Interpretation des Gehörten sowie des schriftlichen Textes durch die Transkribierenden darstellt und notwendigerweise eine Reduktion des Gesamtumfangs der sprachlichen Äußerungen bedeutet (z.B. Verlust bestimmter intonatorischer Eigenschaften etc.). Transkriptionskonventionen dienen dazu, diese möglichst zu vereinheitlichen, zu vereinfachen und allgemein interpretierbar zu machen. Die Konventionen der SeiKo-Transkriptionen werden in Kapitel 3.2 für die gesprochenen und in Kapitel 3.3 für die geschriebenen Texte dargestellt.\nFür jeden Text(teil) einer Datenerhebung (Narrative, Questions, Decontext, Text) einer Schüler:in werden verschiedene EXMARaLDA-Dateien angelegt. Die Dateinamen setzen sich aus folgenden Informationen zusammen:\nERHEBUNGSZEITPUNKT_SCHÜLER:IN-ID_STORY_INTERVIEWTEIL &gt;&gt; z.B. E04_A06_Busticket_T\n(In der Metadatenübersicht sind diese Informationen als ERHEBUNG, PROBANDIN, STORY, PART zu finden.)\nGrundsätzlich wurden die Produktionen der Schüler:innen und der Interviewer:innen je in einer eigenen Transkriptionsspur dargestellt. (Die Spuren enthalten dabei folgende Pseudonyme als Sprecher:innen-ID zugewiesen: [INT] für die Interviewer:in, sowie eine individuelle ID - z.B. [B02] - für die Schüler:innen.) Nicht durch die Transkriptionskonventionen darstellbare Auffälligkeiten (z.B. Störgeräusche, Sprechqualität) oder alternative Transkriptionen wurden auf einer separaten Spur ([com]) vermerkt.\nSensible Textstellen (z.B. Nennung von Namen, Orten etc.) wurden in der Transkription pseudonymisiert wiedergegeben (z.B. NAME, ORT). In den Audioaufnahmen wurden solche Stellen durch Verrauschen unkenntlich gemacht. Eine Anonymisierung der Daten durch vollständige Verfremdung stimmlicher Merkmale (vgl. hierzu z.B. Meyermann & Porzelt, 2014) kann nicht vorgenommen werden, da die Daten sonst für viele linguistische Analysen nicht mehr nutzbar wären. (Zum Zugang zur vollständig pseudonymisierten und damit “stummen” Korpusversion sowie den Möglichkeiten zur Nutzung der Audiodaten vgl. Kapitel 10.)\nZur Sicherung der Qualität der Transkriptionen wurden alle Transkripte nach dem Vier-Augen-Prinzip von einem zweiten Teammitglied nachgehört oder überprüft. (Für eine Übersicht der qualitätssichernden Maßnahmen vgl. Kapitel 8.)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Transkription</span>"
+    ]
+  },
+  {
+    "objectID": "transkription.html#sec-transkriptgesprochen",
+    "href": "transkription.html#sec-transkriptgesprochen",
+    "title": "3  Transkription",
+    "section": "3.2 Transkription gesprochener Daten",
+    "text": "3.2 Transkription gesprochener Daten\nFür die Transkription gesprochener Texte werden zunächst eigene Transkriptionsspuren für Schüler:in und Interviewer:in angelegt. Abbildung 3.1 zeigt eine typische Ansicht einer EXMARaLDA-Datei während der Transkription.\n\n\n\n\n\n\nAbbildung 3.1: Ansicht des Partitur-Editors bei der Transkription mündlicher Texte\n\n\n\n\n3.2.1 Äußerungsnahe Wiedergabe des Gesagten\nÄußerungen wurden inklusive subordinierter Äußerungen in einfacher orthographischer Transkription wiedergegeben Rehbein et al. (2004). Großbuchstaben wurden dabei nicht verwendet. Subordination wird mit , kenntlich gemacht. Die Transkriptionszeichen (. , ? und !) wurden für die Unterscheidung von deklarativen, interrogativen oder exklamativen Äußerungen genutzt. Entscheidend für die Zuordnung war neben der Intonation der Sprecher:innen auch die Interpretation durch die Transkribend:in. Wurde die finale Tonhöhenbewegung am Ende der Äußerung gehalten, wurde - transkribiert. Eventgrenzen wurden nach den gehörten Äußerungseinheiten gesetzt. (Längere Pausen, Störgeräusche u.a. sowie Überlappungen können auch in eigenen Events abgesetzt sein.)\nGesprochensprachliche Phänomene wurden möglichst originalgetreu wiedergegeben. Beispiele: und er hat ein punkt für sein team (E02_B02) ne andere person (E02_A05)\nSystematische (und obligatorische) Reduktionen der gesprochenen Sprache wurden nach orthographischen Standards transkribiert. Auch leichte sprachliche Verschleifungen wurden aufgelöst (z.B. und dann, nicht undann, ich, nicht isch).\nFremdsprachiges Material wurde möglichst originalgetreu wiedergegeben und pro Wort mit [] markiert. Beispiel: mit [tea] [and] buch (E01_B07)\nBuchstabierte Abkürzungen wurden ohne Leerzeichen zwischen den Buchstaben ergänzt.\n\n\n3.2.2 Unverständliches und Unklares\nFür unklare Äußerungen, die mit # annotiert werden, ist potentiell eine alternative Transkription auf [com] angegeben. Diese ist mit einem vorangestellten ? markiert.\nBeispiel:\n\n\n\n\n\n\nAbbildung 3.2: Unklare Transkription (E15_B07)\n\n\n\nGänzlich unverständliche Passagen wurden mit XXX markiert. Beispiel: die eine mann hat eis XXX mit hände (E02_B10)\n\n\n3.2.3 Pausen\nZur vereinfachten Darstellung von Pausen wurden Pausenzeichen und exakte Angaben der Pausenlänge verwendet.\nEin kurzes Stocken im Redefluss kann mit einem Punktzeichen • transkribiert werden.\nEine Pause mit einer geschätzten Länge von bis zu einer halben Sekunde wird mit zwei Punktzeichen •• , eine geschätzte Pause von bis zu einer dreiviertel Sekunde mit drei Punktzeichen ••• transkribiert.\nLängere Pausen wurden gemessen und numerisch in Doppelklammern angegeben. (z.B. ((2.5)) oder ((2.5s))\nPausen innerhalb eines Wortes wurden auf [com] notiert.\nBeispiel: kon((••))trolleur (E10_B11)\n\n\n3.2.4 Abbrüche und Selbstkorrekturen\nAbbrüche auf Wortebene wurden mit / unmittelbar am Wortende transkribiert.\nBeispiel: im fahrrad steckt ei/ ein tüte (E15_B08)\nSatzabbrüche wurden mit // am Ende des abgebrochenen Satzes und nach einem Leerzeichen markiert.\nBeispiel: und dann // (E01_B09)\n\n\n3.2.5 Überlappungen\nFür überlappende Äußerungen wurde auf der jeweiligen Spur der Sprecher:innen der Audioabschnitt identifiziert und in entsprechenden Events transkribiert. Anschließend wurden die Eventgrenzen so gesetzt, dass die Extension der Überlappung auch in der Transkription sichtbar wird, wobei einzelne Worte nicht auf verschiedene Events aufgeteilt wurden (vgl. Event 52 in Abbildung 3.1).\nWenn eine Sprecher:in unterbrochen wird, wurde die Unterbrechung als Pause und Überlappung transkribiert.\n\n\n3.2.6 Paralinguistische Phänomene\nParalinguistische Phänomene wie Lachen, Flüstern etc. wurden auf [com] notiert und mit [&] markiert (z.B. &lachen oder &lachend).\n\n3.2.6.1 Fragen, Rückversicherungen, Zögern\nFragen und Rückversicherungen wurden standardisiert mit mh ?, ne ? und hee ? wiedergegeben.\nMarkierung von Zögern (hesitation markers) und hörbares Nachdenken (turn holding) wurden mit em, mh, hm und ee transkribiert.\n\n\n3.2.6.2 Zustimmung und Negation\nZustimmung wurde mit mhm, ehe, ah, aha, oke oder okei wiedergegeben.\nNegation wurde als hmhm, eheh, nee transkribiert.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Transkription</span>"
+    ]
+  },
+  {
+    "objectID": "transkription.html#sec-transkriptgeschrieben",
+    "href": "transkription.html#sec-transkriptgeschrieben",
+    "title": "3  Transkription",
+    "section": "3.3 Transkription geschriebener Texte",
+    "text": "3.3 Transkription geschriebener Texte\nDie Transkription der geschriebenen Texte erfolgte auf Grundlage der gescannten handschriftlichen Produktionen der Schüler:innen. Bei schriftlichen Texten wurde bereits während der Transkription eine Tokenisierung der Texte vorgenommen. Abbildung 3.3 zeigt daher eine Transkriptionsspur für den originalen Text in seinem ursprünglichen Wortlaut [v], eine tokenisierte Spur [tok_part], in denen von den Lerner:innen vorgenommene Selbstkorrekturen umgesetzt sind (vgl. dazu Kapitel 3.3.4.2) sowie eine Spur zur Wiedergabe des Textlayouts [lay] und eine Spur zur Darstellung von Korrekturen [excl]. Optional konnte die [com]-Spur zum Vermerken von Kommentaren eingesetzt werden.\n\n\n\n\n\n\nAbbildung 3.3: Ansicht des Partitur-Editors bei der Transkription schriftlicher Texte (E01_B10)\n\n\n\n\n3.3.1 Textnahe Wiedergabe\nAnalog zu den mündlichen Texte wurden auch die geschriebenen Texte der Schüler:innen möglichst originalgetreu wiedergegeben. Die Schreibweisen werden dokumentiert, d.h. Orthographie und Interpunktion wurden nicht verändert. Dabei wurde auch die jeweilige Groß- und Kleinschreibung berücksichtigt. Die Eventgrenzen orientieren sich an der Interpunktion der Schüler:innen.\n\n\n3.3.2 Unleserliches\nUnleserliches wurde möglichst pro Buchstabe mit @ wiedergegeben: z.B. ge@aufen.\n\n\n3.3.3 Korrekturen\nKorrekturen werden grundsätzlich auf der [v]/Transkriptionsspur erfasst. In den tokenisierten Spuren steht nur die finale Fassung des Textes vgl. dazu auch Kapitel 3.3.4.2.\nDurchgestrichene Wörter wurden mit XX XX transkribiert (vgl. auch Event 32 in Abbildung 3.3).\nBeispiel: XXgelauXX\nDurchgestrichene Buchstaben wurden mit X X wiedergegeben (vgl. auch Abbildung 3.4).\nBeispiel: geXeXlaufen\nNachträglich ergänzte Buchstaben wurden mit &lt;&gt; markiert (vgl. auch Abbildung 3.4).\nBeispiel: ge&lt;lau&gt;en\nEin nachträglich eingefügtes Wort wurde mit &lt; markiert.\nBeispiel: ich &lt;bin gelaufen\nBei mehreren nachträglich eingefügten Wörtern wurde vor jedem Wort die Einfügung mit &lt; &lt; kenntlich gemacht.\nBeispiel: ich &lt; &lt;bin &lt; &lt;dann gelaufen\n\n\n\n\n\n\nAbbildung 3.4: Durchgestrichene Buchstaben und nachträglich eingefügte Buchstaben (E01_B10)\n\n\n\n\n\n3.3.4 Tokenisierung im Transkriptionsprozess und zusätzliche Spuren\nSchriftliche Texte wurden bereits im Transkriptionsprozess tokenisiert. Die tokenisierte Spur wurde anhand der in Kapitel 3.3.4.2 dargestellten Vorgaben angepasst. Außerdem wurde eine zusätzliche Spur mit Hinweisen zum Layout ([lay]) und zu ausgeschlossenem Material ([excl]) ergänzt.\n\n3.3.4.1 Layout\nDie [lay]-Spur umfasst eine Markierung des Zeilenendes, von Absätzen, Leerzeilen und Einrückungen.\nDas Zeilenende wurde mit / unter dem Event des letzten Worts dieser Zeile markiert. Bei Worttrennung wurde die Trennung (z.B. gelau- / fen und /) unter dem letzten Wortbestandteil dargestellt.\nAbsätze und Leerzeilen wurden mit // im Event des letzten Worts im Absatz transkribiert.\nLeichte Einrückungen wurden mit §, starke Einrückungen mit §§ im Event des eingerückten Worts bzw. des ersten eingerückten Worts wiedergegeben.\nGroße Lücken zwischen Wörtern wurden mit == im Event des Wortes nach dieser Lücke transkribiert.\n\n\n3.3.4.2 Korrekturen als Vorbereitung für das automatische Tagging\nAnders als bei der Transkription mündlicher Daten erfolgte für die schriftlichen Texte eine manuelle Korrektur der [tok_part]-Spur. Dies ist notwendig, um bessere Ergebnisse bei der automatischen Annotation (vgl. Kapitel 5) zu erzielen.\nKorrekturtranskriptionen wie das Einfügen von Buchstaben oder Wörtern werden auf [tok_part] bereinigt. Vollständig korrigierte Wörter, die erkennbar von der Schreiber:in aus der “finalen Fassung” des Textes gestrichen wurden und nicht Teil der “letzten finalen Fassung des Textes” sein sollten, werden auf einer separaten Spur [excl] mit dem Tag repair markiert. Das heißt, [tok_part] enthält den Lerner:innentext in der “letzten Fassung”.\n\n\n\n\nMeyermann, Alexia, & Porzelt, Maike. (2014). Hinweise zur Anonymisierung von qualitativen Daten. Version 1.0. Leibniz-Institut für Bildungsforschung und Bildungsinformation.\n\n\nRehbein, Jochen, Schmidt, Thomas, Meyer, Bernd, Watzke, Franziska, & Herkenrath, Annette. (2004). Handbuch für das computergestützte Transkribieren nach HIAT. Institut für Deutsche Sprache.\n\n\nSchellhardt, Christin, & Schroeder, Christoph. (2015). MULTILIT: Manual, criteria of transcription and analysis for German, Turkish and English.\n\n\nSchmidt, Thomas, & Wörner, Kai. (2014). EXMARaLDA. In Handbook on Corpus Phonology (S. 402–419). Oxford University Press.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Transkription</span>"
+    ]
+  },
+  {
+    "objectID": "transkription.html#footnotes",
+    "href": "transkription.html#footnotes",
+    "title": "3  Transkription",
+    "section": "",
+    "text": "https://exmaralda.org/de/partitur-editor-de/↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Transkription</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html",
+    "href": "segmentierung.html",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "",
+    "text": "4.1 Spuren bei der Segmentierung\nFür die Segmentierung wurden folgende zusätzliche Spuren eingerichtet:\nBei Bedarf können zusätzlich folgende Spuren (ebenfalls als Annotationsspuren) erzeugt werden:",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#sec-spuren-seg",
+    "href": "segmentierung.html#sec-spuren-seg",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "",
+    "text": "Spuren bei der Segmentierung\n\n\n\n\n\n\n[unit]\nsegmentierte Äußerungseinheiten\n\n\n[subclause]\nabhängige Nebensätze\n\n\n[excl]\nausgeschlossenes Material (z.B. Korrekturen, Wiederholungen)\n\n\n\n\n\nOptionale Spuren bei der Segmentierung\n\n\n\n\n\n\n[unit2-x]\nEinschübe in Form von Äußerungseinheiten, analog zu [unit]\n\n\n[subclause2-x]\nabhängige Nebensätze",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#sec-seggrundlage",
+    "href": "segmentierung.html#sec-seggrundlage",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.2 Grundlage der Segmentierung",
+    "text": "4.2 Grundlage der Segmentierung\nUm die Transkripte in Äußerungseinheiten zu segmentieren, die die Arbeit des automatisierten POS-Taggings und der Lemmatisierung erleichtern, wurde sich an der Analysis of Speech Unit von Foster et al. (2000) orientiert und die Operationalisierung der Segmentierungseinheiten fürs Deutsche spezifiziert und exemplifiziert. Das folgende Kapitel dokumentiert das Vorgehen und markiert allgemeine Modifikationen aus dem Vorgehen von Foster et al. (2000). Die Segmentierung beruhte v.a. auf syntaktischen Kriterien, wobei zur Disambiguierung teilweise auch semantische und/oder intonatorische Kriterien herangezogen wurden.\nJedes Token (außer Pausen) der [tok_part]-Spur ist von einer Annotation auf [unit] oder [excl] überspannt. Wo möglich, wurden Spannannotationen der Annotation einzelner Tokens vorgezogen. (So wurde etwa bei zwei Tokens, die als false start gewertet wurden, eine Spanne mit entsprechendem Tag über beide Tokenevents auf [excl] gezogen.) Grundsätzlich wurden Spannen auf [unit] so eng wie möglich angelegt, um einem möglichst minimalen Anspruch an Äußerungseinheiten gerecht zu werden.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#sec-unit",
+    "href": "segmentierung.html#sec-unit",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.3 Definition einer Äußerungseinheit (=unit)",
+    "text": "4.3 Definition einer Äußerungseinheit (=unit)\nFoster et al. (2000) orientieren sich bei der Definition ihrer AS-Unit an der t-unit. Eine Äußerungseinheit oder AS-unit (unit) ist eine Äußerung einer Sprecher:in, die aus einer eigenständigen/unabhängigen clause (“independent clause”) oder einer “sub-clausal unit” zusammen mit allen abhängigen clauses/Nebensätzen besteht.\nEine eigenständige/unabhängige clause besteht aus mindestens einem Verb, das, anders als bei Foster et al. (2000), finit oder infinit sein kann, und maximal einem Verbalkomplex auf unit-Ebene. Weitere Verbalkomplexe können in abhängigen Nebensätzen auftreten.\nEine eigenständige Äußerungseinheit bilden Matrixsätze (vgl. Kapitel 4.5) auch dann mit den von ihnen abhängigen clauses, wenn diese keine Nebensatzwortstellung aufweisen (vgl. Kapitel 4.8).\nBeispiel: sie hat gesagt ich hab keine fahrkarte (E10_B10)\nÄußerungseinheiten wurden auf der Spur [unit] als Spannen annotiert. Dabei wurde differenziert zwischen eigenständigen verbhaltigen clauses und nicht verbhaltigen sub-clausal units. Die Tags ergänzen die Funktion der Äußerungseinheit oder den Typ der sub-clausal unit (vgl. Kapitel 4.7).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#sec-unvollstaendig",
+    "href": "segmentierung.html#sec-unvollstaendig",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.4 Unvollständige Äußerungseinheiten",
+    "text": "4.4 Unvollständige Äußerungseinheiten\nUnvollständige units (und auch Nebensätze) können mit folgenden Tags differenziert werden (vgl. Kapitel 4.7):\nWenn eine unit nach Produktion eines Verbs ersichtlicherweise abgebrochen wurde, wird sie mit dem zusätzlichen Tag BREAK getagged.\nBeispiel: die buch ist (E02_B02)\nHandelt es sich um eine unvollständige, aber verbhaltige und nicht abgebrochene Äußerung, die durch den diskursiven Kontext sinnvoll erweiterbar ist, wird mit dem zusätzlichen Tag DISC gearbeitet.\nBeispiel: was macht die mutter da? – schimpfen (E01_A05)\nBeispiel: diesen schockmoment, das kann man richtig fühlen, wenn man in die tasche guckt und – die hausaufgaben nicht hat (E11_B02)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#sec-matrix",
+    "href": "segmentierung.html#sec-matrix",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.5 Matrixsätze",
+    "text": "4.5 Matrixsätze\nAls Matrixsätze werden alle Sätze bezeichnet, von denen eine subclause abhängig ist. Matrixsätze wurden entsprechend der auf [unit] eingerichteten Tags annotiert; die Eigenschaft eines Satzes als Matrixsatz wird durch die Integration einer subclause und die entsprechende Spurstruktur erfasst, die Tags selbst differenzieren zwischen unterschiedlichen Äußerungstypen und sind nicht explizit als Matrixsätze erfasst.\nNicht realisierte Matrixsätze, von denen eine subclause abhängig ist, wurden mit Ø auf [unit] dargestellt. Die Extension entspricht der Spanne auf [subclause].\n\n\n\n\n\n\nAbbildung 4.1: Nicht realisierter Matrixsatz (E16_A04)\n\n\n\nHauptsatzförmige Sätze, die von einem Matrixsatz abhängig sind, wurden als abhängige Sätze auf [subclause] erfasst (vgl. Kapitel 4.8 für das spezifische Vorgehen).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#vor--und-nachlaufelemente",
+    "href": "segmentierung.html#vor--und-nachlaufelemente",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.6 Vor- und Nachlaufelemente",
+    "text": "4.6 Vor- und Nachlaufelemente\nTopikalisierte NPs und adverbiale Prä-Vorfelder wurden als Teil der unit erfasst.\nBeispiel: dann er hat lachen (E06_B11)\nNachlaufelemente wurden entweder als Teil der vorangegangenen unit erfasst oder bildeten eine eigene unit:\nSie wurden, sofern sie aus syntaktischer, intonatorischer und pragmatischer Perspektive als Nachfeldbesetzung gesehen werden können, als Teil der unit “eingespannt”.\nBeispiel: ich hab nicht geschwommen leider (E02_B02)\nAuch tag questions wie oder wurden als Teil der vorigen unit gefasst, deren Annotation sich aus der Struktur der Äußerung ergibt; die Äußerung einer tag question führte nicht dazu, dass die gesamte Äußerung als Frage (WINT/INT) erfasst wird.\nEine lange Pause und/oder anaphorische Marker (z.B. also) führten hingegen dazu, die beiden Äußerungen als getrennt zu betrachten und das Nachlaufelement einzeln zu taggen. Das Nachlaufelement konnte hierbei oft als DISC erfasst werden (vgl. Kapitel 4.7.2).\nBeispiel: die anderen sprechen mit den. also mit diese mädchen (E16_B10)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#sec-tags_unit",
+    "href": "segmentierung.html#sec-tags_unit",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.7 Tagübersicht für [unit]",
+    "text": "4.7 Tagübersicht für [unit]\n\n4.7.1 verbhaltige units\nIn Tabelle 4.1 werden alle Tags für verbhaltige Units dargestellt.\n\n\n\n\nTabelle 4.1: Übersicht der annotierten verbhaltigen units\n\n\n\n\n\n\n\nTag\nBeschreibung\nBeispiel\n\n\n\n\nDEC\nÄußerungseinheit in Form eines Deklarativs\nund dann hat der kleiner bruder n ball so geworfen (E19_A05)\n\n\nINT\nÄußerungseinheit in Form eines Interrogativs\nhast du fahrkarte oder (E04_B10)\n\n\nWINT\nÄußerungseinheit in Form eines W-Interrogativs\nwas passiert (E05_B08)\n\n\nIMP\nÄußerungseinheit in Form eines Imperativs\nUnd dass wegen lass die leute in ruhe (E18_A04)\n\n\nBREAK\n(+) als ergänzendes Tag für abgebrochene, verbhaltige Äußerungen\naber ich hab ge/ (DECBREAK, E14_B07)\n\n\nDISC\n(+) als ergänzendes Tag für unvollständige verbhaltige Units, die durch diskursive Rekonstruktion sinnvoll erweitert werden können\ndiesen schockmoment, das kann man richtig fühlen, wenn man in die tasche guckt und – die hausaufgaben nicht hat (E11_B02)\n\n\n\n\n\n\n\n\n\n\n\n\n\n4.7.2 nicht verbhaltige (sub-clausal) units\nNicht verbhaltige units (sub-clausal units) werden in Tabelle 4.2 dargestellt:\n\n\n\n\nTabelle 4.2: Übersicht der annotierten verblosen units\n\n\n\n\n\n\n\nTag\nBeschreibung\nBeispiel\n\n\n\n\nDISC\neine oder mehrere Phrasen, die aus dem diskursiven/situationen Kontext zu einer vollen clause rekonstruierbar sind. Dieses Tag ist operationalisiert als eine alleinstehende clause, die aus dem diskursiven/situativen Kontext verständlich ist; z.B. als Antwort auf eine Frage.\nwas könnte das sein? – papier, oder? (E06_A05)\n\n\nIRNON\nreguläre, zielsprachenkonforme Äußerungen. Dazu zählen auch *ja, nein, oke* etc.). Mit IRNON markierte Strukturen sind dabei grundsätzlich nicht satzförmig rekonstruierbar.\nja, nein, oke\n\n\nSCU\nbruchstückhafte, nicht verbhaltige Äußerungen, bei denen es sich auch nicht um DISC, IRNON, *false starts* oder Abbrüche handelt. Dieses Tag erfasst klassische lerner:innensprachliche Äußerungen mit pragmatischem Gehalt. Diese Kategorie wird bei Foster et al. 2000 so nicht erfasst.\nvon feuer (E05_B08)\n\n\nØ\nnicht realisierte Äußerungseinheit (Matrixsatz), von der eine subclause abhängt\n\n\n\n\n\n\n\n\n\n\n\n\nDISC kann also bei verbhaltigen units angehängt werden (vgl. Kapitel 4.3), markiert alleinstehend aber nicht verbhaltige und aus dem Kontext rekonstruierbare Äußerungen. IRNON können “minor utterances”, “irregular sentences”, “nonsentences” nach Quirk et al. (1985) sein. Das Sammeltag SCU wird in Abgrenzung zu den anderen verblosen Annotationen und Abbrüchen (vgl. Kapitel 4.11.1) vergeben und bei Foster et al. (2000) so nicht verwendet. Für nicht realisierte Matrixsätze vgl auch Kapitel 4.5.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#sec-subclause",
+    "href": "segmentierung.html#sec-subclause",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.8 Abhängige clauses / Nebensätze",
+    "text": "4.8 Abhängige clauses / Nebensätze\nAbhängige Sätze bestehen aus mindestens einem finiten oder infiniten Verb und einem weiteren Element (Subjekt, Objekt, Komplement oder Adverbial) (vgl. Foster et al. (2000)). Anders als bei Foster et al. (2000) zählen hier auch Subjunktionen und zu-Infinitive als weitere Elemente.\nNebensätze wurden auf der Spur [subclause] nach Typ in Form von Spannen unterhalb der [unit]-Spur annotiert. Die Differenzierung nach Typen ist nicht Foster et al. (2000) entnommen.\nAuch Nebensätze mit abweichender Verbstellung wurden nach Funktion in Form von Spannen unterhalb der [unit]-Spur annotiert; Verbletztstellung ist also kein ausschlaggebendes Kriterium dafür, auf [subclause] getagged zu werden. Relevant war ihre Abhängigkeit von einem Matrixsatz.\nNebensätze, die von Matrixsätzen auf [unit2] abhängig sind, werden unabhängig davon auf [subclause] (bzw. [subclause2], wenn [subclause] schon “belegt” ist) annotiert.\nBeispiel: dann mama hat hm ich hab vergessen wie heißt das auf deutsch tea zum diese junge geben (E01_C02)\nAuch hauptsatzförmige Sätze, die von einem Matrixsatz abhängig sind, wurden auf [subclause] erfasst. Diese wurden mit dem Tag MCSUB markiert und einem Zusatztag, das, analog zu den Tags auf DEC, die Funktion der Äußerung annotiert.\nBeispiel MCSUBDEC: ich glaube ich habe namen falsch gesagt (E12_B07)\nBeispiel MCSUBWINT: und hier die fragt, wie viel kostet ee so etwas (E02_B09)\nDie Entscheidung, ob der potenzielle MCSUB eingebettet ist oder nicht, ergab sich daraus, ob der potenzielle Matrixsatz alleinstehen kann. Wenn er nicht alleinstehen kann, liegt auf [subclause] ein MCSUB vor:\nBeispiel: ich glaube ich habe namen falsch gesagt (E12_B07)\nHier liegt auf [subclause]-Ebene ein MCSUBDEC vor.\nKönnen dagegen beide Sätze alleinstehen, wird DEC DEC erfasst.\nBeispiel: ich denke gerade. unterbrich mich nicht. (konstruiertes Beispiel)\nSo wurde zum Beispiel auch wörtliche Rede als MCSUB und die sie einleitende Äußerung auf [unit] als Matrixsatz getagged.\nBeispiel: der hat halt gesagt was machst du (E12_B07)\nZusätzlich differenzieren wir, analog zu den Tags auf [unit]:\n\nverbhaltige, aber abgebrochene Nebensätze mit dem Tag-Zusatz BREAK (Intonation beachten!)\nBeispiel: weil die haben ee in bücher ge/ (E05_B09)\nDISC: auf [subclause] nur bei verbhaltigen Äußerungen, die aus dem diskursiven Kontext heraus sinnvoll erweitert werden könnten.\nBeispiel: entschuldigung, dass ich diesen buk zerstört habe oder ja zerstört (E07_B02)\nsubclausal units auf [subclause], also nicht verbhaltige, aber eingeleitete und nach Funktion differenzierbare Nebensätze mit dem Tag-Zusatz SCU. Dieses Vorgehen weicht von Foster et al. (2000: 368) ab, die nicht verbhaltige subordinierte Einheiten exkludieren.\nBeispiel: weil ich kein ticket (E04_B07)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#sec-tags_subclause",
+    "href": "segmentierung.html#sec-tags_subclause",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.9 Tagübersicht für [subclause]",
+    "text": "4.9 Tagübersicht für [subclause]\nTabelle 4.3 verzeichnet mögliche Tags der Annotationsebene [subclause]. Diese können sowohl Einbettungen in Form von Nebensätzen (Tags mit SC…) als auch in Form von Hauptsätzen umfassen (Tags mit MCSUB…).\n\n\n\n\nTabelle 4.3: Übersicht der annotierten Nebensätze\n\n\n\n\n\n\n\nTag\nBeschreibung\nBeispiel\n\n\n\n\nSCREL\nRelativsatz\nsachen das sie verkaufen (E08_B09)\n\n\nSCADV\neingebetteter Adverbialsatz\ner wart bis das ball zu ihn kommt (E04_B09)\n\n\nSCINDER\nindirekter Fragesatz-\nein schülerin gucken was passiert (E06_B07)\n\n\nSCCOMP\nKomplementsatz\ner guckt dass sie frau guckt oder nicht (E08_B10)\n\n\nSCINFUM\neingebetteter Infinitivsatz\nund der mann benutzt den perfekten moment um abzuhauen (E20_A04)\n\n\nSCINF\nnicht eingebetteter Infinitvsatz\nsie sehen ein junge gucken für sie (E02_C05)\n\n\nSCNON\nnicht eingeleitete Nebensatz\nund die beide will kuchen geht ofen (E05_D02)\n\n\nBREAK\nals ergänzendes Tag für abgebrochene, verbhaltige Äußerungen\nBeispiele ab hier s. Tagübersicht für [unit]\n\n\nDISC\nals ergänzenders Tag für verbhaltige subclauses, die durch diskursive Rekonstruktion sinnvoll erweitert werden können\n\n\n\nSCU\nals ergänzendes Tag für SCUs auf subclause-Ebene\n\n\n\nMCSUBDEC\nÄußerungseinheit in Form eines Deklarativs\n\n\n\nMCSUBINT\nÄußerungseinheit in Form eines Interrogativs\n\n\n\nMCSUBWINT\nÄußerungseinheit in Form eines W-Interrogativs\n\n\n\nMCSUBIMP\nÄußerungseinheit in Form eines Imperativs\n\n\n\nBREAK\nals ergänzendes Tag für abgebrochene, verbhaltige Äußerungen\n\n\n\nDISC\nals ergänzendes Tag für unvollständige verbhaltige Units, die durch diskursive Rekonstruktion sinnvoll erweitert werden können\n\n\n\nMCSUBDISC\neine oder mehrere Phrasen, die aus dem diskursiven/situativen Kontext zu einer vollen clause rekonstruierbar sind.\n\n\n\nMCSUBIRNON\nirregular and non-sentences\n\n\n\nMCSUBSCU\nSammeltag: Andere sub-clausal units, die nicht über false starts, DISC oder IRNON erfassbar sind.\n\n\n\nMCSUBØ\nnicht realisierte Äußerungseinheit, von der eine subclause abhängt",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#mehrfache-einbettung-einschübe",
+    "href": "segmentierung.html#mehrfache-einbettung-einschübe",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.10 Mehrfache Einbettung / Einschübe",
+    "text": "4.10 Mehrfache Einbettung / Einschübe\nHauptsatzförmige Einschübe wurden auf [unit2] (im Folgenden Beispiel als DEC) annotiert:\nBeispiel: das war ich glaube leichter als die andere drei (E07_B02)\nDie Differenzierung zu MCSUB ergibt sich daraus, dass auf unit2 getaggte Äußerungen einen Einschub innerhalb eines Hauptsatzes darstellen, während Matrixsätze mit MCSUB Hauptsätze mit von ihnen abhängigen Äußerungen darstellen.\nMehrfach eingebettete Nebensätze wurden mit zusätzlichen Spuren [subclause2], [subclause3] annotiert. Wenn sich eine subclause auf [unit2] bezieht, wird diese unabhängig davon trotzdem auf [subclause] (oder [subclause2], wenn [subclause] schon “belegt” ist) annotiert.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#sec-excludings",
+    "href": "segmentierung.html#sec-excludings",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.11 Ausgeschlossenes Material",
+    "text": "4.11 Ausgeschlossenes Material\nAbbrüche, Wiederholungen und Selbstreparaturen wurden von den weiteren Annotationsschritten ausgeschlossen. Sie wurden daher auf einer separaten Spur [excl] annotiert und klassifiziert. Ausnahmen bildeten verbhaltige Abbrüche, die auf [unit] und [subclause] entsprechend getagged und zusätzlich mit BREAK markiert wurden (vgl. Kapitel 4.4).\n\n4.11.1 Abbrüche (false starts)\nAbgebrochene, verblose Äußerungen (egal, ob es durch die Sprecher:in selbst oder eine Unterbrechung geschieht) wurden nicht als Äußerungseinheiten, sondern mit dem Tag falst als Abbrüche markiert.\nBeispiel: und dann (E06_A05)\nVerbhaltige Abbrüche wurden, anders als bei Foster et al. (2000) nicht exkludiert, sondern gemäß ihrer Funktion (also bspw. mit DEC) getagged und zusätzlich mit BREAK markiert (vgl. Kapitel 4.4).\n\n\n4.11.2 Wiederholungen\nBei Wiederholungen wurde zwischen unterbrochenem Redefluss, Stottern sowie Halten des Rederechts auf der einen Seite und rhetorisch motivierten Wiederholungen auf der anderen Seite unterschieden; erstere wurden mit doub als Wiederholungen markiert.\nBeispiel: die die kinder spielen (E01_A05)\nDabei wurde nur das jeweils letzte Wort bzw. die jeweils letzte Phrase nicht markiert. Rhetorisch motivierte Wiederholungen (Beispiel: Das ist sehr sehr lecker) werden als Teil der Äußerungseinheit angesehen und nicht auf [excl] markiert.\n\n\n4.11.3 Selbst-Reparaturen / Korrekturen\nWird ein Teil einer Äußerung unmittelbar durch eine Reformulierung repariert / korrigiert, wurde der zu reparierende Teil nicht als Teil der Äußerungseinheit segmentiert, sondern mit repair auf [excl] getagged.\nBeispiel: deine bruder lernen ee ein buch lesen (E01_B07)\nÄußerungen, für die lediglich ein Korrekturbedarf angezeigt wird, wie z.B. Das ist ein Hund – Nein! oder auch Das ist ein Hund – Nein! Kein Hund! (konstruiertes Beispiel) wurden nicht ausgeschlossen.\n\n\n4.11.4 Vorgelesene Passagen\nWird sprachliches Material von der Proband:in vorgelesen, aus dem Gedächtnis “zitiert”, wie bei der Wiedergabe von Aufgabenstellungen, oder direkt von der Interviewer:in übernommen, wird dies mit dem Tag read ebenfalls exkludiert.\nBeispiel: thema ist wie hast du mutti kennengelernt (E02_B02)\nBeispiel: das ist ein korb, sagt man – ein korb? (E03_A04)\n\n\n4.11.5 Hesitationsmarker\nIsolierte, also außerhalb von units auftretende Hesitationsmarker (em, mh, ee) wurden mit dem Tag hes ebenfalls auf [excl] getagged und damit ausgeschlossen.\nÄußerungsinterne Hesitationsmarker, Interjektionen, fremdsprachliches Material etc. wurde im folgenden Annotationsschritt auf der [pos]-Spur markiert bzw. korrigiert und differenziert.\n\n\n4.11.6 Unterbrechungen / Scaffolding\nUnterbrechungen durch die Gesprächspartner:in oder Dritte müssen bei der Segmentierung in Äußerungseinheiten nicht beachtet werden. Die Spanne wird ungeachtet der Unterbrechung über die von der Lerner:in geäußerte Einheit gezogen.\n\n\n4.11.7 Tagübersicht für [excl]\nTabelle 4.4 zeigt eine Übersicht der Tags für die Annotationsebene [excl].\n\n\n\n\nTabelle 4.4: Übersicht der annotierten ausgeschlossenen Äußerungsanteile\n\n\n\n\n\n\n\nTag\nBeschreibung\n\n\n\n\nfalst\nFalse starts / Abbrüche\n\n\ndoub\nWiederholungen, die nicht rhetorisch motiviert sind. (Ausgeschlossen werden die vorangegangenen Wörter/Phrasen.)\n\n\nrepair\nWörter, Phrasen oder Äußerungseinheiten, die als Selbstreparatur markiert sind\n\n\nread\nVorgelesene Äußerungen\n\n\nhes\nHesitationssignal außerhalb von units",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "segmentierung.html#ziel-der-segmentierung-und-der-selektion-ausgeschlossenen-materials",
+    "href": "segmentierung.html#ziel-der-segmentierung-und-der-selektion-ausgeschlossenen-materials",
+    "title": "4  Segmentierung der Äußerungseinheiten",
+    "section": "4.12 Ziel der Segmentierung und der Selektion ausgeschlossenen Materials",
+    "text": "4.12 Ziel der Segmentierung und der Selektion ausgeschlossenen Materials\nAm Ende dieses Verarbeitungsschrittes liegt ein Transkript vor, in dem alle Lerner:innen-Äußerungen mindestens über [unit] ODER [excl] getagged wurden. Außerdem wurden ggf. subclauses und verbale Koordination erfasst. Anhand der excl-Spur konnte anschließend eine “cleane” Spur ([ctok_part]) erzeugt werden, die nur Tokens enthält, die auch über [unit] erfasst wurden, und alles, was über [excl] erfasst wurde, ausschließt.\n\n\n\n\nFoster, Pauline, Tonkyn, Alan, & Wigglesworth, Gillian. (2000). Measuring spoken language: A unit for all reasons. Applied Linguistics, 21(3), 354–375. https://doi.org/10.1093/applin/21.3.354\n\n\nQuirk, Randolph, Greenbaum, Sidney, Leech, Geoffrey, & Svartvik, Jan. (1985). A Comprehensive grammar of the English language. Longman.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Segmentierung der Äußerungseinheiten</span>"
+    ]
+  },
+  {
+    "objectID": "lemmapos.html",
+    "href": "lemmapos.html",
+    "title": "5  Lemmatisierung und POS-Tagging",
+    "section": "",
+    "text": "5.1 Spuren bei Lemmatisierung und POS-Tagging\nDiesen Annotationsschritten sind die folgenden Spuren mit einem neuen Sprecher PART_CLEAN zugeordnet:",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lemmatisierung und POS-Tagging</span>"
+    ]
+  },
+  {
+    "objectID": "lemmapos.html#sec-spuren-lemmapos",
+    "href": "lemmapos.html#sec-spuren-lemmapos",
+    "title": "5  Lemmatisierung und POS-Tagging",
+    "section": "",
+    "text": "Halbautomatische Annotationsspuren\n\n\n\n\n\n\n[lemma]\nSpur mit den durch den TreeTagger erzeugten und manuell korrigierten Lemmata\n\n\n[pos]\nSpur mit den durch den TreeTagger erzeugten und manuell korrigierten POS-Tags",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lemmatisierung und POS-Tagging</span>"
+    ]
+  },
+  {
+    "objectID": "lemmapos.html#automatisierte-arbeitsschritte",
+    "href": "lemmapos.html#automatisierte-arbeitsschritte",
+    "title": "5  Lemmatisierung und POS-Tagging",
+    "section": "5.2 Automatisierte Arbeitsschritte",
+    "text": "5.2 Automatisierte Arbeitsschritte\nZunächst wurde über ein Skript geprüft, ob die Dateien verarbeitungsrelevante Fehler enthalten, die dann ggf. ausgebessert wurden.\nDann wurde die Spur [ctok_part] erstellt, die eine um Pausenzeichen und auf [excl] als auszuschließend markiertes Material bereinigte Kopie von [tok_part] umfasst.\nDie Token auf [ctok_part] wurden anschließend mit Hilfe des TreeTagger Schmid (1995) (unter Einbezug der Satzspannen aus [unit]) anhand des STTS 2.0 (Westpfahl et al., 2017) mit einem POS-Tagging und einer Lemmatisierung versehen. Die automatisierte Annotation erfolgte über verschiedene Skripte mit Hilfe von Annatto1 (vgl. Krause & Klotz, 2023).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lemmatisierung und POS-Tagging</span>"
+    ]
+  },
+  {
+    "objectID": "lemmapos.html#korrektur",
+    "href": "lemmapos.html#korrektur",
+    "title": "5  Lemmatisierung und POS-Tagging",
+    "section": "5.3 Korrektur",
+    "text": "5.3 Korrektur\nDas POS-Tagging und die Lemmatisierung wurden auf den Spuren [lemma] und [pos], Kopien der automatisiert generierten Spuren, korrigiert. Die automatisiert generierten Spuren wurden anschließend gelöscht, können aber mithilfe der öffentlich zugänglichen Pipeline2 reproduziert und somit für die Evaluation des Treetaggers für frühe Lerner:innendaten verwendet werden.\nTags wurden in Zweifelsfällen, wenn möglich, (auch) anhand funktionaler Kriterien korrigiert, bspw. in Bezug auf Verbformen (so kann z.B. “gib” als VVFIN anstatt als VVIMP getagged werden, wenn der Kontext diese Interpretation nahelegt).\nZweifelsfälle bei der Korrektur wurden im Vier-Augen-Prinzip besprochen; offensichtliche Versehen, die bei der Transkription oder Segmentierung entstanden sind, sowie Fehler durch die Pipeline wurden in diesem manuellen Korrekturschritt, sofern sie offensichtlich als Fehler zu erkennen sind (wenn etwa auf [excl] Markiertes nicht durch die Pipeline gelöscht wurde oder wenn offensichtlich zu exkludierendes Material nicht auf [excl] markiert oder offensichtlich ein falsches Annotationstag vergeben wurde), eigenständig und ohne weitere Besprechung korrigiert.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lemmatisierung und POS-Tagging</span>"
+    ]
+  },
+  {
+    "objectID": "lemmapos.html#lemmatisierung",
+    "href": "lemmapos.html#lemmatisierung",
+    "title": "5  Lemmatisierung und POS-Tagging",
+    "section": "5.4 Lemmatisierung",
+    "text": "5.4 Lemmatisierung\nDie Lemmatisierung orientiert sich grundlegend an den Richtlinien für das TIGER-Korpus (vgl. Proisl et al., 2019). Davon abweichendes Vorgehen ist in den folgenden Richtlinien jeweils als solches gekennzeichnet.\n\n5.4.1 Normalisierung der Wortformen\nUmgangssprachliche Wortformen wurden möglichst oberflächennah normalisiert, in schriftlichen Texten wurden orthographische Fehler korrigiert, Wortneuschöpfungen wurden normalisiert, aber nicht korrigiert (vgl. Proisl et al., 2019: 2).\nAbkürzungen wurden, anders als bei den TIGER-Richtlinien (ebd.) nicht normalisiert. Kontraktionen wurden aufgelöst (ums -&gt; um es, son -&gt; so ein, machste -&gt; machst du) und in einem Event einzeln und mit Leerzeichen zwischen den beiden Token lemmatisiert. Dieses Vorgehen unterscheidet sich ebenfalls von Proisl et al. (2019), die keine Auflösung von Kontraktionen vorgeben.\nWenn in der Transkription schriftlicher Daten Wörter zusammengeschrieben wurden, die zielsprachlich nicht zusammengeschrieben werden (bspw. ausversehen), wurden diese im gleichen Event durch Leerzeichen getrennt lemmatisiert (hierfür sehen Proisl et al., 2019 keine Regelung vor). Wenn Wörter auseinandergeschrieben wurden, die zielsprachlich zusammengeschrieben werden (bus fahr Karte, E10_B09_T), wurden diese auf der Lemma- und POS-Spur in jeweils einem Event zusammengeführt.\nWenn Fehler in der Transkription sichtbar wurden (bspw. verliern statt verlieren), wurden diese im Transkript und auf allen Spuren korrigiert. (Bei der Auswertung des automatischen Taggings/Lemmatisierens muss dementsprechend erwähnt werden, dass manche Token ggf. aufgrund von Transkriptionsfehlern nicht richtig getagged/lemmatisiert werden konnten.)\nWenn Wörter wegen einer wortinternen Pause in zwei Events aufgeteilt wurden, wurden die entsprechenden Events auf [pos] und [lemma] zusammengeführt und es wurde jeweils ein Tag pro Spur vergeben. Bei zwei möglichen Alternativen wurden beide, jeweils gefolgt von einem or, im gleichen Event lemmatisiert (z.B. kontroll &gt; KontrolleurorKontrolleor). (Dieses Vorgehen orientiert sich an dem im STTS 2.0 für die Markierung möglicher Alternativen vorgesehenen Fragezeichen, das allerdings technische Schwierigkeiten bereitete und daher durch das or ersetzt wurde.) In geschriebenen Texten, in denen Wörter (nur) aufgrund graphematischer Interpretation und/oder unter Rückgriff auf den Bildstimulus und die mündlichen Daten zu rekonstruieren sind, werden die entsprechenden Rekonstruktionen lemmatisiert.\n\n\n5.4.2 Substantive\nNN: Substantive wurden in der 1. Person Singular Nominativ lemmatisiert. Ausnahmen bilden Pluraliatantum, die im Nominativ Plural lemmatisiert wurden. Substantivierte Formen wurden entsprechend ihrer Basiswortart lemmatisiert; substantivierte Infinitive dementsprechend als verbaler Infinitiv (das Lesen &gt; lesen). Derivationen aus Formen des Partizip I (die Überzeugende &gt; überzeugen) und Partizip II (der Überzeugte &gt; überzeugen) wurden in ihrer verbalen Grundform lemmatisiert, was sich vom Vorgehen bei Proisl et al. (2019) unterscheidet. Unserem Vorgehen nach wurden bei der Suche nach überzeugen auf [lemma] demnach alle Treffer angezeigt, die sich aus dem Lemma oder Derivationen davon ergeben; eine weitere Differenzierung nach Wortarten ist über [pos] möglich. Aus Adjektiven abgeleitete Substantive wurden in ihrer prädikativen Grundform lemmatisiert, bspw. die Schöne also als schön [und nicht, wie bei Proisl et al. (2019): 4, in der schwachen Form des Nominativs Singular Maskulin]. Grammatikalisierte Substantivierungen werden als Substantive lemmatisiert, was so in den TIGER-Richtlinien nicht ausdifferenziert wird.\nNE: Eigennamen werden im Nominativ Singular lemmatisiert; Eigennamen ohne Singularform werden im Nominativ Plural lemmatisiert.\n\n\n5.4.3 Adjektive\nAdjektive werden in ihrer unflektierten Form im Positiv der prädikativen Form lemmatisiert. Falls es diese Form nicht gibt, wird die starke Form des Nominativs Singular Femininum (im Gegensatz zu Maskulinum bei Proisl et al., 2019: 5) lemmatisiert. Attributiv verwendete Partizipien wurden in ihrem verbalen Infinitiv lemmatisiert (die überzeugte Wählerin &gt; überzeugen), was sich vom TIGER-Vorgehen unterscheidet (vgl. ebd.) und eine umfassende Lemmasuche, bei Bedarf mit Differenzierung der Wortart über [pos], erlaubt (s. auch Kapitel 5.4.2).\n\n\n5.4.4 Zahlen\nZahlen werden in ihrer Grundform lemmatisiert.\n\n\n5.4.5 Verben\nVerben wurden im Infinitiv lemmatisiert. Kontrahierte Verben wie schreibste wurden im Infinitiv lemmatisiert. Der zweite Bestandteil der Kontraktion (Pronomen) wurde entsprechend der entsprechenden Regeln im gleichen Event mit Leerzeichen getrennt lemmatisiert, was sich vom TIGER-Vorgehen unterscheidet (vgl. Proisl et al., 2019: 2).\n\n\n5.4.6 Artikel\nBestimmte Artikel werden als die lemmatisiert. Unbestimmte Artikel werden im Nominativ Singular Femininum (eine) lemmatisiert, was sich bzgl. des Genus von den TIGER-Richtlinien von Proisl et al. (2019) unterscheidet und u.a. im Output des Taggers begründet liegt.\n\n\n5.4.7 Pronomen\nPronomen wurden, wenn möglich, im Nominativ Singular Femininum (statt Maskulinum wie bei Proisl et al., 2019: 7f.) lemmatisiert. Pronomen, die nur im Plural existieren (z.B. beide, irgendwelche), wurden in der indefiniten Form im Nominativ Plural Femininum lemmatisiert. Bei unflektierbaren Formen (sich, wer) wurde die Oberflächenform lemmatisiert.\n\n\n\n\n\nTabelle 5.1: Übersicht über die Lemmatisierung von Pronomen\n\n\n\n\n\n\n\nTag\nDefinition\nLemmatisierung\nBeispiellemma\n\n\n\n\nPDAT\nAttribuierendes Demonstrativpronomen\nNominativ Singular Femininum\ndiese\n\n\nPDS\nSubstituierendes Demonstrativpronomen\nNominativ Singular Femininum\ndie\n\n\nPIAT\nAttribuierendes Indefinitpronomen\nNominativ Singular / Plural Femininum / Oberflächenform\nandere, irgendwelche, etwas\n\n\nPIS\nSubstituierendes Indefinitpronomen ohne Determinierer\nNominativ Singular / Plural Femininum / Oberflächenform\neine, alle, etwas\n\n\nPIDAT\nAttribuierendes Indefinitpronomen mit Determinierer\nNominativ Singular Femininum\neine\n\n\nPIDS\nSubstituierendes Indefinitpronomen mit Determinierer\nNominativ Singular Femininum / Plural / Oberflächenform\nandere, beide, bisschen\n\n\nPPER\nIrreflexibles Personalpronomen\nNominativ Singular\nOberflächenform: er &gt; er, ihnen &gt; sie, ihm &gt; er …\n\n\nPPOSAT\nAttribuierendes Possessivpronomen\nNominativ Singular Femininum\nihre, seine\n\n\nPPOSS\nSubstituierendes Possessivpronomen\nNominativ Singular Femininum\nmeine, deine\n\n\nPRELAT\nAttribuierendes Relativpronomen\nNominativ Singular Femininum\nderen\n\n\nPRELS\nSubstituierendes Relativpronomen\nNominativ Singular Femininum\ndie\n\n\nPRF\nReflexives Personalpronomen\nsich\nsich\n\n\nPWAT\nAttribuierendes Interrogativpronomen\nNominativ Singular Femininum\nwelche, wessen\n\n\nPWS\nSubstituierendes Interrogativpronomen\nOberflächenform\nwer, was\n\n\nPWAV\nAdverbiales Interrogativ- oder Reflexivpronomen\nOberflächenform\nwarum, wo\n\n\n\n\n\n\n\n\n\n\n\n\n\n5.4.8 Adverbien\nAdverbien wurden in ihrer Oberflächenform lemmatisiert. Bei Kontraktionen wie bei sone wurde das Adverb in seiner Oberflächenform lemmatisiert; der zweite Bestandteil der Kontraktion (Artikel) wurde, anders als bei Proisl et al. (2019, S. 10), ebenfalls lemmatisiert (gleiches Event, durch Leerzeichen getrennt).\n\n\n5.4.9 Konjunktionen\nKonjunktionen wurden in ihrer Oberflächenform lemmatisiert. Bei Kontraktionen wurde das Pronomen, anders als bei Proisl et al. (2019, S. 11), ebenfalls lemmatisiert (gleiches Event, durch Leerzeichen getrennt).\n\n\n5.4.10 Adpositionen\nAdpositionen wurden in ihrer Oberflächenform lemmatisiert.\nAPPRART: Bei Präpositionen mit Artikel wurden die Präposition und der Artikel separat lemmatisiert; der Artikel wurde also, anders als bei Proisl et al. (2019, S. 10), ebenfalls lemmatisiert (gleiches Event, durch Leerzeichen getrennt).\n\n\n5.4.11 Partikeln\nPartikeln wurden in ihrer Oberflächenform lemmatisiert.\n\n\n5.4.12 Interjektionen, Diskursmarker (wie NGHES), ONO, Interpunktion\nDas Lemma ist grundsätzlich die Oberflächenform. Normalisierbare Formen, die phonetisch transkribiert wurden (z.B. oke), wurden normalisiert (okay).\n\n\n5.4.13 Fremdsprachliches Material\nLemma ist die Oberflächenform.\n\n\n5.4.14 Unklares/Unverständliches\nBei unsicheren Transkriptionen wurde die Form, die als wahrscheinlichste transkribiert wurde, sofern sie im Kontext schlüssig ist, der Lemmatisierung zugrunde gelegt. #fällt# wurde also zu fallen lemmatisiert. Bei nicht auflösbaren unklaren Transkriptionen (z.B. #anzo#) wurde die Oberflächenform inklusive # transkribiert. Ganz Unverständliches, das als XXX transkribiert und auf [pos] als UI getagged wurde, wurde in dieser Form lemmatisiert. Dieses Vorgehen ist bei Proisl et al. (2019) nicht geregelt.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lemmatisierung und POS-Tagging</span>"
+    ]
+  },
+  {
+    "objectID": "lemmapos.html#pos-tagging",
+    "href": "lemmapos.html#pos-tagging",
+    "title": "5  Lemmatisierung und POS-Tagging",
+    "section": "5.5 POS-Tagging",
+    "text": "5.5 POS-Tagging\nDas POS-Tagging verwendet das Stuttgart-Tübingen-Tagset 2.0 (STTS 2.0) (vgl. Westpfahl et al., 2017). Folgende Tags ergänzen das STTS 2.0:\n\n5.5.1 Präfix- und Partikelverben\nFür abgetrennte Präfixe, die zielsprachlich nicht abgetrennt werden können, ergänzen wir das Tag PTKVZU.\nFür Präfix- und Partikelverben wird eine ergänzende Verbklasse VP eingeführt, für die sich analog zu den Vollverben (vgl. Westpfahl et al. (2017), 28) folgende Tags ergeben:\nVPFIN, VPIMP, VPINF, VPIZU, VPPP\n\n\n5.5.2 Kopula\nFür Kopulae (sein, werden, bleiben) wird die Verbklasse VK ergänzt, hier ergeben sich die Tags:\nVKFIN, VKIMP, VKINF, VKIZU, VKPP\n\n\n5.5.3 weil als Diskursmarker vs. Subjunktion\nAbweichend zum STTS 2.0 (26f.) wurde sich in der Differenzierung zwischen Diskursmarker SEDM und Subjunktion KOUS nicht an der Verbstellung orientiert, sondern an der Funktion des entsprechenden Wortes und an der Klassifikation der dazugehörigen Äußerung als eigenständig oder subordiniert, da die Verbstellung oft nicht zielsprachlich ist oder teilweise gar kein (finites) Verb vorhanden ist und die Äußerung dennoch als subordiniert und das entsprechende Token dementsprechend als KOUS klassifiziert werden kann.\nBeispiele:\n#weil#/KOUS ich ee kein ticket (E04_B07)\nweil/KOUS ich ee vergessen mein ticket (E04_B07)\n\n\n\n\nKrause, Thomas, & Klotz, Martin. (2023). Annatto. https://github.com/korpling/annatto\n\n\nProisl, Thomas, Dykes, Natalie, Heinrich, Philipp, Kabashi, Besim, & Evert, Stefan. (2019). Lemmatisierungsrichtlinien. Version 2019-04-26.\n\n\nSchmid, Helmut. (1994). Probabilistic Part-of-Speech Tagging Using Decision Trees. Proceedings of International Conference on New Methods in Language Processing.\n\n\nSchmid, Helmut. (1995). Improvements in Part-of-Speech Tagging with an Application to German. Proceedings of the ACL SIGDAT-Workshop. Dublin, Ireland.\n\n\nWestpfahl, Swantje, Schmidt, Thomas, Jonietz, Jasmin, & Borlinghaus, Anton. (2017). STTS 2.0: Guidelines für die Annotation von POS-Tags für Transkripte gesprochener Sprache in Anlehnung an das Stuttgart Tübingen Tagset (STTS).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lemmatisierung und POS-Tagging</span>"
+    ]
+  },
+  {
+    "objectID": "lemmapos.html#footnotes",
+    "href": "lemmapos.html#footnotes",
+    "title": "5  Lemmatisierung und POS-Tagging",
+    "section": "",
+    "text": "https://github.com/korpling/annatto↩︎\nDie Pipeline ist über https://github.com/seiko-korpus/seiko-pipeline/ verfügbar.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lemmatisierung und POS-Tagging</span>"
+    ]
+  },
+  {
+    "objectID": "ngr.html",
+    "href": "ngr.html",
+    "title": "6  Annotation Nominalgruppen",
+    "section": "",
+    "text": "6.1 Spuren bei der Annotation von Nominalgruppen\nNominalgruppen wurden auf [ngr] getagged. Auf [kern] wurde der Kern/Nukleus, das lexikalische Zentrum der NGr, erfasst sowie das Determinativum bzw. wurde dort ggf. die Information erfasst, dass ein obligatorisches Determinativum fehlt. Bei Bedarf (also Einbettung einer NGr in eine andere) konnten zweite usw. Spuren eingerichtet werden: [ngr2], [kern2] usw.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotation Nominalgruppen</span>"
+    ]
+  },
+  {
+    "objectID": "ngr.html#sec-spuren-ngr",
+    "href": "ngr.html#sec-spuren-ngr",
+    "title": "6  Annotation Nominalgruppen",
+    "section": "",
+    "text": "Annotationsspuren für Nominalgruppen\n\n\n[ngr]\nNominalgruppen\n\n\n[kern]\nnominale Kerne",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotation Nominalgruppen</span>"
+    ]
+  },
+  {
+    "objectID": "ngr.html#grundlagen-der-annotation-von-nominalgruppen",
+    "href": "ngr.html#grundlagen-der-annotation-von-nominalgruppen",
+    "title": "6  Annotation Nominalgruppen",
+    "section": "6.2 Grundlagen der Annotation von Nominalgruppen",
+    "text": "6.2 Grundlagen der Annotation von Nominalgruppen\nAlle Nominalgruppen (NGr) wurden auf [ngr] basierend auf dem in Gamper (2022) genutzten Tagset erfasst. Um dem gerecht zu werden, dass Lerner:innen nominale Ausdrücke (und ihre Attributionen) nicht immer gemäß festgelegter Phrasenstruktur (vgl. Himmelmann, 1997) realisieren, wurde der Begriff der Nominalgruppe dem der -phrase vorgezogen (vgl. Eroms, 2016). Nominalgruppen müssen also nicht zielsprachlich realisiert sein und strikte Phrasenstrukturen aufweisen, um als NGr erfasst zu werden; das Gleiche gilt für potenzielle Attribute. So wurden etwa NGr mit nachgestellten Adjektiven, die klar als attributiv zum vorangegangenen Nomen erkannt werden können, als NGrADJ oder attributive Relativsätze mit abweichender Verbstellung als NGrREL getagged.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotation Nominalgruppen</span>"
+    ]
+  },
+  {
+    "objectID": "ngr.html#abweichungen-und-spezifizierungen-zu-gamper2022ausbaunominalerstrukturen",
+    "href": "ngr.html#abweichungen-und-spezifizierungen-zu-gamper2022ausbaunominalerstrukturen",
+    "title": "6  Annotation Nominalgruppen",
+    "section": "6.3 Abweichungen und Spezifizierungen zu Gamper (2022)",
+    "text": "6.3 Abweichungen und Spezifizierungen zu Gamper (2022)\nAnders als bei Gamper (2022) wurden besitzanzeigende Präpositionalphrasen mit von (bspw. der hund von der frau) nicht als postnominaler Genitiv (PGEN), sondern als Präpositionalphrase (PREP) annotiert.\nEs wurden lediglich solche NGr als mehrfach, also als NGrMULT erfasst, bei denen sich zwei oder mehr Attribute auf den gleichen nominalen Kern beziehen (horizontale Attribution, vgl. Schmidt, 2011). Die Erweiterungen bei NGrMULT müssen nicht unterschiedlicher Art sein. Die dem NGrMULT folgenden einzelnen Tags geben die Attribute in der Reihenfolge, in der sie auftreten, wieder.\nBeispiel: der perfekte momen um die Tute zu glauen (E20_A04; NGrMULTADJINF)\nVertikale Mehrfachattribution (vgl. Schmidt, 2011), also die Attribution eines nominalen Kerns, der selbst in eine attribuierte NGr eingebettet ist, ist durch die Annotation der Nominalgruppe auf der Spur [ngr2] erfasst.\nBeispiel: die junge das das rote tshirt hat (E09_B11; NGrREL auf [ngr], NGrADJ auf [ngr2])\nAnders als bei Gamper (2022) wurden für Präpositionalphrasen keine gesonderten Tags vergeben; auf oberster Ebene wird NGrPREP annotiert; in der Präpositionalphrase enthaltene NGrs werden als solche auf [ngr2] erfasst.\nAls mit Apposition erweiterte NGr (NGrAPP) wurden auch Strukturen wie bild vier oder nummer sechs erfasst, die im Korpus häufig als kohärenzstiftende Mittel eingesetzt werden.\nAußerdem wurde das Tag NGrSO eingeführt, das NGr mit dem Prädeterminativ so erfasst (vgl. Hirschmann, 2023). Auch wenn diese NGr nicht an sich als erweitert gelten, wurden sie, wenn sie gemeinsam mit Attributen auftreten, mit dem kombinierten NGrMULT-Tag erfasst, also etwa NGrMULTSOPREP. So können auch diese NGr differenziert abgefragt werden; die weitere Differenzierung kann dann in späteren Schritten vollzogen werden, indem etwa NGrMULTSO+ aus den mehrfach erweiterten NGr ausgeschlossen werden.\nZudem wurden NGrQ eingeführt, die “slightly extended nouns” (Klein & Dittmar, 1979: 134) erfassen. Diese NGr enthalten quantifizierende Determinatoren, die auch in Kombination mit anderen Determinatoren auftreten können, etwa die beiden kinder. Auf [kern] werden diese Quantifikatoren mit QUA erfasst.\nAuf [kern] wurde der lexikalische Kern der NGr, also das Nomen, mit dem Tag KERN erfasst. Dem Kern zugehörige Determinative wurden auf der gleichen Spur mit DET getagged. Wenn ein Determinativum obligatorisch wäre und nicht realisiert wurde, wird das mit dem ergänzenden Tag 0DET ebenfalls erfasst. Wenn zwei Determinative realisiert wurden oder ein Determinativum realisiert wurde, wo ein Nullartikel zielsprachlich obligatorisch gewesen wäre, wurde das mit pDET erfasst. Das Tag QUA erfasst quantifizierende Determinatoren.\n\n6.3.1 ngr\n\n\n\n\nTabelle 6.1: Übersicht der annotierten Nominalgruppen\n\n\n\n\n\n\n\nTag\nBeschreibung\nBeispiel\n\n\n\n\nNGrO\nnicht erweiterte / einfache NGr (mit oder ohne Determinierer, nominal; keine Pronomen)\nder lehrerin (E01_A04)\n\n\nNGrCO\nkoordinierte, nicht erweiterte NGr (auch bei Aufzählungen)\ndiesem ball oder diesem papier (E12_D01)\n\n\nNGrQ\nnur mit ggf. zusätzlich zum Artikel vorhandenen Quantifikator erweiterte NGr\ndie zwei mädchen (E10_B10)\n\n\nNGrADJ\nNGr enthält attributives Adjektiv.\neine braune gürtel (E08_A05), die alte frau (E10_D02)\n\n\nNGrPRT\nNGr enthält Partizip.\neine gestorben blume (E08_C03), ein verstecke buch E12_B09)\n\n\nNGrGEN\nNGr enthält pränominales Genitivattribut.\nmarias buch (E11_B02)\n\n\nNGrSO\nNGr enthält pränominales \"so\".\nso eine typ (E02_D04)\n\n\nNGrPADV\nNGr enthält postnominalen adverbiales Attribut.\ndiese junge hier (E09_B07)\n\n\nNGrPREP\nNGr enthält postnominale Präpositionalphrase.\ndie tasse mit dem tee (E01_B02)\n\n\nNGrPGEN\nNGr enthält postnominalen Genitiv.\ndas Buch seines Bruder (E01_C02)\n\n\nNGrPEX\nNGr enthält andere postnominale Attribute (wie-phrase, als-phrase).\nsportlehrer wie so herr NAME (E09_C05)\n\n\nNGrAPP\nNGr enthält postnominale Apposition.\neine tasse tee (E01_B02)\n\n\nNGrREL\nNGr enthält Relativsatz.\nein frau welche wollen einkaufen (E02_C02)\n\n\nNGrINF\nNGr enthält Infinitivsatz.\nkeine zeit ein neuen zu backen (E11_A05)\n\n\nNGrCOMP\nNGr enthält Komplementsatz.\nkeine ahnung wo ist mein tasche (E08_D05)\n\n\nNGrMULT\nNGr hat mehr als ein Attribut auf einem Level.\neine andere name für salon (E13_C04)\n\n\nADJ\nals ergänzendes tag bei NGrMULT\n\n\n\nPRT\nals ergänzendes tag bei NGrMULT\n\n\n\nEXPRT\nals ergänzendes tag bei NGrMULT\n\n\n\nGEN\nals ergänzendes tag bei NGrMULT\n\n\n\nPADV\nals ergänzendes tag bei NGrMULT\n\n\n\nPREP\nals ergänzendes tag bei NGrMULT\n\n\n\nPGEN\nals ergänzendes tag bei NGrMULT\n\n\n\nPEX\nals ergänzendes tag bei NGrMULT\n\n\n\nAPP\nals ergänzendes tag bei NGrMULT\n\n\n\nREL\nals ergänzendes tag bei NGrMULT\n\n\n\nINF\nals ergänzendes tag bei NGrMULT\n\n\n\nCOMP\nals ergänzendes tag bei NGrMULT",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotation Nominalgruppen</span>"
+    ]
+  },
+  {
+    "objectID": "ngr.html#kern",
+    "href": "ngr.html#kern",
+    "title": "6  Annotation Nominalgruppen",
+    "section": "6.4 kern",
+    "text": "6.4 kern\n\n\n\n\nTabelle 6.2: Übersicht der annotierten Nominalgruppenkerne und -determinierer\n\n\n\n\n\n\n\nTag\nBeschreibung\nBeispiel\n\n\n\n\nDET\nDeterminierer des Kerns\n\n\n\nKERN\nKern der NGr\n\n\n\n0DET\nals ergänzendes Tag für zu determinierende, aber nicht determinierte Kerne, an KERN angehängt\nfrau kauft orange (E02_C05)\n\n\npDET\nDET bei nicht zu determinierenden, aber determinierten Kernen\neine leut (E03_D01)\n\n\nQUA\nquantifier\nein bisschen angst (E02_B02)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEroms, Hans-Werner. (2016). Zur Geschichte und Typologie komplexer Nominalphrasen im Deutschen. In Mathilde Hennig (Hrsg.), Komplexe Attribution: Ein Nominalstilphänomen aus sprachhistorischer, grammatischer, typologischer und funktionalstilistischer Perspektive (S. 21–55). De Gruyter. https://doi.org/10.1515/9783110421170\n\n\nGamper, Jana. (2022). Ausbau nominaler Strukturen in der Sekundarstufe I. Eine textkorpusanalytische Studie. Korpora Deutsch als Fremdsprache, 2(2), 13–42. https://doi.org/10.48694/kordaf.3551\n\n\nHimmelmann, Nikolaus P. (1997). Deiktikon, Artikel, Nominalphrase: Zur Emergenz syntaktischer Struktur. De Gruyter. https://doi.org/10.1515/9783110929621\n\n\nHirschmann, Hagen. (2023). Das pränominale so und seine lexikalischen Varianten im Deutschen – eine syntaktische, konstruktions- und variationslinguistische Beschreibung. In Marc Felfe, Dagobert Höllein, & Klaus Welke (Hrsg.), Regelbasierte Konstruktionsgrammatik (S. 183–230). De Gruyter. https://doi.org/10.1515/9783111334042-006\n\n\nKlein, Wolfgang, & Dittmar, Norbert. (1979). Developing Grammars (Willem J. M. Levelt, Hrsg.; Bd. 1). Springer. https://doi.org/10.1007/978-3-642-67385-6\n\n\nSchmidt, Jürgen Erich. (2011). Die deutsche Substantivgruppe und die Attribuierungskomplikation. Niemeyer. https://doi.org/10.1515/9783110958515",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Annotation Nominalgruppen</span>"
+    ]
+  },
+  {
+    "objectID": "verb.html",
+    "href": "verb.html",
+    "title": "7  Annotation Verben",
+    "section": "",
+    "text": "7.1 Spuren bei der Annotation von Satzkonstituenten und Verbstellung",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Annotation Verben</span>"
+    ]
+  },
+  {
+    "objectID": "verb.html#sec-spuren-verb",
+    "href": "verb.html#sec-spuren-verb",
+    "title": "7  Annotation Verben",
+    "section": "",
+    "text": "Annotationsspuren für Verbstellungsmuster\n\n\n\n\n\n\n[unit_cons]\nSatzkonstituenten von unit, jeweils entsprechend der Bezugsspur (z.B. unit2_cons; subclause_cons)\n\n\n[unit_stage]\nVerbstellungsstufe von unit, jeweils entsprechend der Bezugsspur (z.B. unit2_stage; subclause_stage)",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Annotation Verben</span>"
+    ]
+  },
+  {
+    "objectID": "verb.html#sec-annokonst",
+    "href": "verb.html#sec-annokonst",
+    "title": "7  Annotation Verben",
+    "section": "7.2 Annotation Satzkonstituenten",
+    "text": "7.2 Annotation Satzkonstituenten\nDie Annotationen von Satzkonstituenten und Verbstellungsmustern (vgl. Kapitel 7) sind, soweit es für SeiKo sinnvoll erscheint, an den Annotationsspezifikationen des DAKODA-Projekts (vgl. Ruppenhofer et al., 2024) orientiert.\nEine Annotation der Satzkonstitutenten erfolgt nur für verbhaltige units. Das heißt DISC IRNON und SCU werden grundsätzlich nicht berücksichtigt.\nFür jede vorhandene [unit]- und [subclause]-Spur muss eine korrespondierende [cons]-Spur angelegt werden. (Diese werden dann z.B: [unit_cons] oder [subclause_cons] genannt.)\nDie Konstituenten werden als Spannen unter den jeweiligen [pos]-Events annotiert. Eine Übersicht der möglichen Tags wird in Tabelle 7.1 dargestellt.\n\n\n\n\nTabelle 7.1: Übersicht der annotierten Satzkonstituenten\n\n\n\n\n\n\n\nTag\nBeschreibung\n\n\n\n\nV\nVerb\n\n\nS\nSubjekt (nominal, pronominal)\n\n\nSexpl\nSubjekt expletiv\n\n\nScl\nSubjekt satzförmig\n\n\nSext\nzugehöriger Teil eines Subjekts\n\n\nO\nObjekt (nominal, pronominal)\n\n\nOexpl\nObjekt expletiv\n\n\nOcl\nObjekt satzförmig\n\n\nOext\nzugehöriger Teil eines Objekts\n\n\nA\nArgument\n\n\nAext\nzugehöriger Teil eines Arguments\n\n\nPred\nPrädikativ\n\n\nPredcl\nPrädikativ satzförmig\n\n\ncl\nabhängiger Nebensatz\n\n\next\nDISCONT. Konstituenten, z.B. Oext\n\n\nN\nNegator\n\n\nC\nJunktor\n\n\nX\nRestkategorie: Modifizierer/Adjunkt oder Partikel\n\n\nXcl\nRestkategorie satzförmig\n\n\n@\nunklare Elemente\n\n\n\n\n\n\n\n\n\n\n\nIm Unterschied zu Ruppenhofer et al. (2024) unterscheiden wir verschiedene Verbtypen nicht auf [unit_cons], da diese auf [pos] differenziert getagged werden.\nFalls eine Konstituente in mehreren Teilen realisiert wird, wird der Kopf mit dem regulären Tag annotiert. (+)ext markiert dann den zweiten Teil der Konstituente.\nNegatoren werden nur als solche annotiert, wenn es sich um eine Satznegation handelt.\nBeispiel: die Katze frisst nicht = [cons] SVN\nAndernfalls wird der Negator als Teil der Konstituente annotiert.\nBeispiel: Die Katze frisst nicht den Vogel, sondern die Maus = [cons] SVA\nUnklare Elemente werden mit @ annotiert.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Annotation Verben</span>"
+    ]
+  },
+  {
+    "objectID": "verb.html#annotation-verbstellung",
+    "href": "verb.html#annotation-verbstellung",
+    "title": "7  Annotation Verben",
+    "section": "7.3 Annotation Verbstellung",
+    "text": "7.3 Annotation Verbstellung\nBei der Annotation der Verbstellungsmuster orientieren wir uns ebenfalls an den Spezifikationen von Ruppenhofer et al. (2024).\nFür alle [unit]- und [subclause]-Spuren werden korrespondierende [stage]-Spuren angelegt. (z.B. [unit_stage], [subclause_stage], etc.).\nFür jede verbhaltige unit wird dann auf der entsprechenden [stage]-Spur eine Spannannotation erstellt, die alle für die Zuordnung relevanten Konstituenten umfasst. Nicht konnektintegrierte Konnektoren (und, oder) werden dabei nicht mit eingeschlossen!\nWeist eine unit Eigenschaften mehrere Verbstellungsmuster bzw. Abweichungen oder spezifischen Interpretationsformen dieser auf, werden alle relevanten Tags vergeben. Die einzelnen Tags und (einige) mögliche Kombinationen werden in Tabelle 7.2 dargestellt.\n\n\n\n\nTabelle 7.2: Übersicht der annotierten Verbstellungsstrukturen\n\n\n\n\n\n\n\nTag\nBeschreibung\nBeispiel\n\n\n\n\nnostage\nkeine PT-Stufe zuzuordnen\nsprechen mit der kinder (E01_B07)\n\n\nnostagekor\nkeine PT-Stufe zuzuordnen, da aufgrund eines Koordinationskontextes eine syntaktische Reduktion vorliegt\n(Dann ist die Mutter gekommen) und sagte (E19_A04)\n\n\nSV\nSubjekt und Verb ohne weiteres Element\nwir kochen (E05_B10)\n\n\nSVX\nSubjekt und Verb mit folgendem Element, das kein Objekt ist\nund sie versteht nicht (E06_C05)\n\n\nSVO\nkanonische Satzstellung in einem Deklarativsatz mit finitem Verb\nund der junge em schmeißt n ball (E07_A05)\n\n\nADV\nSVO oder SVX mit einem weiteren Element vor dem Subjekt im Vorfeld\nund danach n die gibt eine junge ein tee (E07_A05)\n\n\nSEP\nVerbklammer mit gefülltem Mittelfeld\nund ein junge hat tor gemacht (E09_B11)\n\n\nNOSEP\nnicht realisierte Separation in SEP-Kontext\nEin Junge hat verloren in Basketball (E09_C03)\n\n\nSEPnoev\nSEP mit leerem Mittelfeld (Nähestellung)\nund der tasse is hingefallen (E01_A05)\n\n\nSEPanti\nobligatorische Objektsatz im Nachfeld, daher leeres Mittelfeld\nJunge hat gesagte was sie müssen leise sein (E01_C02)\n\n\nSEP ADV\n\nund dann der kinder • ee macht kaffee runter (E01_A05)\n\n\nNOSEP ADV\n\nin diese bild wir • • • können sehen (E03_C02)\n\n\nSEPnoev ADV\n\ndanach • • ee die junge willen umziehen (E09_C04)\n\n\nSEPanti ADV\n\n\n\n\nINV\nSubjektinversion\nund da kommt die mutter (E01_A05)\n\n\nINVpseudo\nnach W-Adverb\nwie sagt man das? (E08_A04)\n\n\nINVin\neingebettete Inversionen\n(und das wars) glaube ich (E07_C02)\n\n\nINV SEP\n\nvielleicht ee • wollte sie einfach mit er ee • • • lachen (E12_C04)\n\n\nINVpseudo SEP\n\nwarum hat sie • nicht gesagt (E06_A04)\n\n\nINVin SEP\n\n\n\n\nINV SEPnoev\n\ndann gehen • • ee sitzen (E05_D04)\n\n\nVEND\nVerbendstellung im Nebensatzkontext\nweil der verloren hat (E09_A04)\n\n\nVENDnoev\nwenn nur eine Konstituente vor dem finiten Verb steht (+ggf. Konnektor) oder in zielsprachlichen Kontexten (etwa V2-Nebensätze)\nob der telefoniert (E15_B10)\n\n\n!VEND\nVEND anstelle von MC-Strukturen\nich buch lesen (E01_D04)\n\n\n\n\n\n\n\n!SVX NOVEND(noev)\nSVX Struktur in einem VEND-Kontext\n\n\n\n!SVO NOVEND(noev)\nSVO Struktur in einem VEND-Kontext\n\n\n\n!ADV NOVEND(noev)\nADV Struktur in einem VEND-Kontext\n\n\n\n!SEP NOVEND(noev)\nSEP Struktur in einem VEND-Kontext\n\n\n\n!NOSEP NOVEND(noev)\n\n\n\n\n!SEPnoev NOVEND(noev)\n\n\n\n\n!INV NOVEND(noev)\nINV Struktur in einem VEND-Kontext\n\n\n\n!INVnoev NOVEND(noev)\n\n\n\n\n!INVpseudo NOVEND(noev)\n\n\n\n\n!SEP !INVpseudo NOVEND(noev)\n\n\n\n\nV1imp\nfür V1 Imperative\nzeig mir • eure • buskart (E10_C04)\n\n\nØ\nwenn auf unit eine nicht realisierte Äußerungseinheit annotiert ist, von der eine subclause abhängt\n\n\n\n\n\n\n\n\n\n\n\n\nRuppenhofer et al. (2024) unterscheiden in ihren Annotationsspezifikationen grundsätzlich zwischen Strukturen, die als Kernindikatoren für die Verbstellungsstufen gelten können (core), und Strukturen, die in den meisten vorliegenden Arbeiten nicht als Indikatoren gewertet werden (peri). Wir ergänzen diese Zuordnungen nicht als eigene Analysekategorien, da die Merkmale aus anderen der vorliegenden Annotationen abgeleitet werden können.\nIm Folgenden werden die Kriterien für die Zuordnung der Kernstufen und die Interpretation von Varianten dargestellt.\n\n7.3.1 SVO\nAls Indikatoren für die kanonische Verbstellung (SVO) werten wir alle Deklarativsätze, die ein Verb in der linken Satzklammer sowie ein lokales Subjekt und Objekt enthalten. (Abweichend von Ruppenhofer et al., 2024 wird SVO auch bei Kopulaverben annotiert.)\nEnthält die Äußerung hingegen eine weitere Konstituente, die kein Objekt ist, wird SVX annotiert. Folgt nach dem Verb keine weitere Konstituente, ist das Tag SV.\nSVO wird auch für Strukturen annotiert, die auf [subclause] mit MCSUB(+) getagged werden.\nSVO/SVX wird auch bei Sätzen mit Interrogativpronomen, die als Subjekt des Satzes fungieren, annotiert.\nBeispiel: Wer war das? Was ist los?\nTreten SV/SVX/SVO-Strukturen in Kontexten auf, in denen sie ungrammatisch sind (VEND), werden sie als !SV, !SVX oder !SVO zusammen mit der nicht realisierten Struktur annotiert (NOVEND oder NOVENDnoev).\n\n\n7.3.2 ADV\nSVO-Strukturen bei denen ein weiteres Element neben dem Subjekt das Vorfeld besetzt, werden mit ADV annotiert. Wir unterscheiden dabei nicht zwischen verschiedenen Konstituenten oder der Position vor oder nach dem Subjekt im Vorfeld.\nADV wird jedoch nicht bei topikalisierten Nominalgruppen annotiert.\nBeispiel: Die Katze sie frisst\nEbenso wird ADV nicht bei zielsprachlichen mehrfache Vorfeldbesetzungen gesetzt.(z.B. Konnektoren wie Die Katze aber schläft immer noch.)\nAuch ADV kann ungrammatisch in Kontexten auftreten, in denen VEND obligatorisch wäre. Diese Strukturen werden dann mit !ADV NOVEND annotiert.\n\n\n7.3.3 SEP\nSEP-Strukturen zeichnen sich durch ein komplexes Prädikat in Distanzstellung bei besetztem Mittelfeld aus. Ein lokales Subjekt ist dafür nicht zwingend erforderlich.\nWird diese Separation nicht realisiert, wird die Struktur mit NOSEP getagged.\nBei leerem Mittelfeld und wenn kein weiteres Element auf den finiten Prädikatsteil folgt (Nähestellung), kann die Struktur nicht als Evidenz für Separation gewertet werden (SEPnoev).\nEine obligatorische Nähestellung liegt bei Verben vor, die einen Objektsatz fordern, der dann im Nachfeld realisiert wird. Solche Strukturen werden mit SEPanti annotiert.\nAuch SEP-Strukturen können in MCSUB(+) [subclause] in Nebensätzen auftreten.\nSEP kann zusammen mit ADV und INV und ebenso anstelle von VEND-Strukturen auftreten (!SEP NOVEND).\n\n\n7.3.4 INV\nFür den Nachweis einer Subjektinversion muss das Subjekt im Mittelfeld realisiert werden, während eine weitere Konstituente das Vorfeld besetzt.\nBei einem unbesetzten Vorfeld bei V1-Exklamativa wird ebenfalls INV annotiert.\nBeispiel: Frisst die schon wieder einen Vogel!\nParenthetische Inversionsstrukturen (Beispiel: Die Katze, glaube ich, frisst den Vogel) werden in SeiKo mit INVin annotiert.\nINVpseudo wird nach W-Adverbien annotiert; bei Sätzen mit Interrogativpronomen, die als Subjekt des Satzes fungieren, wird nicht INVpseudo, sondern SVO/SVX annotiert. (Bsp.: Wer war das? Was ist los?)\n\n\n7.3.5 VEND\nDie Verbendstellung ist grammatisch in Nebensatzkontexten. Ein Subjekt ist für die Zuordnung nicht notwendig.\nFolgt auf einen Subjunktor kein weiteres Element (CSV statt CSXV auf [cons]) wird mit VENDnoev getagged.\nTreten VEND-Strukturen in Kontexten auf, in denen z.B. SVO grammatisch wäre, werden diese mit !VEND annotiert.\nBei einigen Nebensätzen (z.B. nach Subjunktor weil) werden für das Deutsche auch V2-Strukturen im Nebensatz als zielsprachlich angesehen. Wir annotieren diese mit NOVENDnoev (meist im Zusammenhang mit der tatsächlichen Struktur (also z.B. SEP NOVENDnoev)\nBeispiel: weil die Maus ist weggelaufen\n\n\n7.3.6 V1\nNeben den in Kapitel 7.3.4 beschriebenen V1-Strukturen wird V1imp für Imperative mit Verberststellung genutzt.\n\n\n7.3.7 nostage\nKann keine Verbstellungsstruktur zugeordnet werden, wird mit nostage getagged. Ist die Zuordnung nicht möglich, weil durch syntaktische Reduktion (z.B. bei Koordinationsellipsen) obligatorische Konstituenten nicht realisiert werden, ist das Tag nostagekor (vgl. Kapitel 7.3.9).\n\n\n7.3.8 Ø\nØ wird auf unit_stage annotiert, wenn auf unit ebenfalls Ø annotiert ist, was für eine nicht realisierte Äußerungseinheit, von der eine subclause abhängt, steht.\n\n\n7.3.9 Koordination(sellipsen)\nKoordinierte Äußerungseinheiten werden als getrennte Einheiten segmentiert.\nBeispiel: Die Katze schläft und die Maus frisst Käse\nDies gilt auch bei doppelter Prädikation.\nBeispiel: Die Maus frisst einen Käse und schläft dann ein.\nsowie bei koordinierten Verbalphrasen\nBeispiel: Die Katze schläft und schnarcht.\nDas Kriterium für die Segmentierung ist die Verbhaltigkeit einer unit. Dieses Vorgehen unterscheidet sich von dem von Foster et al. (2000), die koordinierte Einheiten unter bestimmten Bedingungen (vgl. ebd.: 367) als Teil einer AS-Unit fassen.\nKoordinierte Nominalgruppen werden nicht getrennt segmentiert.\n\n\n\n\nFoster, Pauline, Tonkyn, Alan, & Wigglesworth, Gillian. (2000). Measuring spoken language: A unit for all reasons. Applied Linguistics, 21(3), 354–375. https://doi.org/10.1093/applin/21.3.354\n\n\nRuppenhofer, Josef, Schwendemann, Matthias, Portmann, Annette, & Wisniewski, Katrin. (2024). Specification of Processability Theory’s Developmental Stages.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Annotation Verben</span>"
+    ]
+  },
+  {
+    "objectID": "evaluation.html",
+    "href": "evaluation.html",
+    "title": "8  Qualitätssicherung und Evaluation",
+    "section": "",
+    "text": "8.1 Erarbeitung und Präzisierung der Richtlinien\nDieses Kapitel beschreibt das Vorgehen zur Sicherung der Konsistenz und Qualität der Datenaufbereitung.\nDie Richtlinien für Segmentierung und Annotation wurden auf Grundlage theoretischer Vorarbeiten und bestehender Manuals erarbeitet und für die spezifischen Anforderungen des Korpus iterativ angepasst. Ein zentraler Bestandteil dieses Prozesses war der fortlaufende datennahe Austausch im Team: Annotationsentscheidungen wurden anhand konkreter Beispiele diskutiert, um Unklarheiten zu identifizieren, die Richtlinien zu präzisieren und notwendige Anpassungen vorzunehmen.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Qualitätssicherung und Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#vier-augen-prinzip",
+    "href": "evaluation.html#vier-augen-prinzip",
+    "title": "8  Qualitätssicherung und Evaluation",
+    "section": "8.2 Vier-Augen-Prinzip",
+    "text": "8.2 Vier-Augen-Prinzip\nIm Prozess der Datenaufbereitung wurde, soweit möglich, nach dem Vier-Augen-Prinzip gearbeitet. Neben dem Austausch zu Problemfällen und der Diskussion eines Konsens wurde der Arbeitsprozess so strukturiert, dass zwischen zentralen Arbeitsschritten ein Wechsel der Bearbeiter:in erfolgte. So wurden die Transkriptionen bei der folgenden Segmentierung zusätzlich überprüft und Zweifelsfälle ggf. besprochen. Ebenso wurden die Segmentierungen zusammen mit den automatischen Annotationen während der manuellen Annotation geprüft und korrigiert.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Qualitätssicherung und Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#inter-annotator-agreements",
+    "href": "evaluation.html#inter-annotator-agreements",
+    "title": "8  Qualitätssicherung und Evaluation",
+    "section": "8.3 Inter-Annotator-Agreements",
+    "text": "8.3 Inter-Annotator-Agreements\nZusätzlich führten wir zu zwei Zeitpunkten eine Evaluation der Annotationen anhand der Berechnung eines Inter-Annotator-Agreements (IAA) durch.1\nZunächst erfolgte dies während der Datenaufbereitung von SeiKo1 mit einem Sample von 21 % der bis zu diesem Zeitpunkt vorliegenden Daten. Für die doppelt und unabhängig annotierten Stichprobendaten wurde ein IAA berechnet, das die hierarchischen Abhängigkeiten in mehrschichtigen Annotationsebenen als Baumstrukturen interpretiert und mit einem dafür geeigneten Maß vergleicht (vgl. Skjærholt, 2013).\nHierbei konnte für Krippendorff’s alpha (Krippendorff, 1970) ein Wert von .73 für alle Verbstellungsstrukturen berechnet werden, für die Verbstellungsstrukturen eingebetteter AS-units ein Wert von .43. Für die Nominalgruppen (NGr) ergab sich ein ähnliches Bild: NGr auf erster Ebene, also solche, die nicht selbst in andere Nominalgruppen eingebettet sind, ergaben einen Wert von 0.86, während abhängige NGr lediglich bei .43 lagen.\nDie Sichtung inkonsistenter Annotationen und ihre gemeinsame Diskussion dienten dazu, die Richtlinien zu präzisieren und die Übereinstimmung bei späteren Annotationen zu erhöhen. Nach Abschluss dieses iterativen Prozesses wurden die finalen Richtlinien auf alle Daten angewendet.\nNach abgeschlossener Annotation von SeiKo1 wurde ein über die Schüler:innen, Erhebungszeitpunkte und Textteile balanciertes Zufallssample aus ca. 21 % der Daten (20,9 % der [pos]-Token, 20,6 % [unit]-Token, 20,7 % [stage]-Token, 20,6 % [ngr]-Token) gezogen und unabhängig von zwei Annotator:innen annotiert. Das bedeutet, dass insgesamt 1488 verbhaltige Äußerungen und 1248 Nominalgruppen doppelt annotiert wurden und auf dieser Grundlage erneut ein IAA berechnet wurde.\nZur Bestimmung des Inter-Annotator-Agreements wurde für die hierarchisch strukturierten Ebenen ([ngr], [unit_cons], [subclause_cons]) Krippendorffs alpha auf Basis von Tree-Edit-Distance bestimmt Pawlik & Augsten (2012). Die Ergebnisse finden sich in Tabelle 8.1.\n\n\n\nTabelle 8.1: Übersicht über das IAA hierarchisch strukturierter Ebenen in SeiKo1.\n\n\n\n\n\nAnnotationsebene\nα (alle Token)\nα (nur annotierte Token)\n\n\n\n\nNominalgruppen\n0.87\n0.89\n\n\nKonstituenten unit\n0.90\n0.89\n\n\nKonstituenten subclause\n0.90\n0.94\n\n\n\n\n\n\nDie Berechnung des IAA der [stage]-Annotationen war nicht darauf angewiesen, ihre hierarchische Struktur zu berücksichtigen, da Spannen und Struktur dieser Annotationen bereits durch den vorigen Annotationsschritt, die Segmentierung, für beide Annotator:innen gleichermaßen vorgegeben waren. Das IAA für diese Strukturen betrug 0.9 für Annotationen auf einer [unit]-Ebene bzw. 0.93 auf einer [subclause]-Ebene.\nDie aus dem IAA entstandene Übersicht über doppelt annotierte Strukturen wurde außerdem genutzt, um systematische Unterschiede zu identifizieren, Unschärfen erneut zu besprechen und zu glätten, und gemeinsam beschlossene Korrekturen in den Daten vorzunehmen.\nAuf Basis dieser Ergebnisse und unter Beibehaltung des Vier-Augen-Prinzips wurden anschließend die Daten aus SeiKo2 annotiert.\n\n\n\n\nKrippendorff, Klaus. (1970). Bivariate Agreement Coefficients for Reliability of Data. Sociological Methodology, 2, 139. https://doi.org/10.2307/270787\n\n\nPawlik, Mateusz, & Augsten, Nikolaus. (2012). RTED: A Robust Algorithm for the Tree Edit Distance. https://doi.org/10.48550/ARXIV.1201.0230\n\n\nSkjærholt, Arne. (2013). Influence of preprocessing on dependency syntax annotation: speed and agreement. Proceedings of the 7th Linguistic Annotation Workshop & Interoperability with Discourse, 28–32.\n\n\nSkjærholt, Arne. (2014). A chance-corrected measure of inter-annotator agreement for syntax. Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 934–944. https://doi.org/10.3115/v1/P14-1088",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Qualitätssicherung und Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#footnotes",
+    "href": "evaluation.html#footnotes",
+    "title": "8  Qualitätssicherung und Evaluation",
+    "section": "",
+    "text": "Für Beratung zu und Berechnung der Inter-Annotator-Agreements bedanken wir uns herzlich bei Martin Klotz!↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Qualitätssicherung und Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "9  Literaturverzeichnis",
+    "section": "",
+    "text": "Bley-Vroman, Robert. (1983). The comparative fallacy in interlanguage\nstudies: The case of systematicity. Language\nLearning, 33(1), 1–17. https://doi.org/10.1111/j.1467-1770.1983.tb00983.x\n\n\nEroms, Hans-Werner. (2016). Zur Geschichte und\nTypologie komplexer Nominalphrasen im\nDeutschen. In Mathilde Hennig (Ed.), Komplexe\nAttribution: Ein Nominalstilphänomen aus\nsprachhistorischer, grammatischer, typologischer und\nfunktionalstilistischer Perspektive (pp. 21–55). De\nGruyter. https://doi.org/10.1515/9783110421170\n\n\nFoster, Pauline, Tonkyn, Alan, & Wigglesworth, Gillian. (2000).\nMeasuring spoken language: A unit for all reasons.\nApplied Linguistics, 21(3), 354–375. https://doi.org/10.1093/applin/21.3.354\n\n\nGamper, Jana. (2022). Ausbau nominaler Strukturen in der\nSekundarstufe I. Eine textkorpusanalytische\nStudie. Korpora Deutsch Als Fremdsprache,\n2(2), 13–42. https://doi.org/10.48694/kordaf.3551\n\n\nGilquin, Gaëtanelle. (2022). One norm to rule them all? Corpus-derived norms in learner corpus research\nand foreign language teaching. Language Teaching,\n55(1), 87–99. https://doi.org/10.1017/S0261444821000094\n\n\nHimmelmann, Nikolaus P. (1997). Deiktikon, Artikel,\nNominalphrase: Zur Emergenz syntaktischer\nStruktur. De Gruyter. https://doi.org/10.1515/9783110929621\n\n\nHirschmann, Hagen. (2023). Das pränominale so und seine lexikalischen\nVarianten im Deutschen – eine syntaktische,\nkonstruktions- und variationslinguistische Beschreibung. In\nMarc Felfe, Dagobert Höllein, & Klaus Welke (Eds.),\nRegelbasierte Konstruktionsgrammatik (pp.\n183–230). De Gruyter. https://doi.org/10.1515/9783111334042-006\n\n\nKlein, Wolfgang, & Dittmar, Norbert. (1979). Developing\nGrammars (Willem J. M. Levelt, Ed.; Vol. 1). Springer.\nhttps://doi.org/10.1007/978-3-642-67385-6\n\n\nKrause, Thomas, & Klotz, Martin. (2023). Annatto. https://github.com/korpling/annatto\n\n\nKrause, Thomas, & Zeldes, Amir. (2016). ANNIS3:\nA new architecture for generic corpus query and\nvisualization. Digital Scholarship in the Humanities,\n31(1), 118–139. https://doi.org/10.1093/llc/fqu057\n\n\nKrippendorff, Klaus. (1970). Bivariate Agreement\nCoefficients for Reliability of Data.\nSociological Methodology, 2, 139. https://doi.org/10.2307/270787\n\n\nMassumi, Mona, & von Dewitz, Nora. (2015). Neu zugewanderte\nKinder und Jugendliche im deutschen\nSchulsystem: Bestandsaufnahme und\nEmpfehlungen. https://international.uni-koeln.de/sites/international/aaa/92/92pdf/92pdf_REFUGEES_PUBL_MI_ZfL_Studie_Zugewanderte_im_deutschen_Schulsystem_final_screen.pdf\n\n\nMeyermann, Alexia, & Porzelt, Maike. (2014). Hinweise zur\nAnonymisierung von qualitativen Daten.\nVersion 1.0. Leibniz-Institut für Bildungsforschung\nund Bildungsinformation.\n\n\nProisl, Thomas, Dykes, Natalie, Heinrich, Philipp, Kabashi, Besim, &\nEvert, Stefan. (2019). Lemmatisierungsrichtlinien.\nVersion 2019-04-26.\n\n\nQuirk, Randolph, Greenbaum, Sidney, Leech, Geoffrey, & Svartvik,\nJan. (1985). A Comprehensive grammar of the\nEnglish language. Longman.\n\n\nRuppenhofer, Josef, Schwendemann, Matthias, Portmann, Annette, &\nWisniewski, Katrin. (2024). Specification of Processability\nTheory’s Developmental Stages.\n\n\nSchellhardt, Christin, & Schroeder, Christoph. (2015).\nMULTILIT: Manual, criteria of\ntranscription and analysis for German, Turkish\nand English.\n\n\nSchmid, Helmut. (1994). Probabilistic Part-of-Speech Tagging Using Decision Trees.\nProceedings of International Conference on New Methods in Language\nProcessing.\n\n\nSchmid, Helmut. (1995). Improvements in Part-of-Speech Tagging with an\nApplication to German. Proceedings of the\nACL SIGDAT-Workshop. Dublin, Ireland.\n\n\nSchmidt, Jürgen Erich. (2011). Die deutsche Substantivgruppe\nund die Attribuierungskomplikation. Niemeyer. https://doi.org/10.1515/9783110958515\n\n\nSchmidt, Thomas, & Wörner, Kai. (2014). EXMARaLDA. In\nHandbook on Corpus Phonology (pp. 402–419). Oxford\nUniversity Press.\n\n\nSchwendemann, Matthias, Portmann, Annette, Schlauch, Julia, Gamper,\nJana, & Wisniewski, Katrin. (2024). Forschungsdaten für alle.\nRechtliche Möglichkeiten und Herausforderungen bei der Veröffentlichung\nvon Lernerkorpora. 4(2), 149–176. https://doi.org/10.48694/kordaf.4138\n\n\nSkjærholt, Arne. (2013). Influence of preprocessing on dependency syntax\nannotation: Speed and agreement. Proceedings of the 7th\nLinguistic Annotation Workshop &\nInteroperability with Discourse, 28–32.\n\n\nSkjærholt, Arne. (2014). A chance-corrected measure of inter-annotator\nagreement for syntax. Proceedings of the 52nd Annual\nMeeting of the Association for Computational\nLinguistics (Volume 1: Long\nPapers), 934–944. https://doi.org/10.3115/v1/P14-1088\n\n\nWestpfahl, Swantje, Schmidt, Thomas, Jonietz, Jasmin, & Borlinghaus,\nAnton. (2017). STTS 2.0: Guidelines für\ndie Annotation von POS-Tags für\nTranskripte gesprochener Sprache in\nAnlehnung an das Stuttgart Tübingen Tagset\n(STTS).\n\n\nWiese, Heike. (2020). Language Situations: A\nMethod for Capturing Variation within\nSpeakers’ Repertoires. In Yoshiyuki Asahi\n(Ed.), Methods in Dialectology XVI (pp. 105–117).\nPeter Lang.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Literaturverzeichnis</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html",
+    "href": "nutzungsbedingungen.html",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "",
+    "text": "10.1 Gegenstand der Nutzungsbedingungen\nDiese Nutzungsbedingungen regeln den Zugang zu SeiKo und die Nutzung der darin bereitgestellten Daten. Dazu gehören insbesondere Transkriptionen, Annotationen und Metadaten sowie – soweit gesondert freigegeben – die Audiodateien.\nDer Zugang wird ausschließlich nach Prüfung und Genehmigung einer individuellen Zugriffsanfrage gewährt. Mit der Beantragung des Zugangs und der anschließenden Nutzung der Daten erkennt die nutzungsberechtigte Person diese Nutzungsbedingungen an.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#zugangsberechtigung",
+    "href": "nutzungsbedingungen.html#zugangsberechtigung",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.2 Zugangsberechtigung",
+    "text": "10.2 Zugangsberechtigung\nDer Zugang wird ausschließlich natürlichen Personen gewährt, die sich authentifiziert und Angaben zu ihrer institutionellen Zugehörigkeit sowie zum vorgesehenen Nutzungszweck gemacht haben.\nDie Zugangsberechtigung ist persönlich und nicht übertragbar. Zugangsdaten, Freigabelinks oder heruntergeladene Korpusdateien dürfen nicht an andere Personen weitergegeben werden.\nWeitere Personen, die im Rahmen eines Forschungs- oder Lehrvorhabens mit den Daten arbeiten wollen, müssen jeweils eine eigene Zugangsberechtigung beantragen.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#zulässige-nutzungszwecke",
+    "href": "nutzungsbedingungen.html#zulässige-nutzungszwecke",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.3 Zulässige Nutzungszwecke",
+    "text": "10.3 Zulässige Nutzungszwecke\nDas SeiKo-Korpus darf ausschließlich zu wissenschaftlichen, nicht kommerziellen Zwecken genutzt werden. Zulässig ist insbesondere die Nutzung für:\n\nwissenschaftliche Forschung,\nwissenschaftliche Lehre,\nStudium und wissenschaftliche Qualifikationsarbeiten.\n\nJede darüber hinausgehende Nutzung, insbesondere eine kommerzielle Nutzung, Auftragsforschung mit kommerziellem Verwertungsinteresse oder die Verwendung zur Entwicklung kommerzieller Produkte und Dienstleistungen, bedarf der vorherigen schriftlichen Zustimmung der Lizenzgeber:in.\nDie Daten dürfen nur für den in der Zugriffsanfrage angegebenen Zweck verwendet werden. Wesentliche Änderungen oder Erweiterungen des Vorhabens sind dem SeiKo-Projekt mitzuteilen und können eine erneute Genehmigung erfordern.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#zulässige-bearbeitung-der-daten",
+    "href": "nutzungsbedingungen.html#zulässige-bearbeitung-der-daten",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.4 Zulässige Bearbeitung der Daten",
+    "text": "10.4 Zulässige Bearbeitung der Daten\nIm Rahmen des genehmigten Vorhabens dürfen die bereitgestellten Daten:\n\nheruntergeladen und auf geeigneten Systemen gespeichert,\nvervielfältigt, konvertiert und technisch aufbereitet,\nausgewertet und mit anderen Forschungsdaten verknüpft,\nkorrigiert, ergänzt und mit zusätzlichen Annotationen versehen werden.\n\nDiese Erlaubnis umfasst ausschließlich die interne Bearbeitung für das genehmigte Forschungs-, Lehr- oder Studienvorhaben. Sie berechtigt nicht zur Weitergabe oder Veröffentlichung der bearbeiteten Daten.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#verbot-der-weitergabe-und-veröffentlichung",
+    "href": "nutzungsbedingungen.html#verbot-der-weitergabe-und-veröffentlichung",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.5 Verbot der Weitergabe und Veröffentlichung",
+    "text": "10.5 Verbot der Weitergabe und Veröffentlichung\nDas SeiKo-Korpus sowie einzelne Korpusdateien oder wesentliche Teile daraus dürfen weder in ihrer ursprünglichen noch in einer veränderten oder ergänzten Form:\n\nan nicht zugangsberechtigte Dritte weitergegeben,\nveröffentlicht oder verbreitet,\nin öffentlich zugängliche Repositorien hochgeladen,\nals Anhang oder Supplement zu einer Publikation bereitgestellt,\nüber Webseiten, öffentliche Code-Repositorien oder andere Plattformen zugänglich gemacht werden.\n\nDies gilt auch für bearbeitete Fassungen, konvertierte Dateien, korrigierte Transkriptionen, zusätzliche Annotationen und andere abgeleitete Korpusversionen, sofern diese eine Rekonstruktion oder eigenständige Nutzung der ursprünglichen Korpusdaten ermöglichen.\nDie Weitergabe aggregierter, anonymisierter Analyseergebnisse, die keine Rekonstruktion einzelner Korpusdaten oder Rückschlüsse auf beteiligte Personen ermöglichen, bleibt zulässig.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#veröffentlichung-zusätzlicher-annotationen-und-korpusversionen",
+    "href": "nutzungsbedingungen.html#veröffentlichung-zusätzlicher-annotationen-und-korpusversionen",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.6 Veröffentlichung zusätzlicher Annotationen und Korpusversionen",
+    "text": "10.6 Veröffentlichung zusätzlicher Annotationen und Korpusversionen\nBearbeitete Korpusfassungen, zusätzliche Annotationen, Korrekturen oder Erweiterungen können dem SeiKo-Projekt zur Prüfung und dauerhaften Aufnahme in das Korpus angeboten werden.\nEine Veröffentlichung solcher Daten kann nach vorheriger schriftlicher Vereinbarung über das SeiKo-Projekt erfolgen. Dabei werden insbesondere die Qualitätssicherung, die Versionierung, die Dokumentation sowie die angemessene Nennung der beteiligten Personen gesondert geregelt.\nEine eigenständige Veröffentlichung oder Weitergabe solcher Fassungen außerhalb des SeiKo-Projekts ist nur mit vorheriger schriftlicher Zustimmung der Lizenzgeber:in zulässig.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#wissenschaftliche-publikationen-und-korpusausschnitte",
+    "href": "nutzungsbedingungen.html#wissenschaftliche-publikationen-und-korpusausschnitte",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.7 Wissenschaftliche Publikationen und Korpusausschnitte",
+    "text": "10.7 Wissenschaftliche Publikationen und Korpusausschnitte\nDie Veröffentlichung wissenschaftlicher Ergebnisse, die mithilfe von SeiKo gewonnen wurden, ist zulässig.\nIn wissenschaftlichen Publikationen, Vorträgen und Qualifikationsarbeiten dürfen einzelne, für die wissenschaftliche Argumentation erforderliche Korpusausschnitte wiedergegeben werden, sofern:\n\nder Umfang der Wiedergabe durch den wissenschaftlichen Zweck gerechtfertigt ist,\nkeine zusammenhängenden oder umfangreichen Teile des Korpus reproduziert werden,\ndie betroffenen Personen nicht identifiziert oder reidentifiziert werden können,\ndie Quelle und die verwendete Korpusversion vollständig angegeben werden und\nkeine Rechte Dritter oder zusätzliche Schutzbestimmungen entgegenstehen.\n\nFür die Veröffentlichung von Abbildungen der Primärtexte, längeren Transkriptpassagen oder Ausschnitten aus Audiodateien ist grundsätzlich die vorherige schriftliche Zustimmung des SeiKo-Projekts erforderlich.\nGesetzlich zulässige Nutzungen, insbesondere das Zitatrecht, bleiben unberührt.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#quellenangabe",
+    "href": "nutzungsbedingungen.html#quellenangabe",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.8 Quellenangabe",
+    "text": "10.8 Quellenangabe\nBei jeder Publikation, Präsentation oder Qualifikationsarbeit, die auf der Nutzung von SeiKo beruht, ist das Korpus unter Angabe der verwendeten Version und des zugehörigen DOI zu zitieren.\nDie empfohlene Zitierweise lautet:\nSchlauch, Julia; Braunewell, Aylin; Gamper, Jana (2026): SeiKo - Korpus Seiteneinsteiger:innen in Vorbereitungsklassen. Handbuch zu Korpusdesign und Datenaufbereitung. Version XX. Zenodo. DOI: 10.5281/zenodo.21495943\nNutzende werden gebeten, das SeiKo-Projekt über aus der Korpusnutzung entstandene Publikationen zu informieren. Entsprechende Hinweise können an seiko@uni-giessen.de gesendet werden. Die Publikationen können anschließend in die Bibliographie auf der SeiKo-Webseite aufgenommen werden.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#schutz-der-beteiligten-personen",
+    "href": "nutzungsbedingungen.html#schutz-der-beteiligten-personen",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.9 Schutz der beteiligten Personen",
+    "text": "10.9 Schutz der beteiligten Personen\nJeglicher Versuch, die im Korpus erfassten Personen zu identifizieren oder pseudonymisierte Daten mit anderen Informationen zu verknüpfen, um die Identität einer Person festzustellen, ist untersagt.\nZufällig bekannt gewordene identifizierende oder besonders schutzbedürftige Informationen dürfen nicht veröffentlicht oder weitergegeben werden. Ein entsprechender Vorfall ist dem SeiKo-Projekt unverzüglich mitzuteilen.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#datensicherheit",
+    "href": "nutzungsbedingungen.html#datensicherheit",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.10 Datensicherheit",
+    "text": "10.10 Datensicherheit\nDie nutzungsberechtigte Person hat die Korpusdaten durch angemessene technische und organisatorische Maßnahmen vor unbefugtem Zugriff, Verlust und unbeabsichtigter Offenlegung zu schützen.\nDie Daten dürfen nur auf Geräten, Servern und Speichersystemen verarbeitet werden, bei denen der Zugriff auf die am genehmigten Vorhaben beteiligten und zugangsberechtigten Personen beschränkt ist.\nEine Übermittlung an externe Dienstleister:innen oder die Eingabe der Daten in externe Cloud-, KI- oder Analysedienste ist nur zulässig, wenn die Vertraulichkeit der Daten und die Einhaltung dieser Nutzungsbedingungen nachweislich gewährleistet sind und erforderlichenfalls eine vorherige Zustimmung des SeiKo-Projekts eingeholt wurde.\nSicherheitsvorfälle, Datenverluste oder unbefugte Zugriffe sind unverzüglich an seiko@uni-giessen.de zu melden.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#beendigung-der-nutzung",
+    "href": "nutzungsbedingungen.html#beendigung-der-nutzung",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.11 Beendigung der Nutzung",
+    "text": "10.11 Beendigung der Nutzung\nNach Abschluss des genehmigten Vorhabens, nach Ablauf oder Widerruf der Zugangsberechtigung sowie auf Aufforderung der Lizenzgeber:in sind die heruntergeladenen Korpusdaten und alle davon angefertigten Kopien zu löschen.\nDavon ausgenommen sind veröffentlichte Forschungsergebnisse sowie vollständig anonymisierte und aggregierte Auswertungsergebnisse, aus denen die ursprünglichen Korpusdaten nicht rekonstruiert werden können.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#widerruf-des-zugangs",
+    "href": "nutzungsbedingungen.html#widerruf-des-zugangs",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.12 Widerruf des Zugangs",
+    "text": "10.12 Widerruf des Zugangs\nBei einem Verstoß gegen diese Nutzungsbedingungen kann der Zugang zum Korpus mit sofortiger Wirkung gesperrt oder widerrufen werden. In diesem Fall sind sämtliche Korpusdaten und Kopien unverzüglich zu löschen.\nWeitergehende Rechte der Lizenzgeber:in und Rechte betroffener Personen bleiben unberührt.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#beantragung-des-zugangs",
+    "href": "nutzungsbedingungen.html#beantragung-des-zugangs",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.13 Beantragung des Zugangs",
+    "text": "10.13 Beantragung des Zugangs\nDer Zugang zu den regulär bereitgestellten SeiKo-Daten ist über die Zugriffsanfrage des entsprechenden Zenodo-Eintrags zu beantragen.1\nIn der Anfrage sind mindestens folgende Angaben zu machen:\n\nName und institutionelle Zugehörigkeit,\nFunktion oder Status der anfragenden Person,\nBeschreibung des Forschungs-, Lehr- oder Studienvorhabens,\nvorgesehene Art und Dauer der Datennutzung,\ngegebenenfalls Namen weiterer beteiligter Personen.\n\nErfordert das Vorhaben die Arbeit mit Audiodateien, ist zusätzlich eine Anfrage an seiko@uni-giessen.de zu richten. Für diese Daten können weitergehende Zugangs- und Nutzungsbedingungen gelten.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#rechte-an-den-daten",
+    "href": "nutzungsbedingungen.html#rechte-an-den-daten",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "10.14 Rechte an den Daten",
+    "text": "10.14 Rechte an den Daten\nDurch die Gewährung des Zugangs werden keine Eigentums-, Urheber- oder sonstigen ausschließlichen Rechte an den Korpusdaten übertragen. Sämtliche Rechte verbleiben bei den jeweiligen Rechteinhaber:innen.\nDie nutzungsberechtigte Person erhält ausschließlich die in diesen Nutzungsbedingungen ausdrücklich genannten, nicht ausschließlichen und nicht übertragbaren Nutzungsrechte.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "nutzungsbedingungen.html#footnotes",
+    "href": "nutzungsbedingungen.html#footnotes",
+    "title": "10  SeiKo-Nutzungsbedingungen",
+    "section": "",
+    "text": "Vgl. hierzu: https://help.zenodo.org/docs/share/access-requests/request-access/↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>SeiKo-Nutzungsbedingungen</span>"
+    ]
+  },
+  {
+    "objectID": "Anhang/anhang.html",
+    "href": "Anhang/anhang.html",
+    "title": "11  Anhang",
+    "section": "",
+    "text": "11.1 Stimulusmaterial",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Anhang</span>"
+    ]
+  },
+  {
+    "objectID": "Anhang/anhang.html#sec-stimuli",
+    "href": "Anhang/anhang.html#sec-stimuli",
+    "title": "11  Anhang",
+    "section": "",
+    "text": "11.1.1 Teekanne\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAbbildung 11.1: Stimulusmaterial Teekanne\n\n\n\n\n\n11.1.2 Fahrradtasche\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAbbildung 11.2: Stimulusmaterial Fahrradtasche\n\n\n\n\n\n11.1.3 Sportunterricht\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAbbildung 11.3: Stimulusmaterial Sportunterricht\n\n\n\n\n\n11.1.4 Busticket\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAbbildung 11.4: Stimulusmaterial Busticket\n\n\n\n\n\n11.1.5 Kuchen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAbbildung 11.5: Stimulusmaterial Kuchen\n\n\n\n\n\n11.1.6 Hausaufgabe\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAbbildung 11.6: Stimulusmaterial Hausaufgabe\n\n\n\nAlle Bildergeschichten wurden mit einer nicht mehr verfügbaren Version von Pixton1: erstellt.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Anhang</span>"
+    ]
+  },
+  {
+    "objectID": "Anhang/anhang.html#sec-leitfaden",
+    "href": "Anhang/anhang.html#sec-leitfaden",
+    "title": "11  Anhang",
+    "section": "11.2 Stimulusleitfaden (Q-Part)",
+    "text": "11.2 Stimulusleitfaden (Q-Part)\n\n11.2.1 Teekanne\n\n\nInterviewfragen (Q) zum Stimulus „Teekanne“\n\n\n\n\nAnlass\n\n\nInterviewfrage\n\n\n\n\n\n\nBild 6\n\n\nWie schaut die Frau/ der Junge? Warum schaut die Frau/ der Junge so? Und was denkt der Junge? Und wie ist das passiert?\n\n\n\n\n\n\nHier sieht man das ja.\n\n\n\n\nBild 5\n\n\nWas sieht man hier? Und warum / wie passiert das genau? Was denkt die Frau wohl?/ was die Kinder?\n\n\n\n\nBild 4\n\n\nUnd was machen sie hier? Ach, die spielen im Zimmer Ball.\n\n\n\n\nBild 3\n\n\nUnd was passiert hier? Was sagt die Frau? Und warum sagt sie das?\n\n\n\n\nBild 2\n\n\nWas macht der Junge? Warum?\n\n\n\n\nBild 1\n\n\nWo sind sie denn eigentlich? Was macht der Junge? Was machen die Kinder? Was glaubst du, was denkt der Junge?\n\n\n\n\nTeil D\n\n\nDu hast jetzt ja ganz genau gesehen, was passiert ist. Das Buch ist jetzt kaputt. Stell dir vor, der Junge geht in deine Klasse. Kannst du deiner Lehrerin sagen, was passiert ist?\n\n\n\n\n\n\n11.2.2 Kuchen\n\n\nInterviewfragen (Q) zum Stimulus „Kuchen“\n\n\n\n\nAnlass\n\n\nInterviewfrage\n\n\n\n\n\n\nBild 6\n\n\nWie schauen der Junge / das Mädchen? Warum schauen die so? Was denken sie? Was ist (genau) passiert?\n\n\n\n\n\n\nHier sieht man das ja.\n\n\n\n\nBild 5\n\n\nUnd was machen sie hier? Warum machen die das? Was passiert? Und wie / warum ist das passiert? Was denken der Junge/ das Mädchen?\n\n\n\n\nBild 4\n\n\nUnd was machen sie hier? Was sagt das Mädchen?\n\n\n\n\nBild 3\n\n\nUnd was machen sie hier? Was glaubst du, warum backen sie den Kuchen?\n\n\n\n\nBild 2\n\n\nUnd was machen sie hier? Warum macht der Junge das?\n\n\n\n\nBild 1\n\n\nWo sind die denn eigentlich? Was machen die da?\n\n\n\n\nTeil D\n\n\nDer Nachbar riecht das Feuer und ruft die Feuerwehr. Die Feuerwehr weiß nicht was passiert ist, aber du hast es ja jetzt genau gesehen. Kannst du dem Feuerwehrmann erklären, was passiert ist?\n\n\n\n\n\n\n11.2.3 Sportunterricht\n\n\nInterviewfragen (Q) zum Stimulus „Sportunterricht“\n\n\n\n\nAnlass\n\n\nInterviewfrage\n\n\n\n\n\n\nBild 6\n\n\nWer ist der Mann? Wie schaut der Mann/ der (Sport-)Lehrer? Und warum schaut der so? Was denkt er? Und wie ist das passiert?\n\n\n\n\n\n\nHier sieht man das ja.\n\n\n\n\nBild 5\n\n\nWas passiert hier genau? / Was siehst du hier? Was denkt der Junge wohl? / was denken die Jungen? Und warum macht der Junge das?\n\n\n\n\nBild 4\n\n\nUnd was machen sie hier? Ach, die hatten Sportunterricht und ziehen sich um.\n\n\n\n\nBild 3\n\n\nUnd was passiert hier? Was denken die Jungen?\n\n\n\n\nBild 2\n\n\nUnd was machen die Jungen hier? Was sagt der Junge?\n\n\n\n\nBild 1\n\n\nWo sind sie denn eigentlich?\n\n\n\n\nTeil D\n\n\nDer Sportlehrer weiß nicht was passiert ist, aber du hast es ja jetzt ganz genau gesehen. Kannst du dem Lehrer erklären, was passiert ist?\n\n\n\n\n\n\n11.2.4 Hausaufgaben\n\n\nInterviewfragen (Q) zum Stimulus „Hausaufgaben“\n\n\n\n\nAnlass\n\n\nInterviewfrage\n\n\n\n\n\n\nBild 6\n\n\nWas sagt das Mädchen? Wie schaut die Lehrerin hier? Was denkt sie? Was denkt der Junge? Und was ist davor (genau) passiert?\n\n\n\n\n\n\nHier sieht man das ja.\n\n\n\n\nBild 5\n\n\nWas passiert hier? Warum macht die Lehrerin das? Wie schaut das Mädchen? Warum schaut sie so?\n\n\n\n\nBild 4\n\n\nUnd was machen sie hier?\n\n\n\n\nBild 3\n\n\nUnd was ist hier los? Was macht der Junge? Wie macht er das? Was glaubst du, was denkt der Junge?\n\n\n\n\nBild 2\n\n\nUnd was passiert hier? Warum macht der Junge das? Was denkt er/ sie?\n\n\n\n\nBild 1\n\n\nWo sind die denn eigentlich? Was machen die Kinder?\n\n\n\n\nTeil D\n\n\nDie Lehrerin hat nicht alles gesehen. Aber du hast alles ganz genau beobachtet. Kannst du der Lehrerin sagen, was passiert ist?\n\n\n\n\n\n\n11.2.5 Busticket\n\n\nInterviewfragen (Q) zum Stimulus „Busticket“\n\n\n\n\nAnlass\n\n\nInterviewfrage\n\n\n\n\n\n\nBild 6\n\n\nWer ist das? [Mann] Wer ist das? [Mädchen] Was denkt er/ sie? Und warum stehen die da? / Was ist passiert?\n\n\n\n\n\n\nHier sieht man sie ja im Bus.\n\n\n\n\nBild 5\n\n\nWas passiert hier genau? / Was siehst du hier? Was denkt das Mädchen? Was sagt der Mann? Und warum sagt der Mann das?\n\n\n\n\nBild 4\n\n\nUnd was sieht man hier? Ach, die beiden haben aber ein Ticket.\n\n\n\n\nBild 3\n\n\nUnd was passiert hier? Was sagt der Mann?\n\n\n\n\nBild 2\n\n\nUnd was machen sie hier?\n\n\n\n\nBild 1\n\n\nUnd wo sind sie hier? Und was machen sie? Was siehst du noch?\n\n\n\n\nTeil D\n\n\nDas Mädchen kommt jetzt zu spät zur Schule. Stell dir vor, sie geht in deine Klasse. Eure Lehrerin fragt sich, wo das Mädchen ist. Du hast im Bus ja alles gesehen, kannst du deiner Lehrerin sagen, was passiert ist?\n\n\n\n\n\n\n11.2.6 Fahrradtasche\n\n\nInterviewfragen (Q) zum Stimulus „Fahrradtasche“\n\n\n\n\nAnlass\n\n\nInterviewfrage\n\n\n\n\n\n\nBild 6\n\n\nWer ist das? [Frau] Wie schaut die Frau denn? Da war doch auch ein Mann, oder? Wo ist der? Und was denkt die Frau? Was ist da (genau) passiert? / Wie ist das genau passiert?\n\n\n\n\n\n\nHier sieht man das ja.\n\n\n\n\nBild 5\n\n\nUnd was macht der Mann hier? Und warum macht er das?\n\n\n\n\nBild 4\n\n\nUnd was macht der Mann hier? Und wie macht er das? Was glaubst du, was denkt der Mann?\n\n\n\n\nBild 3\n\n\nWas macht die Frau hier? Und warum macht sie das? Was siehst du noch?\n\n\n\n\nBild 2\n\n\nWas macht die Frau? Warum?\n\n\n\n\nBild 1\n\n\nWo ist das denn eigentlich? Was macht die Frau? Was macht die anderen Leute?\n\n\n\n\nTeil D\n\n\nDie Frau ruft die Polizei, aber eigentlich weiß sie ja nicht was passiert ist. Du hast das aber ganz genau gesehen. Kannst du dem Polizisten noch einmal alles ganz genau erzählen?",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Anhang</span>"
+    ]
+  },
+  {
+    "objectID": "Anhang/anhang.html#sec-schriftkonventionen",
+    "href": "Anhang/anhang.html#sec-schriftkonventionen",
+    "title": "11  Anhang",
+    "section": "11.3 Schriftkonventionen",
+    "text": "11.3 Schriftkonventionen\nUm die Lesbarkeit zu erleichtern, wurden für dieses Manual einheitliche Schriftkonventionen erarbeitet, die im Folgenden aufgeführt sind:\n\nAnweisungen mit Befehlen aus Exmaralda kursiv (Transcription -&gt; Add Token Tiers)\nSpur in eckigen Klammern ([unit])\nTags in Großbuchstaben (DEC); Tags der [excl]-Spur (auszuschließendes Material) in Kleinbuchstaben\nFundorte für Belege in GROßBUCHSTABEN (z.B. E03_B07 für Erhebungszeitpunkt 03 bei Proband:in B07)\nkursiv bei Beispielen mit zusätzlichem sprachlichen Kontext; hier wird der relevante Teil des Ausschnitts kursiv gesetzt\nfarbliche Markierung von Beispielen: Beispieltext\nSprachbeispiele werden entsprechend der Transkriptionskonventionen abgebildet; Pausen und exkludiertes Material können ausgelassen werden; wenn nötig, können Satzzeichen hinzugefügt werden\nSprecher:innenwechsel in Beispielen werden mit einem Halbgeviertstrich (–) abgebildet",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Anhang</span>"
+    ]
+  },
+  {
+    "objectID": "Anhang/anhang.html#footnotes",
+    "href": "Anhang/anhang.html#footnotes",
+    "title": "11  Anhang",
+    "section": "",
+    "text": "Vgl. für die aktuelle Version: https://www.pixton.com/de/.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Anhang</span>"
+    ]
+  }
+]

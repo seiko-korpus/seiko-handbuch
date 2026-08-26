@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Lemmatisierung und POS-Tagging – SeiKo (Korpus Seiteneinsteiger:innen in Vorbereitungsklassen): Handbuch zu Korpusdesign und Datenaufbereitung</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ngr.html" rel="next">
+<link href="./segmentierung.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-48c60cb7732cd05bfba6f296ac703904.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lemmapos.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lemmatisierung und POS-Tagging</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./cover/handbuch_deckblatt.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">SeiKo-Handbuch</a> 
+        <div class="sidebar-tools-main">
+    <a href="mailto:seiko@uni-giessen.de" title="Kontakt" class="quarto-navigation-tool px-1" aria-label="Kontakt"><i class="bi bi-envelope"></i></a>
+    <a href="./seiko-handbuch.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vorwort</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Allgemeines</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datenerhebung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Korpusdesign und Datenerhebung</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./transkription.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Transkription</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./segmentierung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Segmentierung der Äußerungseinheiten</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lemmapos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lemmatisierung und POS-Tagging</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ngr.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Annotation Nominalgruppen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./verb.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Annotation Verben</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./evaluation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Qualitätssicherung und Evaluation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Literaturverzeichnis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nutzungsbedingungen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">SeiKo-Nutzungsbedingungen</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Anhang/anhang.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Anhang</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#sec-spuren-lemmapos" id="toc-sec-spuren-lemmapos" class="nav-link active" data-scroll-target="#sec-spuren-lemmapos"><span class="header-section-number">5.1</span> Spuren bei Lemmatisierung und POS-Tagging</a></li>
+  <li><a href="#automatisierte-arbeitsschritte" id="toc-automatisierte-arbeitsschritte" class="nav-link" data-scroll-target="#automatisierte-arbeitsschritte"><span class="header-section-number">5.2</span> Automatisierte Arbeitsschritte</a></li>
+  <li><a href="#korrektur" id="toc-korrektur" class="nav-link" data-scroll-target="#korrektur"><span class="header-section-number">5.3</span> Korrektur</a></li>
+  <li><a href="#lemmatisierung" id="toc-lemmatisierung" class="nav-link" data-scroll-target="#lemmatisierung"><span class="header-section-number">5.4</span> Lemmatisierung</a>
+  <ul class="collapse">
+  <li><a href="#normalisierung-der-wortformen" id="toc-normalisierung-der-wortformen" class="nav-link" data-scroll-target="#normalisierung-der-wortformen"><span class="header-section-number">5.4.1</span> Normalisierung der Wortformen</a></li>
+  <li><a href="#sec-lemma-Substantive" id="toc-sec-lemma-Substantive" class="nav-link" data-scroll-target="#sec-lemma-Substantive"><span class="header-section-number">5.4.2</span> Substantive</a></li>
+  <li><a href="#adjektive" id="toc-adjektive" class="nav-link" data-scroll-target="#adjektive"><span class="header-section-number">5.4.3</span> Adjektive</a></li>
+  <li><a href="#zahlen" id="toc-zahlen" class="nav-link" data-scroll-target="#zahlen"><span class="header-section-number">5.4.4</span> Zahlen</a></li>
+  <li><a href="#verben" id="toc-verben" class="nav-link" data-scroll-target="#verben"><span class="header-section-number">5.4.5</span> Verben</a></li>
+  <li><a href="#artikel" id="toc-artikel" class="nav-link" data-scroll-target="#artikel"><span class="header-section-number">5.4.6</span> Artikel</a></li>
+  <li><a href="#pronomen" id="toc-pronomen" class="nav-link" data-scroll-target="#pronomen"><span class="header-section-number">5.4.7</span> Pronomen</a></li>
+  <li><a href="#adverbien" id="toc-adverbien" class="nav-link" data-scroll-target="#adverbien"><span class="header-section-number">5.4.8</span> Adverbien</a></li>
+  <li><a href="#konjunktionen" id="toc-konjunktionen" class="nav-link" data-scroll-target="#konjunktionen"><span class="header-section-number">5.4.9</span> Konjunktionen</a></li>
+  <li><a href="#adpositionen" id="toc-adpositionen" class="nav-link" data-scroll-target="#adpositionen"><span class="header-section-number">5.4.10</span> Adpositionen</a></li>
+  <li><a href="#partikeln" id="toc-partikeln" class="nav-link" data-scroll-target="#partikeln"><span class="header-section-number">5.4.11</span> Partikeln</a></li>
+  <li><a href="#interjektionen-diskursmarker-wie-nghes-ono-interpunktion" id="toc-interjektionen-diskursmarker-wie-nghes-ono-interpunktion" class="nav-link" data-scroll-target="#interjektionen-diskursmarker-wie-nghes-ono-interpunktion"><span class="header-section-number">5.4.12</span> Interjektionen, Diskursmarker (wie NGHES), ONO, Interpunktion</a></li>
+  <li><a href="#fremdsprachliches-material" id="toc-fremdsprachliches-material" class="nav-link" data-scroll-target="#fremdsprachliches-material"><span class="header-section-number">5.4.13</span> Fremdsprachliches Material</a></li>
+  <li><a href="#unklaresunverständliches" id="toc-unklaresunverständliches" class="nav-link" data-scroll-target="#unklaresunverständliches"><span class="header-section-number">5.4.14</span> Unklares/Unverständliches</a></li>
+  </ul></li>
+  <li><a href="#pos-tagging" id="toc-pos-tagging" class="nav-link" data-scroll-target="#pos-tagging"><span class="header-section-number">5.5</span> POS-Tagging</a>
+  <ul class="collapse">
+  <li><a href="#präfix--und-partikelverben" id="toc-präfix--und-partikelverben" class="nav-link" data-scroll-target="#präfix--und-partikelverben"><span class="header-section-number">5.5.1</span> Präfix- und Partikelverben</a></li>
+  <li><a href="#kopula" id="toc-kopula" class="nav-link" data-scroll-target="#kopula"><span class="header-section-number">5.5.2</span> Kopula</a></li>
+  <li><a href="#weil-als-diskursmarker-vs.-subjunktion" id="toc-weil-als-diskursmarker-vs.-subjunktion" class="nav-link" data-scroll-target="#weil-als-diskursmarker-vs.-subjunktion"><span class="header-section-number">5.5.3</span> <em>weil</em> als Diskursmarker vs.&nbsp;Subjunktion</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-lemmapos" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lemmatisierung und POS-Tagging</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-spuren-lemmapos" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-spuren-lemmapos"><span class="header-section-number">5.1</span> Spuren bei Lemmatisierung und POS-Tagging</h2>
+<p>Diesen Annotationsschritten sind die folgenden Spuren mit einem neuen Sprecher <em>PART_CLEAN</em> zugeordnet:</p>
+<table class="caption-top table">
+<caption>Halbautomatische Annotationsspuren</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>[lemma]</td>
+<td>Spur mit den durch den TreeTagger erzeugten und manuell korrigierten Lemmata</td>
+</tr>
+<tr class="even">
+<td>[pos]</td>
+<td>Spur mit den durch den TreeTagger erzeugten und manuell korrigierten POS-Tags</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="automatisierte-arbeitsschritte" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="automatisierte-arbeitsschritte"><span class="header-section-number">5.2</span> Automatisierte Arbeitsschritte</h2>
+<p>Zunächst wurde über ein Skript geprüft, ob die Dateien verarbeitungsrelevante Fehler enthalten, die dann ggf. ausgebessert wurden.</p>
+<p>Dann wurde die Spur [ctok_part] erstellt, die eine um Pausenzeichen und auf [excl] als auszuschließend markiertes Material bereinigte Kopie von [tok_part] umfasst.</p>
+<p>Die Token auf [ctok_part] wurden anschließend mit Hilfe des TreeTagger <span class="citation" data-cites="Schmid1994ProbabilisticPartofSpeechTagging">Schmid (<a href="references.html#ref-Schmid1995ImprovementsPartofSpeechTagging" role="doc-biblioref">1995</a>)</span> (unter Einbezug der Satzspannen aus [unit]) anhand des STTS 2.0 <span class="citation" data-cites="Westpfahl.etal2017STTSGuidelinesfur">(<a href="references.html#ref-Westpfahl.etal2017STTSGuidelinesfur" role="doc-biblioref">Westpfahl et al., 2017</a>)</span> mit einem POS-Tagging und einer Lemmatisierung versehen. Die automatisierte Annotation erfolgte über verschiedene Skripte mit Hilfe von <em>Annatto</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <span class="citation" data-cites="Krause.Klotz2023Annatto">(vgl. <a href="references.html#ref-Krause.Klotz2023Annatto" role="doc-biblioref">Krause &amp; Klotz, 2023</a>)</span>.</p>
+</section>
+<section id="korrektur" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="korrektur"><span class="header-section-number">5.3</span> Korrektur</h2>
+<p>Das POS-Tagging und die Lemmatisierung wurden auf den Spuren [lemma] und [pos], Kopien der automatisiert generierten Spuren, korrigiert. Die automatisiert generierten Spuren wurden anschließend gelöscht, können aber mithilfe der öffentlich zugänglichen Pipeline<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> reproduziert und somit für die Evaluation des Treetaggers für frühe Lerner:innendaten verwendet werden.</p>
+<p>Tags wurden in Zweifelsfällen, wenn möglich, (auch) anhand funktionaler Kriterien korrigiert, bspw. in Bezug auf Verbformen (so kann z.B. “gib” als VVFIN anstatt als VVIMP getagged werden, wenn der Kontext diese Interpretation nahelegt).</p>
+<p>Zweifelsfälle bei der Korrektur wurden im Vier-Augen-Prinzip besprochen; offensichtliche Versehen, die bei der Transkription oder Segmentierung entstanden sind, sowie Fehler durch die Pipeline wurden in diesem manuellen Korrekturschritt, sofern sie offensichtlich als Fehler zu erkennen sind (wenn etwa auf [excl] Markiertes nicht durch die Pipeline gelöscht wurde oder wenn offensichtlich zu exkludierendes Material nicht auf [excl] markiert oder offensichtlich ein falsches Annotationstag vergeben wurde), eigenständig und ohne weitere Besprechung korrigiert.</p>
+</section>
+<section id="lemmatisierung" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="lemmatisierung"><span class="header-section-number">5.4</span> Lemmatisierung</h2>
+<p>Die Lemmatisierung orientiert sich grundlegend an den Richtlinien für das TIGER-Korpus <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">(vgl. <a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">Proisl et al., 2019</a>)</span>. Davon abweichendes Vorgehen ist in den folgenden Richtlinien jeweils als solches gekennzeichnet.</p>
+<section id="normalisierung-der-wortformen" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="normalisierung-der-wortformen"><span class="header-section-number">5.4.1</span> Normalisierung der Wortformen</h3>
+<p>Umgangssprachliche Wortformen wurden möglichst oberflächennah normalisiert, in schriftlichen Texten wurden orthographische Fehler korrigiert, Wortneuschöpfungen wurden normalisiert, aber nicht korrigiert <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">(vgl. <a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">Proisl et al., 2019</a>: 2)</span>.</p>
+<p>Abkürzungen wurden, anders als bei den TIGER-Richtlinien (ebd.) nicht normalisiert. Kontraktionen wurden aufgelöst (<span class="beispiel"><em>ums -&gt; um es, son -&gt; so ein, machste -&gt; machst du</em></span>) und in einem Event einzeln und mit Leerzeichen zwischen den beiden Token lemmatisiert. Dieses Vorgehen unterscheidet sich ebenfalls von <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">Proisl et al. (<a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">2019</a>)</span>, die keine Auflösung von Kontraktionen vorgeben.</p>
+<p>Wenn in der Transkription schriftlicher Daten Wörter zusammengeschrieben wurden, die zielsprachlich nicht zusammengeschrieben werden (bspw. <span class="beispiel"><em>ausversehen</em></span>), wurden diese im gleichen Event durch Leerzeichen getrennt lemmatisiert <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">(hierfür sehen <a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">Proisl et al., 2019</a> keine Regelung vor)</span>. Wenn Wörter auseinandergeschrieben wurden, die zielsprachlich zusammengeschrieben werden (<span class="beispiel"><em>bus fahr Karte</em>, E10_B09_T</span>), wurden diese auf der Lemma- und POS-Spur in jeweils einem Event zusammengeführt.</p>
+<p>Wenn Fehler in der Transkription sichtbar wurden (bspw. <em>verliern</em> statt <em>verlieren</em>), wurden diese im Transkript und auf allen Spuren korrigiert. (Bei der Auswertung des automatischen Taggings/Lemmatisierens muss dementsprechend erwähnt werden, dass manche Token ggf. aufgrund von Transkriptionsfehlern nicht richtig getagged/lemmatisiert werden konnten.)</p>
+<p>Wenn Wörter wegen einer wortinternen Pause in zwei Events aufgeteilt wurden, wurden die entsprechenden Events auf [pos] und [lemma] zusammengeführt und es wurde jeweils ein Tag pro Spur vergeben. Bei zwei möglichen Alternativen wurden beide, jeweils gefolgt von einem <em>or</em>, im gleichen Event lemmatisiert (z.B. <em>kontroll</em> &gt; <em>KontrolleurorKontrolleor</em>). (Dieses Vorgehen orientiert sich an dem im STTS 2.0 für die Markierung möglicher Alternativen vorgesehenen Fragezeichen, das allerdings technische Schwierigkeiten bereitete und daher durch das <em>or</em> ersetzt wurde.) In geschriebenen Texten, in denen Wörter (nur) aufgrund graphematischer Interpretation und/oder unter Rückgriff auf den Bildstimulus und die mündlichen Daten zu rekonstruieren sind, werden die entsprechenden Rekonstruktionen lemmatisiert.</p>
+</section>
+<section id="sec-lemma-Substantive" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="sec-lemma-Substantive"><span class="header-section-number">5.4.2</span> Substantive</h3>
+<p><strong>NN</strong>: Substantive wurden in der 1. Person Singular Nominativ lemmatisiert. Ausnahmen bilden Pluraliatantum, die im Nominativ Plural lemmatisiert wurden. Substantivierte Formen wurden entsprechend ihrer Basiswortart lemmatisiert; substantivierte Infinitive dementsprechend als verbaler Infinitiv (<em>das Lesen</em> &gt; <em>lesen</em>). Derivationen aus Formen des Partizip I (<em>die Überzeugende</em> &gt; <em>überzeugen</em>) und Partizip II (<em>der Überzeugte</em> &gt; <em>überzeugen</em>) wurden in ihrer verbalen Grundform lemmatisiert, was sich vom Vorgehen bei <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">Proisl et al. (<a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">2019</a>)</span> unterscheidet. Unserem Vorgehen nach wurden bei der Suche nach <em>überzeugen</em> auf [lemma] demnach alle Treffer angezeigt, die sich aus dem Lemma oder Derivationen davon ergeben; eine weitere Differenzierung nach Wortarten ist über [pos] möglich. Aus Adjektiven abgeleitete Substantive wurden in ihrer prädikativen Grundform lemmatisiert, bspw. <em>die Schöne</em> also als <em>schön</em> [und nicht, wie bei <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">Proisl et al. (<a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">2019</a>)</span>: 4, in der schwachen Form des Nominativs Singular Maskulin]. Grammatikalisierte Substantivierungen werden als Substantive lemmatisiert, was so in den TIGER-Richtlinien nicht ausdifferenziert wird.</p>
+<p><strong>NE</strong>: Eigennamen werden im Nominativ Singular lemmatisiert; Eigennamen ohne Singularform werden im Nominativ Plural lemmatisiert.</p>
+</section>
+<section id="adjektive" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="adjektive"><span class="header-section-number">5.4.3</span> Adjektive</h3>
+<p>Adjektive werden in ihrer unflektierten Form im Positiv der prädikativen Form lemmatisiert. Falls es diese Form nicht gibt, wird die starke Form des Nominativs Singular Femininum <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">(im Gegensatz zu Maskulinum bei <a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">Proisl et al., 2019</a>: 5)</span> lemmatisiert. Attributiv verwendete Partizipien wurden in ihrem verbalen Infinitiv lemmatisiert (die <em>überzeugte</em> Wählerin &gt; <em>überzeugen</em>), was sich vom TIGER-Vorgehen unterscheidet (vgl. ebd.) und eine umfassende Lemmasuche, bei Bedarf mit Differenzierung der Wortart über [pos], erlaubt (s. auch <a href="#sec-lemma-Substantive" class="quarto-xref"><span>Kapitel 5.4.2</span></a>).</p>
+</section>
+<section id="zahlen" class="level3" data-number="5.4.4">
+<h3 data-number="5.4.4" class="anchored" data-anchor-id="zahlen"><span class="header-section-number">5.4.4</span> Zahlen</h3>
+<p>Zahlen werden in ihrer Grundform lemmatisiert.</p>
+</section>
+<section id="verben" class="level3" data-number="5.4.5">
+<h3 data-number="5.4.5" class="anchored" data-anchor-id="verben"><span class="header-section-number">5.4.5</span> Verben</h3>
+<p>Verben wurden im Infinitiv lemmatisiert. Kontrahierte Verben wie <em>schreibste</em> wurden im Infinitiv lemmatisiert. Der zweite Bestandteil der Kontraktion (Pronomen) wurde entsprechend der entsprechenden Regeln im gleichen Event mit Leerzeichen getrennt lemmatisiert, was sich vom TIGER-Vorgehen unterscheidet <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">(vgl. <a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">Proisl et al., 2019</a>: 2)</span>.</p>
+</section>
+<section id="artikel" class="level3" data-number="5.4.6">
+<h3 data-number="5.4.6" class="anchored" data-anchor-id="artikel"><span class="header-section-number">5.4.6</span> Artikel</h3>
+<p>Bestimmte Artikel werden als <em>die</em> lemmatisiert. Unbestimmte Artikel werden im Nominativ Singular Femininum (<em>eine</em>) lemmatisiert, was sich bzgl. des Genus von den TIGER-Richtlinien von <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">Proisl et al. (<a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">2019</a>)</span> unterscheidet und u.a. im Output des Taggers begründet liegt.</p>
+</section>
+<section id="pronomen" class="level3" data-number="5.4.7">
+<h3 data-number="5.4.7" class="anchored" data-anchor-id="pronomen"><span class="header-section-number">5.4.7</span> Pronomen</h3>
+<p>Pronomen wurden, wenn möglich, im Nominativ Singular Femininum <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">(statt Maskulinum wie bei <a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">Proisl et al., 2019</a>: 7f.)</span> lemmatisiert. Pronomen, die nur im Plural existieren (z.B. <em>beide</em>, <em>irgendwelche</em>), wurden in der indefiniten Form im Nominativ Plural Femininum lemmatisiert. Bei unflektierbaren Formen (<em>sich</em>, <em>wer</em>) wurde die Oberflächenform lemmatisiert.</p>
+<div style="page-break-after: always;"></div>
+<div class="cell">
+<div id="tbl-pronomen" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pronomen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;5.1: Übersicht über die Lemmatisierung von Pronomen
+</figcaption>
+<div aria-describedby="tbl-pronomen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="table-responsive">
+<table class="table table-hover table-condensed do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Tag</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Definition</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Lemmatisierung</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Beispiellemma</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">PDAT</td>
+<td style="text-align: left;">Attribuierendes Demonstrativpronomen</td>
+<td style="text-align: left;">Nominativ Singular Femininum</td>
+<td style="text-align: left;">diese</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PDS</td>
+<td style="text-align: left;">Substituierendes Demonstrativpronomen</td>
+<td style="text-align: left;">Nominativ Singular Femininum</td>
+<td style="text-align: left;">die</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PIAT</td>
+<td style="text-align: left;">Attribuierendes Indefinitpronomen</td>
+<td style="text-align: left;">Nominativ Singular / Plural Femininum / Oberflächenform</td>
+<td style="text-align: left;">andere, irgendwelche, etwas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PIS</td>
+<td style="text-align: left;">Substituierendes Indefinitpronomen ohne Determinierer</td>
+<td style="text-align: left;">Nominativ Singular / Plural Femininum / Oberflächenform</td>
+<td style="text-align: left;">eine, alle, etwas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PIDAT</td>
+<td style="text-align: left;">Attribuierendes Indefinitpronomen mit Determinierer</td>
+<td style="text-align: left;">Nominativ Singular Femininum</td>
+<td style="text-align: left;">eine</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PIDS</td>
+<td style="text-align: left;">Substituierendes Indefinitpronomen mit Determinierer</td>
+<td style="text-align: left;">Nominativ Singular Femininum / Plural / Oberflächenform</td>
+<td style="text-align: left;">andere, beide, bisschen</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PPER</td>
+<td style="text-align: left;">Irreflexibles Personalpronomen</td>
+<td style="text-align: left;">Nominativ Singular</td>
+<td style="text-align: left;">Oberflächenform: er &gt; er, ihnen &gt; sie, ihm &gt; er …</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PPOSAT</td>
+<td style="text-align: left;">Attribuierendes Possessivpronomen</td>
+<td style="text-align: left;">Nominativ Singular Femininum</td>
+<td style="text-align: left;">ihre, seine</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PPOSS</td>
+<td style="text-align: left;">Substituierendes Possessivpronomen</td>
+<td style="text-align: left;">Nominativ Singular Femininum</td>
+<td style="text-align: left;">meine, deine</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PRELAT</td>
+<td style="text-align: left;">Attribuierendes Relativpronomen</td>
+<td style="text-align: left;">Nominativ Singular Femininum</td>
+<td style="text-align: left;">deren</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PRELS</td>
+<td style="text-align: left;">Substituierendes Relativpronomen</td>
+<td style="text-align: left;">Nominativ Singular Femininum</td>
+<td style="text-align: left;">die</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PRF</td>
+<td style="text-align: left;">Reflexives Personalpronomen</td>
+<td style="text-align: left;">sich</td>
+<td style="text-align: left;">sich</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PWAT</td>
+<td style="text-align: left;">Attribuierendes Interrogativpronomen</td>
+<td style="text-align: left;">Nominativ Singular Femininum</td>
+<td style="text-align: left;">welche, wessen</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PWS</td>
+<td style="text-align: left;">Substituierendes Interrogativpronomen</td>
+<td style="text-align: left;">Oberflächenform</td>
+<td style="text-align: left;">wer, was</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PWAV</td>
+<td style="text-align: left;">Adverbiales Interrogativ- oder Reflexivpronomen</td>
+<td style="text-align: left;">Oberflächenform</td>
+<td style="text-align: left;">warum, wo</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="adverbien" class="level3" data-number="5.4.8">
+<h3 data-number="5.4.8" class="anchored" data-anchor-id="adverbien"><span class="header-section-number">5.4.8</span> Adverbien</h3>
+<p>Adverbien wurden in ihrer Oberflächenform lemmatisiert. Bei Kontraktionen wie bei <em>sone</em> wurde das Adverb in seiner Oberflächenform lemmatisiert; der zweite Bestandteil der Kontraktion (Artikel) wurde, anders als bei <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">Proisl et al. (<a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">2019, S. 10</a>)</span>, ebenfalls lemmatisiert (gleiches Event, durch Leerzeichen getrennt).</p>
+</section>
+<section id="konjunktionen" class="level3" data-number="5.4.9">
+<h3 data-number="5.4.9" class="anchored" data-anchor-id="konjunktionen"><span class="header-section-number">5.4.9</span> Konjunktionen</h3>
+<p>Konjunktionen wurden in ihrer Oberflächenform lemmatisiert. Bei Kontraktionen wurde das Pronomen, anders als bei <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">Proisl et al. (<a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">2019, S. 11</a>)</span>, ebenfalls lemmatisiert (gleiches Event, durch Leerzeichen getrennt).</p>
+</section>
+<section id="adpositionen" class="level3" data-number="5.4.10">
+<h3 data-number="5.4.10" class="anchored" data-anchor-id="adpositionen"><span class="header-section-number">5.4.10</span> Adpositionen</h3>
+<p>Adpositionen wurden in ihrer Oberflächenform lemmatisiert.</p>
+<p>APPRART: Bei Präpositionen mit Artikel wurden die Präposition und der Artikel separat lemmatisiert; der Artikel wurde also, anders als bei <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">Proisl et al. (<a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">2019, S. 10</a>)</span>, ebenfalls lemmatisiert (gleiches Event, durch Leerzeichen getrennt).</p>
+</section>
+<section id="partikeln" class="level3" data-number="5.4.11">
+<h3 data-number="5.4.11" class="anchored" data-anchor-id="partikeln"><span class="header-section-number">5.4.11</span> Partikeln</h3>
+<p>Partikeln wurden in ihrer Oberflächenform lemmatisiert.</p>
+</section>
+<section id="interjektionen-diskursmarker-wie-nghes-ono-interpunktion" class="level3" data-number="5.4.12">
+<h3 data-number="5.4.12" class="anchored" data-anchor-id="interjektionen-diskursmarker-wie-nghes-ono-interpunktion"><span class="header-section-number">5.4.12</span> Interjektionen, Diskursmarker (wie NGHES), ONO, Interpunktion</h3>
+<p>Das Lemma ist grundsätzlich die Oberflächenform. Normalisierbare Formen, die phonetisch transkribiert wurden (z.B. <em>oke</em>), wurden normalisiert (<em>okay</em>).</p>
+</section>
+<section id="fremdsprachliches-material" class="level3" data-number="5.4.13">
+<h3 data-number="5.4.13" class="anchored" data-anchor-id="fremdsprachliches-material"><span class="header-section-number">5.4.13</span> Fremdsprachliches Material</h3>
+<p>Lemma ist die Oberflächenform.</p>
+</section>
+<section id="unklaresunverständliches" class="level3" data-number="5.4.14">
+<h3 data-number="5.4.14" class="anchored" data-anchor-id="unklaresunverständliches"><span class="header-section-number">5.4.14</span> Unklares/Unverständliches</h3>
+<p>Bei unsicheren Transkriptionen wurde die Form, die als wahrscheinlichste transkribiert wurde, sofern sie im Kontext schlüssig ist, der Lemmatisierung zugrunde gelegt. <em>#fällt#</em> wurde also zu <em>fallen</em> lemmatisiert. Bei nicht auflösbaren unklaren Transkriptionen (z.B. <em>#anzo#</em>) wurde die Oberflächenform inklusive <em>#</em> transkribiert. Ganz Unverständliches, das als <em>XXX</em> transkribiert und auf [pos] als UI getagged wurde, wurde in dieser Form lemmatisiert. Dieses Vorgehen ist bei <span class="citation" data-cites="Proisl.etal2019Lemmatisierungsrichtlinien">Proisl et al. (<a href="references.html#ref-Proisl.etal2019Lemmatisierungsrichtlinien" role="doc-biblioref">2019</a>)</span> nicht geregelt.</p>
+</section>
+</section>
+<section id="pos-tagging" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="pos-tagging"><span class="header-section-number">5.5</span> POS-Tagging</h2>
+<p>Das POS-Tagging verwendet das Stuttgart-Tübingen-Tagset 2.0 (STTS 2.0) <span class="citation" data-cites="Westpfahl.etal2017STTSGuidelinesfur">(vgl. <a href="references.html#ref-Westpfahl.etal2017STTSGuidelinesfur" role="doc-biblioref">Westpfahl et al., 2017</a>)</span>. Folgende Tags ergänzen das STTS 2.0:</p>
+<section id="präfix--und-partikelverben" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="präfix--und-partikelverben"><span class="header-section-number">5.5.1</span> Präfix- und Partikelverben</h3>
+<p>Für abgetrennte Präfixe, die zielsprachlich nicht abgetrennt werden können, ergänzen wir das Tag PTKVZU.</p>
+<p>Für Präfix- und Partikelverben wird eine ergänzende Verbklasse <em>VP</em> eingeführt, für die sich analog zu den Vollverben (vgl. <span class="citation" data-cites="Westpfahl.etal2017STTSGuidelinesfur">Westpfahl et al. (<a href="references.html#ref-Westpfahl.etal2017STTSGuidelinesfur" role="doc-biblioref">2017</a>)</span>, 28) folgende Tags ergeben:</p>
+<p><em>VPFIN</em>, <em>VPIMP</em>, <em>VPINF</em>, <em>VPIZU</em>, <em>VPPP</em></p>
+</section>
+<section id="kopula" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="kopula"><span class="header-section-number">5.5.2</span> Kopula</h3>
+<p>Für Kopulae (<em>sein</em>, <em>werden</em>, <em>bleiben</em>) wird die Verbklasse VK ergänzt, hier ergeben sich die Tags:</p>
+<p><em>VKFIN</em>, <em>VKIMP</em>, <em>VKINF</em>, <em>VKIZU</em>, <em>VKPP</em></p>
+</section>
+<section id="weil-als-diskursmarker-vs.-subjunktion" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="weil-als-diskursmarker-vs.-subjunktion"><span class="header-section-number">5.5.3</span> <em>weil</em> als Diskursmarker vs.&nbsp;Subjunktion</h3>
+<p>Abweichend zum STTS 2.0 (26f.) wurde sich in der Differenzierung zwischen Diskursmarker <em>SEDM</em> und Subjunktion <em>KOUS</em> nicht an der Verbstellung orientiert, sondern an der Funktion des entsprechenden Wortes und an der Klassifikation der dazugehörigen Äußerung als eigenständig oder subordiniert, da die Verbstellung oft nicht zielsprachlich ist oder teilweise gar kein (finites) Verb vorhanden ist und die Äußerung dennoch als subordiniert und das entsprechende Token dementsprechend als <em>KOUS</em> klassifiziert werden kann.</p>
+<p>Beispiele:</p>
+<p><span class="beispiel"><em>#weil#/KOUS</em> ich ee kein ticket (E04_B07)</span></p>
+<p><span class="beispiel"><em>weil/KOUS</em> ich ee vergessen mein ticket (E04_B07)</span></p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Krause.Klotz2023Annatto" class="csl-entry" role="listitem">
+Krause, Thomas, &amp; Klotz, Martin. (2023). <em>Annatto</em>. <a href="https://github.com/korpling/annatto">https://github.com/korpling/annatto</a>
+</div>
+<div id="ref-Proisl.etal2019Lemmatisierungsrichtlinien" class="csl-entry" role="listitem">
+Proisl, Thomas, Dykes, Natalie, Heinrich, Philipp, Kabashi, Besim, &amp; Evert, Stefan. (2019). <em>Lemmatisierungsrichtlinien. <span>Version</span> 2019-04-26</em>.
+</div>
+<div id="ref-Schmid1994ProbabilisticPartofSpeechTagging" class="csl-entry" role="listitem">
+Schmid, Helmut. (1994). <em>Probabilistic <span>Part-of-Speech Tagging Using Decision Trees</span></em>. Proceedings of International Conference on New Methods in Language Processing.
+</div>
+<div id="ref-Schmid1995ImprovementsPartofSpeechTagging" class="csl-entry" role="listitem">
+Schmid, Helmut. (1995). <em>Improvements in <span>Part-of-Speech Tagging</span> with an <span>Application</span> to <span>German</span></em>. Proceedings of the ACL SIGDAT-Workshop. Dublin, Ireland.
+</div>
+<div id="ref-Westpfahl.etal2017STTSGuidelinesfur" class="csl-entry" role="listitem">
+Westpfahl, Swantje, Schmidt, Thomas, Jonietz, Jasmin, &amp; Borlinghaus, Anton. (2017). <em><span>STTS</span> 2.0: <span>Guidelines</span> für die <span>Annotation</span> von <span>POS-Tags</span> für <span>Transkripte</span> gesprochener <span>Sprache</span> in <span>Anlehnung</span> an das <span>Stuttgart Tübingen Tagset</span> (<span>STTS</span>)</em>.
+</div>
+</div>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>https://github.com/korpling/annatto<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Die Pipeline ist über <a href="https://github.com/seiko-korpus/seiko-pipeline/" class="uri">https://github.com/seiko-korpus/seiko-pipeline/</a> verfügbar.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./segmentierung.html" class="pagination-link" aria-label="Segmentierung der Äußerungseinheiten">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Segmentierung der Äußerungseinheiten</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ngr.html" class="pagination-link" aria-label="Annotation Nominalgruppen">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Annotation Nominalgruppen</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
