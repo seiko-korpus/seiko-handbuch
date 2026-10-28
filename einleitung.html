@@ -283,7 +283,7 @@ Tabelle&nbsp;1.1: Übersicht aller Annotationsebenen
 <th style="text-align: left;" data-quarto-table-cell-role="th">Kapitel</th>
 <th style="text-align: left;" data-quarto-table-cell-role="th">Annotationsebene</th>
 <th style="text-align: left;" data-quarto-table-cell-role="th">Beschreibung</th>
-<th style="text-align: left;" data-quarto-table-cell-role="th">Beispielanfrage</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Beispielabfrage</th>
 <th style="text-align: left;" data-quarto-table-cell-role="th">Beispielergebnis auf ctok_part</th>
 </tr>
 </thead>
@@ -375,14 +375,14 @@ Tabelle&nbsp;1.1: Übersicht aller Annotationsebenen
 <tr class="odd">
 <td style="text-align: left;">Lemmatisierung &amp; POS-Tagging</td>
 <td style="text-align: left;">PART_CLEAN[lemma]</td>
-<td style="text-align: left;">manuell korrigierte Version von [auto_lemma]</td>
+<td style="text-align: left;">manuell korrigierte Version der automatisch erzeugten Lemmaspur</td>
 <td style="text-align: left;">lemma=‎"spielen‎"</td>
 <td style="text-align: left;">gespielt</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Lemmatisierung &amp; POS-Tagging</td>
 <td style="text-align: left;">PART_CLEAN[pos]</td>
-<td style="text-align: left;">manuell korrigierte Version von [auto_pos]</td>
+<td style="text-align: left;">manuell korrigierte Version der automatisch erzeugten POS-spur</td>
 <td style="text-align: left;">pos=‎"PDAT‎"</td>
 <td style="text-align: left;">diese</td>
 </tr>
@@ -396,7 +396,7 @@ Tabelle&nbsp;1.1: Übersicht aller Annotationsebenen
 <tr class="even">
 <td style="text-align: left;">Nominalgruppen</td>
 <td style="text-align: left;">PART_CLEAN[kern]</td>
-<td style="text-align: left;">nominale Kerne</td>
+<td style="text-align: left;">nominale Kerne und Köpfe</td>
 <td style="text-align: left;">kern=‎"KERN‎"</td>
 <td style="text-align: left;">zimmer</td>
 </tr>
@@ -410,7 +410,7 @@ Tabelle&nbsp;1.1: Übersicht aller Annotationsebenen
 <tr class="even">
 <td style="text-align: left;">Nominalgruppen</td>
 <td style="text-align: left;">PART_CLEAN[kern2]</td>
-<td style="text-align: left;">nominale Kerne</td>
+<td style="text-align: left;">nominale Kerne und Köpfe</td>
 <td style="text-align: left;">kern2=”DET”</td>
 <td style="text-align: left;">dem</td>
 </tr>
@@ -544,7 +544,7 @@ Tabelle&nbsp;1.2: Übersicht der Tokenzahl je Annotationsebene der Teilkorpora S
 <h2 data-number="1.4" class="anchored" data-anchor-id="sec-workflow"><span class="header-section-number">1.4</span> Übersicht des Workflows</h2>
 <p><a href="#fig-workflow" class="quarto-xref">Abbildung&nbsp;<span>1.1</span></a> stellt den Ablauf der einzelnen Arbeitsschritte bei der Erhebung und Aufbereitung der SeiKo-Daten dar.</p>
 <p>Am Anfang des Prozesses stand die Planung des Korpusprojektes sowie die Erstellung eines Korpusdesigns. Nach dem Genehmigungsverfahren<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> konnte mit der Datenerhebung begonnen werden. Anschließend an jeden Datenerhebungstermin wurden die Audiodateien abgelegt und archiviert; die geschriebenen Texte wurden eingescannt und ebenfalls archiviert. Es folgte die Transkription der Daten. Die transkribierten Daten wurden von einer anderen Bearbeiter:in im nächsten Schritt korrigiert sowie segmentiert. Anschließend wurden die Daten automatisch lemmatisiert und mit <em>part-of-speech</em>(POS)-Tags annotiert; hierfür wurde der TreeTagger <span class="citation" data-cites="Schmid1994ProbabilisticPartofSpeechTagging Schmid1995ImprovementsPartofSpeechTagging">(vgl. <a href="references.html#ref-Schmid1994ProbabilisticPartofSpeechTagging" role="doc-biblioref">Schmid, 1994</a>, <a href="references.html#ref-Schmid1995ImprovementsPartofSpeechTagging" role="doc-biblioref">1995</a>)</span> verwendet. Danach wechselte erneut die Bearbeiter:in, sodass im gleichen Schritt eine Kontrolle der manuellen Segmentierung sowie der automatischen Lemmatisierung und des POS-Taggings vorgenommen werden konnte. Zudem wurden in diesem Schritt manuell Nominalgruppen und Verbkonstituenten und -stufen annotiert. Ein Teil der Daten wurde von zwei Bearbeiter:innen annotiert, sodass darauf ein Inter-Annotator-Agreement durchgeführt werden konnte; generell wurden Zweifelsfälle vor allem in anfänglichen Phasen der Segmentierung und Annotation gemeinsam diskutiert und aufgelöst. Über eine Annatto-Pipeline wird aus den einzelnen .exb-Daten und den Metadaten ein Annis-Korpus gebaut, das über eine lokale ANNIS-Schnittstelle <span class="citation" data-cites="Krause.Zeldes2016ANNIS3newarchitecture">(<a href="references.html#ref-Krause.Zeldes2016ANNIS3newarchitecture" role="doc-biblioref">Krause &amp; Zeldes, 2016</a>)</span><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> oder Annimate<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> durchsucht werden kann.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
-<div id="fig-workflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="!htbp" data-fig-align="center">
+<div id="fig-workflow" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="!htbp">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="ABB/Arbeitsprozesse.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%" data-fig-pos="!htbp">
